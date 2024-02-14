@@ -1,0 +1,39 @@
+{
+  "modules": [
+    {
+      "name": "P10 320/160 MEIYAD",
+      "width": 320,
+      "height": 160,
+      "power": 20,
+      "id": 1,
+      "sku": "MYDSMDR",
+      "price": 386
+    },
+    {
+      "name": "P10 320/100 MEIYAD",
+      "width": 330,
+      "height": 150,
+      "power": 25,
+      "id": 2,
+      "sku": "MYDSMDR123",
+      "price": 490
+    }
+  ],
+  "controllers": [
+    {
+      "name": "HD-U6B",
+      "price": 587,
+      "id": 1
+    },
+    {
+      "name": "HD-U63",
+      "price": 1755,
+      "id": 2
+    },
+    {
+      "name": "HD-U62",
+      "price": 949,
+      "id": 3
+    }
+  ]
+}
