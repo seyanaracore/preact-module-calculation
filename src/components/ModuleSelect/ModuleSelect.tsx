@@ -1,6 +1,7 @@
-import ScreenService from '@/services/screenService'
-import { ModuleItem, ModulesListItem } from '@/types'
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ModulesListItem } from '@/types'
+import { ChangeEvent } from 'react'
+import cls from './styles.module.scss'
+import commonCls from '@/assets/scss/common.module.scss'
 
 type Props = {
   moduleId: string
@@ -20,6 +21,7 @@ const ModuleSelect = ({ moduleId, setModuleId, modulesList }: Props) => {
       <select
         onChange={onChangeModuleId}
         value={moduleId}
+        class={[cls.moduleSelect, commonCls.formInput].join(' ')}
       >
         {!modulesList.length ? <option selected>Загрузка</option> : null}
 
