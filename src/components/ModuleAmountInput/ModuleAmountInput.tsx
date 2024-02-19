@@ -39,19 +39,25 @@ const ModuleAmountInput = ({
     numberInputRef.current.style.width = `${numberInputRef.current.scrollWidth + 4}px`
   }
 
-  const onChangeInputAmount = (e: ChangeEvent<HTMLInputElement>) => {
-    const input = e.target as HTMLInputElement
-    const number = input.valueAsNumber
-
-    if (Number.isNaN(number) || number <= 0) return
-
-    setAmount(number)
-  }
-
   const updateInputAmount = () => {
     if (!numberInputRef.current) return
 
     numberInputRef.current.value = amount.toString()
+  }
+
+  const onChangeInputAmount = (e: ChangeEvent<HTMLInputElement>) => {
+    const input = e.target as HTMLInputElement
+    const number = +input.value
+    const isEmpty = input.value === ''
+
+    if (!isEmpty && Number.isNaN(number)) {
+      updateInputAmount()
+      return
+    }
+
+    if (isEmpty) return
+
+    setAmount(number)
   }
 
   useEffect(() => setAmountNumberInputWidth, [amount])
@@ -67,13 +73,14 @@ const ModuleAmountInput = ({
         <div className={cls.moduleAmountInputSide}>
           <span className={cls.moduleAmountInfo}>
             <input
-              type="number"
               value={amount}
               min={1}
               id={id}
               className={cls.moduleAmountInputNumber}
               onBlur={updateInputAmount}
               onChange={onChangeInputAmount}
+              type="text"
+              inputmode="numeric"
               ref={numberInputRef}
             />
             мод
