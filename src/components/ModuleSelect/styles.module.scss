@@ -9,7 +9,8 @@
     &::after {
       position: absolute;
       content: ' ';
-      top: calc(50% - 7px);
+      transform: translate(50%, -50%);
+      top: 50%;
       right: 12px;
       width: 14px;
       height: 14px;
