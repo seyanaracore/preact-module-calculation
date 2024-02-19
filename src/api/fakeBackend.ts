@@ -38,7 +38,10 @@ const fakeBackend = {
     else if (summaryWidth <= 512 && summaryHeight <= 256)
       targetController = controllers.find((controller) => controller.id === 2)
 
-    if (!targetController) throw new Error('Target controller not found')
+    if (!targetController)
+      throw new Error(
+        `Target controller not found. width: ${summaryWidth}, height: ${summaryHeight}`
+      )
 
     return targetController as T
   },
