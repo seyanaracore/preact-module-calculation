@@ -1,0 +1,11 @@
+.root {
+  max-width: 1200px;
+}
+
+.form {
+  padding: 1rem;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

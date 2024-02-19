@@ -4,19 +4,11 @@
       "name": "P10 320/160 MEIYAD",
       "width": 320,
       "height": 160,
-      "power": 20,
+      "consumption": 20,
       "id": 1,
       "sku": "MYDSMDR",
-      "price": 386
-    },
-    {
-      "name": "P10 320/100 MEIYAD",
-      "width": 330,
-      "height": 150,
-      "power": 25,
-      "id": 2,
-      "sku": "MYDSMDR123",
-      "price": 490
+      "price": 386,
+      "amount": 3
     }
   ],
   "controllers": [
@@ -34,6 +26,37 @@
       "name": "HD-U62",
       "price": 949,
       "id": 3
+    }
+  ],
+  "powerUnits": [
+    {
+      "name": "A-200AF-5 (5V, 40A)",
+      "price": 962,
+      "outputPower": 200,
+      "voltage": 5,
+      "amperage": 40,
+      "id": 1
+    }
+  ],
+  "profiles": [
+    {
+      "name": "BLD-ALP9025",
+      "price": 578,
+      "id": 1
+    }
+  ],
+  "corners": [
+    {
+      "name": "УГОЛОК К ПРОФИЛЮ (2590F)",
+      "price": 71,
+      "id": 1
+    }
+  ],
+  "galvanizations": [
+    {
+      "name": "45*10*0,8",
+      "price": 129,
+      "id": 1
     }
   ]
 }

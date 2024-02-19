@@ -1,25 +1,70 @@
-import api from '../api'
-import fakeBackend from '../fakeBackend'
-import { ModuleItem, ControllerItem } from '@/types'
+import fakeBackend from '../api/fakeBackend'
+import {
+  ModuleItem,
+  ControllerItem,
+  ModulesListItem,
+  ProfileItem,
+  PowerUnitItem,
+  GalvanizationItem,
+  CornerItem,
+} from '@/types'
 
-const baseUrl = 'http://localhost:3001'
+const delay = 0
+
+const api = Object.fromEntries(
+  Object.entries(fakeBackend).map(([k, v]) => {
+    return [
+      k,
+      (...args: any[]) =>
+        new Promise((res) => {
+          setTimeout(async () => {
+            // @ts-ignore
+            res(await v(...args))
+          }, delay)
+        }),
+    ]
+  })
+) as unknown as typeof fakeBackend
 
 const screenService = {
-  async getModulesList() {
-    const res = await api.get(`${baseUrl}/modules`).json<ModuleItem[]>()
-
-    return res.map(({ name, id }) => ({ name, id }))
+  getModulesList() {
+    return api.getModulesList<ModulesListItem[]>()
   },
 
-  /**
-   * Получить информацию по модулю
-   */
+  /** Получить информацию по модулю */
   getModuleInfo(moduleId: number | string) {
-    return api.get(`/modules?id=${moduleId}`).json<ModuleItem>()
+    return api.getModuleInfo<ModuleItem>(moduleId)
   },
 
-  async getControllerBySize(params: { width: number; height: number }): Promise<ControllerItem> {
-    return fakeBackend.getControllerBySize(params)
+  async getProfile() {
+    const res = await api.getProfiles<ProfileItem[]>()
+
+    return res[0]
+  },
+
+  async getPowerUnit() {
+    const res = await api.getPowerUnits<PowerUnitItem[]>()
+
+    return res[0]
+  },
+
+  async getCorner() {
+    const res = await api.getCorners<CornerItem[]>()
+
+    return res[0]
+  },
+
+  async getGalvanization() {
+    const res = await api.getGalvanizations<GalvanizationItem[]>()
+
+    return res[0]
+  },
+
+  async getControllerBySize(params: {
+    summaryWidth: number
+    summaryHeight: number
+  }): Promise<ControllerItem> {
+    return api.getControllerBySize(params)
   },
 }
 

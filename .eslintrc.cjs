@@ -1,8 +1,9 @@
 module.exports = {
-  extends: ["preact"],
+  extends: ['preact', 'prettier'],
   parser: '@typescript-eslint/parser',
-  plugins: ["@typescript-eslint"],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'prettier/prettier': 'error',
     'jest/no-deprecated-functions': 'off',
     'no-unused-vars': 'off',
     'padding-line-between-statements': [

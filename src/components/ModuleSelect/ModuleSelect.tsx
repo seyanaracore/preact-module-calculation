@@ -1,42 +1,39 @@
-import ScreenService from "@/services/screenService";
-import { ModuleItem } from "@/types";
-import { ChangeEvent, useEffect, useState } from "react";
+import ScreenService from '@/services/screenService'
+import { ModuleItem, ModulesListItem } from '@/types'
+import { ChangeEvent, useEffect, useState } from 'react'
 
 type Props = {
-  moduleId: string;
-  setModuleId: (module: string) => void;
-};
+  moduleId: string
+  setModuleId: (module: string) => void
+  modulesList: ModulesListItem[]
+}
 
-const ModuleSelect = ({ moduleId, setModuleId }: Props) => {
-  const [modulesList, setModulesList] = useState<
-    Pick<ModuleItem, "name" | "id">[]
-  >([]);
-
-  const initModulesList = async () => {
-    const res = await ScreenService.getModulesList();
-
-    setModulesList(res);
-  };
-
+const ModuleSelect = ({ moduleId, setModuleId, modulesList }: Props) => {
   const onChangeModuleId = (e: ChangeEvent<HTMLSelectElement>) => {
-    setModuleId((e.target as HTMLSelectElement).value);
-  };
-
-  useEffect(() => {
-    initModulesList();
-  }, []);
+    setModuleId((e.target as HTMLSelectElement).value)
+  }
 
   return (
-    <select onChange={onChangeModuleId} value={moduleId}>
-      {!modulesList.length ? <option selected>Загрузка</option> : null}
+    <label>
+      Модуль
+      <br />
+      <select
+        onChange={onChangeModuleId}
+        value={moduleId}
+      >
+        {!modulesList.length ? <option selected>Загрузка</option> : null}
 
-      {modulesList.map(({ name, id }) => (
-        <option key={id} value={id}>
-          {name}
-        </option>
-      ))}
-    </select>
-  );
-};
+        {modulesList.map(({ name, id }, idx) => (
+          <option
+            key={id}
+            value={id}
+          >
+            {name}
+          </option>
+        ))}
+      </select>
+    </label>
+  )
+}
 
-export default ModuleSelect;
+export default ModuleSelect

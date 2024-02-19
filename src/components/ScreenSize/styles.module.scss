@@ -1,0 +1,22 @@
+.module-amount-input {
+  &-container {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    &:first-of-type {
+      margin-right: 12px;
+    }
+  }
+}
+
+.module-amount-info {
+  position: absolute;
+  right: 25px;
+  top: 3px;
+}
+
+.modules-amount-inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+}
