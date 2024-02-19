@@ -8,8 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  padding-left: 8px;
   width: 220px;
 }
 
@@ -18,13 +16,6 @@
   margin-right: 2px;
   border: none;
   background: none;
-  appearance: none;
-  -moz-appearance: textfield;
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
 }
 
 .module-amount-input-side {
@@ -49,7 +40,6 @@
 .module-control-button {
   background: none;
   border: none;
-  appearance: none;
   font-size: 12px;
   border-radius: 4px;
   color: black;

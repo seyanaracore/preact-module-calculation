@@ -71,7 +71,7 @@ const ModuleAmountInput = ({
       <div className={[cls.moduleAmountInput, commonCls.formInput].join(' ')}>
         <span className={cls.moduleAmountFormatted}>{format(targetValue)}</span>
         <div className={cls.moduleAmountInputSide}>
-          <span className={cls.moduleAmountInfo}>
+          <label className={cls.moduleAmountInfo}>
             <input
               value={amount}
               min={1}
@@ -84,7 +84,7 @@ const ModuleAmountInput = ({
               ref={numberInputRef}
             />
             мод
-          </span>
+          </label>
           <div className={cls.moduleControlButtonsContainer}>
             <button
               className={cls.moduleControlButton}

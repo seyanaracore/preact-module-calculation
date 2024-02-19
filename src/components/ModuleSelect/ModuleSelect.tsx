@@ -18,22 +18,24 @@ const ModuleSelect = ({ moduleId, setModuleId, modulesList }: Props) => {
     <label>
       Модуль
       <br />
-      <select
-        onChange={onChangeModuleId}
-        value={moduleId}
-        class={[cls.moduleSelect, commonCls.formInput].join(' ')}
-      >
-        {!modulesList.length ? <option selected>Загрузка</option> : null}
+      <div class={cls.moduleSelectContainer}>
+        <select
+          onChange={onChangeModuleId}
+          value={moduleId}
+          class={[cls.moduleSelect, commonCls.formInput].join(' ')}
+        >
+          {!modulesList.length ? <option selected>Загрузка</option> : null}
 
-        {modulesList.map(({ name, id }, idx) => (
-          <option
-            key={id}
-            value={id}
-          >
-            {name}
-          </option>
-        ))}
-      </select>
+          {modulesList.map(({ name, id }, idx) => (
+            <option
+              key={id}
+              value={id}
+            >
+              {name}
+            </option>
+          ))}
+        </select>
+      </div>
     </label>
   )
 }
