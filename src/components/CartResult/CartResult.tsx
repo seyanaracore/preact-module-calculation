@@ -111,7 +111,7 @@ const CartResult = ({
         amount: profileAmount,
       },
       galvanization: {
-        title: 'Оцинковка',
+        title: `Оцинковка ${galvanization.name}`,
         name: galvanization.name,
         unit: 'мм.',
         amount: galvanizationAmount,
