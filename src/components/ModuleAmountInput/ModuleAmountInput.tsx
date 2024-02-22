@@ -55,7 +55,7 @@ const ModuleAmountInput = ({
       return
     }
 
-    if (isEmpty) return
+    if (isEmpty || number < 1) return
 
     setAmount(number)
   }
