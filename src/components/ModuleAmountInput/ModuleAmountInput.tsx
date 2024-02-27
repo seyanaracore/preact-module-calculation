@@ -5,7 +5,7 @@ import commonCls from '@/assets/scss/common.module.scss'
 const getSize = (mmSize: number) => mmSize / 1000
 
 const format = (size: number) =>
-  size.toString().slice(-1) === '0' ? `${getSize(size)}0` : getSize(size)
+  size.toString().slice(-1) === '0' ? getSize(size).toString().padEnd(5, '0') : getSize(size)
 
 const ModuleAmountInput = ({
   unit,
