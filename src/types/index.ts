@@ -2,6 +2,8 @@ export type ModuleItem = {
   name: string
   width: number
   height: number
+  ledsInWidth: number
+  ledsInHeight: number
   consumption: number
   id: number
   sku: string

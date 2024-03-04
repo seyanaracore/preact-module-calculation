@@ -20,27 +20,27 @@ const fakeBackend = {
   },
 
   async getControllerBySize<T = unknown>({
-    summaryWidth,
-    summaryHeight,
+    summaryLedsWidth,
+    summaryLedsHeight,
   }: {
-    summaryWidth: number
-    summaryHeight: number
+    summaryLedsWidth: number
+    summaryLedsHeight: number
   }) {
     const controllers = db.controllers
     let targetController: ControllerItem | undefined
 
-    if (summaryWidth <= 1024 && summaryHeight === 48)
+    if (summaryLedsWidth <= 1024 && summaryLedsHeight <= 48)
       targetController = controllers.find((controller) => controller.id === 1)
-    else if (summaryWidth <= 768 && summaryHeight <= 64)
+    else if (summaryLedsWidth <= 768 && summaryLedsHeight <= 64)
       targetController = controllers.find((controller) => controller.id === 3)
-    else if (summaryWidth <= 512 && summaryHeight <= 128)
+    else if (summaryLedsWidth <= 512 && summaryLedsHeight <= 128)
       targetController = controllers.find((controller) => controller.id === 2)
-    else if (summaryWidth <= 512 && summaryHeight <= 256)
+    else if (summaryLedsWidth <= 512 && summaryLedsHeight <= 256)
       targetController = controllers.find((controller) => controller.id === 2)
 
     if (!targetController)
       throw new Error(
-        `Target controller not found. width: ${summaryWidth}, height: ${summaryHeight}`
+        `Target controller not found. leds width: ${summaryLedsWidth}, leds height: ${summaryLedsHeight}`
       )
 
     return targetController as T

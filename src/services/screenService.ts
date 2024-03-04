@@ -11,20 +11,22 @@ import {
 
 const delay = 0
 
-const api = Object.fromEntries(
-  Object.entries(fakeBackend).map(([k, v]) => {
-    return [
-      k,
-      (...args: any[]) =>
-        new Promise((res) => {
-          setTimeout(async () => {
-            // @ts-ignore
-            res(await v(...args))
-          }, delay)
-        }),
-    ]
-  })
-) as unknown as typeof fakeBackend
+// const api = Object.fromEntries(
+//   Object.entries(fakeBackend).map(([k, v]) => {
+//     return [
+//       k,
+//       (...args: any[]) =>
+//         new Promise((res) => {
+//           setTimeout(async () => {
+//             // @ts-ignore
+//             res(await v(...args))
+//           }, delay)
+//         }),
+//     ]
+//   })
+// ) as unknown as typeof fakeBackend
+
+const api = fakeBackend
 
 const screenService = {
   getModulesList() {
@@ -61,8 +63,8 @@ const screenService = {
   },
 
   async getControllerBySize(params: {
-    summaryWidth: number
-    summaryHeight: number
+    summaryLedsWidth: number
+    summaryLedsHeight: number
   }): Promise<ControllerItem> {
     return api.getControllerBySize(params)
   },

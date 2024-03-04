@@ -34,7 +34,7 @@ const CartResult = ({
   modulesInHeight,
 }: CartResultProps) => {
   const modulesTotalAmount = useMemo(
-    () => modulesInWidth + modulesInHeight,
+    () => modulesInWidth * modulesInHeight,
     [modulesInHeight, modulesInWidth]
   )
 
@@ -54,21 +54,15 @@ const CartResult = ({
   )
 
   const profileAmount = useMemo(
-    () => Math.ceil(modulesSummaryWidth + modulesSummaryHeight),
+    () => Math.ceil(modulesSummaryWidth * 2 + modulesSummaryHeight * 2),
     [modulesSummaryWidth, modulesSummaryHeight]
   )
 
   const magnetsAmount = useMemo(() => modulesTotalAmount * 4, [modulesTotalAmount])
 
   const galvanizationAmount = useMemo(
-    () =>
-      Math.ceil(
-        ((modulesInWidth + modulesInHeight) *
-          moduleInfo.height *
-          (modulesInWidth * moduleInfo.width + moduleInfo.width)) /
-          1000
-      ),
-    [moduleInfo, modulesInWidth, modulesInHeight]
+    () => Math.ceil(modulesSummaryHeight * modulesInWidth + modulesSummaryHeight),
+    [modulesSummaryHeight, modulesInWidth]
   )
 
   const powerUnitsAmount = usePowerUnitAmount(totalConsumption)

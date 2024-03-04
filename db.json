@@ -4,6 +4,8 @@
       "name": "P10 320/160 MEIYAD",
       "width": 320,
       "height": 160,
+      "ledsInWidth": 32,
+      "ledsInHeight": 16,
       "consumption": 20,
       "id": 1,
       "sku": "MYDSMDR",

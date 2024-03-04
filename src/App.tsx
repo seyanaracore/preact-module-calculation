@@ -76,7 +76,7 @@ const App = () => {
     if (!moduleId) setModuleId(res[0].id.toString())
   })
 
-  const { fetching: getController } = useFetching(
+  const { fetching: getController, isError: getControllerIsError } = useFetching(
     async (payload: Parameters<typeof ScreenService.getControllerBySize>[0]) => {
       setController(undefined)
 
@@ -110,9 +110,12 @@ const App = () => {
   }, [moduleId])
 
   useEffect(() => {
-    if (!modulesSummaryHeight || !modulesSummaryWidth) return
+    if (!moduleInfo) return
 
-    getController({ summaryWidth: modulesSummaryWidth, summaryHeight: modulesSummaryHeight / 10 })
+    getController({
+      summaryLedsWidth: modulesInWidth * moduleInfo.ledsInWidth,
+      summaryLedsHeight: modulesInHeight * moduleInfo.ledsInHeight,
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modulesSummaryHeight, modulesSummaryWidth])
 
@@ -126,6 +129,10 @@ const App = () => {
     ])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    if (getControllerIsError) console.error(getControllerIsError)
+  }, [getControllerIsError])
 
   if (isLoading) return <div>Загрузка...</div>
 
