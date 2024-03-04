@@ -77,10 +77,10 @@ const App = () => {
   })
 
   const { fetching: getController, isError: getControllerIsError } = useFetching(
-    async (payload: Parameters<typeof ScreenService.getControllerBySize>[0]) => {
+    async (payload: Parameters<typeof ScreenService.getController>[0]) => {
       setController(undefined)
 
-      const res = await ScreenService.getControllerBySize(payload)
+      const res = await ScreenService.getController(payload)
 
       setController(res)
     }
@@ -110,14 +110,14 @@ const App = () => {
   }, [moduleId])
 
   useEffect(() => {
-    if (!moduleInfo) return
+    if (!moduleId) return
 
     getController({
-      summaryLedsWidth: modulesInWidth * moduleInfo.ledsInWidth,
-      summaryLedsHeight: modulesInHeight * moduleInfo.ledsInHeight,
+      moduleId,
+      modulesInWidth,
+      modulesInHeight,
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [modulesSummaryHeight, modulesSummaryWidth])
+  }, [moduleId, modulesInWidth, modulesInHeight])
 
   useEffect(() => {
     Promise.allSettled([

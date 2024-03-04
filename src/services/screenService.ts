@@ -9,7 +9,7 @@ import {
   CornerItem,
 } from '@/types'
 
-const delay = 0
+// const delay = 0
 
 // const api = Object.fromEntries(
 //   Object.entries(fakeBackend).map(([k, v]) => {
@@ -25,7 +25,6 @@ const delay = 0
 //     ]
 //   })
 // ) as unknown as typeof fakeBackend
-
 const api = fakeBackend
 
 const screenService = {
@@ -62,11 +61,12 @@ const screenService = {
     return res[0]
   },
 
-  async getControllerBySize(params: {
-    summaryLedsWidth: number
-    summaryLedsHeight: number
+  async getController(params: {
+    moduleId: number | string
+    modulesInWidth: number
+    modulesInHeight: number
   }): Promise<ControllerItem> {
-    return api.getControllerBySize(params)
+    return api.getController(params)
   },
 }
 
