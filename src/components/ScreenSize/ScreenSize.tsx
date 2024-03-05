@@ -1,8 +1,10 @@
 import { ModuleItem } from '@/types'
 import cls from './styles.module.scss'
-import { ChangeEvent, useMemo } from 'react'
+import { ChangeEvent, useContext, useMemo } from 'react'
 import { StateUpdater } from 'preact/hooks'
 import ModuleAmountInput from '@/components/ModuleAmountInput'
+import { StoreContext } from '@/context'
+import useModulesSizes from '@/hooks/useModulesSizes'
 
 type ScreenSizeProps = {
   width: ModuleItem['width']
@@ -13,27 +15,25 @@ type ScreenSizeProps = {
   setModulesInHeight: StateUpdater<number>
 }
 
-const ScreenSize = ({
-  width,
-  height,
-  modulesInWidth,
-  modulesInHeight,
-  setModulesInWidth,
-  setModulesInHeight,
-}: ScreenSizeProps) => {
+const ScreenSize = () => {
+  const { modulesInHeight, modulesInWidth, moduleInfo, setModulesInHeight, setModulesInWidth } =
+    useContext(StoreContext)
+
+  if (!moduleInfo) return <div>Загрузка...</div>
+
   return (
     <div>
       Размер экрана
       <br />
       <div class={cls.moduleAmountInputsContainer}>
         <ModuleAmountInput
-          unit={width}
+          unit={moduleInfo.width}
           label="Ширина"
           setAmount={setModulesInWidth}
           amount={modulesInWidth}
         />
         <ModuleAmountInput
-          unit={height}
+          unit={moduleInfo.height}
           label="Высота"
           setAmount={setModulesInHeight}
           amount={modulesInHeight}

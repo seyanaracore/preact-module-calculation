@@ -34,14 +34,16 @@ const filerMap: Record<keyof typeof requiredIds, Array<any>> = {
   galvanization,
 }
 
+const uniqByKeepLast = <T>(list: Array<T>, key: (i: T) => T[keyof T]) => {
+  return [...new Map(list.map((x) => [key(x), x])).values()]
+}
+
 Object.entries(filerMap).forEach(([fieldName, data]) => {
-  fs.writeFile(
-    path.join(filteredPath, `${fieldName}.json`),
-    JSON.stringify(data.filter(filterBy(fieldName))),
-    (err) => {
-      if (err) {
-        return console.log(err)
-      }
+  const handledData = uniqByKeepLast(data.filter(filterBy(fieldName)), (i) => i.id)
+
+  fs.writeFile(path.join(filteredPath, `${fieldName}.json`), JSON.stringify(handledData), (err) => {
+    if (err) {
+      return console.log(err)
     }
-  )
+  })
 })

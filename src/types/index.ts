@@ -1,3 +1,5 @@
+import { ModuleTypeId } from '@/api/enums'
+
 export type ModuleItem = {
   name: string
   width: number
@@ -5,13 +7,15 @@ export type ModuleItem = {
   ledsInWidth: number
   ledsInHeight: number
   consumption: number
+  typeId: ModuleTypeId
   id: number
   sku: string
   price: number
-  amount: number
 }
 
-export type ModulesListItem = Pick<ModuleItem, 'id' | 'name'>
+export type ModulesListItem = Pick<ModuleItem, 'id' | 'name'> & {
+  'parent-id': ModuleTypeId
+}
 
 export type ControllerItem = {
   name: string
@@ -31,6 +35,13 @@ export type GalvanizationItem = {
   id: number
 }
 
+export type ModuleTypeItem = {
+  name: string
+  id: ModuleTypeId
+}
+
+export type ModuleTypeItemById = Record<ModuleTypeId, ModuleTypeItem>
+
 export type CornerItem = {
   name: string
   price: number
@@ -40,8 +51,8 @@ export type CornerItem = {
 export type PowerUnitItem = {
   name: string
   price: number
-  outputPower: number
-  voltage: number
-  amperage: number
+  // outputPower: number
+  // voltage: number
+  // amperage: number
   id: number
 }

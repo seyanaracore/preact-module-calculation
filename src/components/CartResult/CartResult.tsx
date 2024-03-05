@@ -1,51 +1,57 @@
 import cls from './styles.module.scss'
-import { useMemo } from 'react'
-import {
-  ControllerItem,
-  CornerItem,
-  GalvanizationItem,
-  ModuleItem,
-  PowerUnitItem,
-  ProfileItem,
-} from '@/types'
+import { useContext, useEffect, useMemo } from 'react'
 import usePowerUnitAmount from '@/hooks/usePowerUnitAmount'
 import CartItem from './CartItem'
 import type { CartItem as ICartItem } from './types'
+import { StoreContext } from '@/context'
+import useModulesSizes from '@/hooks/useModulesSizes'
+import useFetching from '@/hooks/useFetching'
+import ScreenService from '@/services/screenService'
+import { ModuleTypeId } from '@/api/enums'
 
-type CartResultProps = {
-  controller?: ControllerItem
-  galvanization: GalvanizationItem
-  moduleInfo: ModuleItem
-  powerUnit: PowerUnitItem
-  profile: ProfileItem
-  corner: CornerItem
-  modulesInWidth: number
-  modulesInHeight: number
-}
+const CartResult = () => {
+  const {
+    powerUnit,
+    corner,
+    galvanization,
+    profile,
+    controller,
+    modulesInHeight,
+    modulesInWidth,
+    moduleInfo,
+    moduleId,
+    setController,
+  } = useContext(StoreContext)
 
-const CartResult = ({
-  controller,
-  galvanization,
-  moduleInfo,
-  powerUnit,
-  profile,
-  corner,
-  modulesInWidth,
-  modulesInHeight,
-}: CartResultProps) => {
+  const { fetching: getController, isError: getControllerIsError } = useFetching(
+    async (payload: Parameters<typeof ScreenService.getController>[0]) => {
+      setController(undefined)
+
+      const res = await ScreenService.getController(payload)
+
+      setController(res)
+    }
+  )
+
+  useEffect(() => {
+    if (!moduleId) return
+
+    getController({
+      moduleId,
+      modulesInWidth,
+      modulesInHeight,
+    })
+  }, [moduleId, modulesInWidth, modulesInHeight])
+
+  useEffect(() => {
+    if (getControllerIsError) console.error(getControllerIsError)
+  }, [getControllerIsError])
+
+  const { modulesSummaryWidth, modulesSummaryHeight } = useModulesSizes()
+
   const modulesTotalAmount = useMemo(
     () => modulesInWidth * modulesInHeight,
     [modulesInHeight, modulesInWidth]
-  )
-
-  const modulesSummaryWidth = useMemo(
-    () => (!moduleInfo ? 0 : modulesInWidth * moduleInfo.width),
-    [modulesInWidth, moduleInfo]
-  )
-
-  const modulesSummaryHeight = useMemo(
-    () => (!moduleInfo ? 0 : modulesInHeight * moduleInfo.height),
-    [modulesInHeight, moduleInfo]
   )
 
   const totalConsumption = useMemo(
@@ -67,25 +73,43 @@ const CartResult = ({
 
   const powerUnitsAmount = usePowerUnitAmount(totalConsumption)
 
-  const cartInfo = useMemo<Record<string, ICartItem>>(() => {
+  const isFullColorModule = useMemo(
+    () =>
+      !moduleInfo
+        ? false
+        : [ModuleTypeId.outdoor, ModuleTypeId.interior].includes(moduleInfo?.typeId),
+    [moduleInfo]
+  )
+
+  const receivingCardAmount = useMemo(() => {
+    // ((общее количество точек по ширине*количество модулей по ширине)/256)*((общее количество точек по высоте*количество модулей по высоте)/256)
+    if (!moduleInfo) return 0
+
+    return Math.ceil(
+      ((moduleInfo.ledsInHeight * modulesInHeight) / 256) *
+        ((moduleInfo.ledsInWidth * modulesInWidth) / 256)
+    )
+  }, [moduleInfo, modulesInHeight, modulesInWidth])
+
+  const cartInfo = useMemo<Record<string, ICartItem | undefined>>(() => {
     const totalModulePrice = !moduleInfo ? 0 : moduleInfo.price * modulesTotalAmount
     const totalPowerUnitPrice = !powerUnit ? 0 : powerUnitsAmount * powerUnit.price
 
     return {
       module: {
-        title: `Модуль ${moduleInfo.name}`,
-        name: moduleInfo.name,
+        title: moduleInfo?.name || '',
+        name: moduleInfo?.name || '',
         amount: modulesTotalAmount,
         unit: 'шт.',
-        price: moduleInfo.price,
+        price: moduleInfo?.price || '',
         totalPrice: totalModulePrice,
       },
       powerUnit: {
-        title: `Бл. пит. ${powerUnit.name}`,
-        name: powerUnit.name,
+        title: `Бл. пит. ${powerUnit?.name || ''}`,
+        name: powerUnit?.name || '',
         amount: powerUnitsAmount,
         unit: 'шт.',
-        price: powerUnit.price,
+        price: powerUnit?.price || '',
         totalPrice: totalPowerUnitPrice,
       },
       controller: !controller
@@ -99,20 +123,20 @@ const CartResult = ({
             totalPrice: controller.price,
           },
       profile: {
-        title: `Профиль ${profile.name}`,
-        name: profile.name,
+        title: profile?.name || '',
+        name: profile?.name || '',
         unit: 'мм.',
         amount: profileAmount,
       },
       galvanization: {
-        title: `Оцинковка ${galvanization.name}`,
-        name: galvanization.name,
+        title: galvanization?.name || '',
+        name: galvanization?.name || '',
         unit: 'мм.',
         amount: galvanizationAmount,
       },
       corner: {
-        title: corner.name,
-        name: corner.name,
+        title: corner?.name || '',
+        name: corner?.name || '',
         unit: 'шт.',
         amount: 4,
       },
@@ -122,20 +146,30 @@ const CartResult = ({
         unit: 'шт.',
         amount: magnetsAmount,
       },
+      receivingCard: isFullColorModule
+        ? {
+            title: 'Принимающая карта',
+            unit: 'шт.',
+            amount: receivingCardAmount,
+            totalPrice: 2360 * receivingCardAmount,
+          }
+        : undefined,
     }
   }, [
     controller,
     corner,
     galvanization,
+    profile,
     galvanizationAmount,
     magnetsAmount,
     moduleInfo,
     modulesTotalAmount,
     powerUnit,
     powerUnitsAmount,
-    profile,
     profileAmount,
   ])
+
+  if (!moduleInfo) return <div>Загрузка...</div>
 
   return (
     <div class={cls.resultContainer}>
@@ -149,13 +183,15 @@ const CartResult = ({
           </tr>
         </thead>
         <tbody>
-          {Object.values(cartInfo).map((cartItem, idx) => (
-            <CartItem
-              {...cartItem}
-              idx={idx}
-              key={idx}
-            />
-          ))}
+          {Object.values(cartInfo).map((cartItem, idx) =>
+            cartItem ? (
+              <CartItem
+                {...cartItem}
+                idx={idx}
+                key={idx}
+              />
+            ) : null
+          )}
         </tbody>
       </table>
     </div>

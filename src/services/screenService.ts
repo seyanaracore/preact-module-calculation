@@ -7,7 +7,12 @@ import {
   PowerUnitItem,
   GalvanizationItem,
   CornerItem,
+  ModuleTypeItem,
+  ModuleTypeItemById,
 } from '@/types'
+import getLedsAmount from '@/helpers/getLedsAmount'
+import getModuleSizesFields from '@/helpers/getModuleSizesFields'
+import { ModuleTypeId } from '@/api/enums'
 
 // const delay = 0
 
@@ -28,37 +33,60 @@ import {
 const api = fakeBackend
 
 const screenService = {
-  getModulesList() {
-    return api.getModulesList<ModulesListItem[]>()
+  getModulesList(): Promise<ModulesListItem[]> {
+    return api.getModulesList()
   },
 
   /** Получить информацию по модулю */
-  getModuleInfo(moduleId: number | string) {
-    return api.getModuleInfo<ModuleItem>(moduleId)
+  async getModuleInfo(moduleId: number | string): Promise<ModuleItem> {
+    const res = await api.getModuleInfo(moduleId)
+    const { ledsInHeight, ledsInWidth } = getLedsAmount(res)
+    const { width, height } = getModuleSizesFields(res)
+
+    return {
+      name: res.name,
+      width,
+      height,
+      ledsInWidth,
+      ledsInHeight,
+      typeId: res['parent-id'],
+      id: res.id,
+      sku: res.artikul.toString(),
+      price: res.price,
+      consumption: +res['vyhodnaya_mownost_vt'],
+    }
   },
 
-  async getProfile() {
-    const res = await api.getProfiles<ProfileItem[]>()
+  async getProfile(): Promise<ProfileItem> {
+    const res = await api.getProfiles()
 
     return res[0]
   },
 
-  async getPowerUnit() {
-    const res = await api.getPowerUnits<PowerUnitItem[]>()
+  async getPowerUnit(): Promise<PowerUnitItem> {
+    const res = await api.getPowerUnits()
 
     return res[0]
   },
 
-  async getCorner() {
-    const res = await api.getCorners<CornerItem[]>()
+  async getCorner(): Promise<CornerItem> {
+    const res = await api.getCorners()
 
     return res[0]
   },
 
-  async getGalvanization() {
-    const res = await api.getGalvanizations<GalvanizationItem[]>()
+  async getGalvanization(): Promise<GalvanizationItem> {
+    const res = await api.getGalvanizations()
 
     return res[0]
+  },
+
+  async getModuleTypes(): Promise<ModuleTypeItemById> {
+    const res = await api.getModuleTypes()
+
+    return Object.fromEntries(
+      res.map((moduleTypeItem) => [moduleTypeItem.id, moduleTypeItem])
+    ) as ModuleTypeItemById
   },
 
   async getController(params: {

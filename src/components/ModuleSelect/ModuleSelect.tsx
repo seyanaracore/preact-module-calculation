@@ -1,19 +1,71 @@
-import { ModulesListItem } from '@/types'
-import { ChangeEvent } from 'react'
+import { ChangeEvent, useContext, useEffect, useMemo } from 'react'
 import cls from './styles.module.scss'
 import commonCls from '@/assets/scss/common.module.scss'
+import { StoreContext } from '@/context'
+import groupBy from 'lodash-es/groupBy'
+import useFetching from '@/hooks/useFetching'
+import ScreenService from '@/services/screenService'
+import { ModuleTypeId } from '@/api/enums'
+import { ModulesListItem } from '@/types'
 
-type Props = {
-  moduleId: string
-  setModuleId: (module: string) => void
-  modulesList: ModulesListItem[]
-}
+type GroupedModules = Record<ModuleTypeId, ModulesListItem[]>
 
-const ModuleSelect = ({ moduleId, setModuleId, modulesList }: Props) => {
+const ModuleSelect = () => {
+  const {
+    moduleId,
+    setModuleId,
+    modulesList,
+    setModulesList,
+    moduleTypes,
+    setModuleInfo,
+    setModuleTypes,
+  } = useContext(StoreContext)
+
+  const groupedModules = useMemo<GroupedModules | null>(() => {
+    if (!modulesList.length || !moduleTypes) return null
+
+    return groupBy(modulesList, (module) => module['parent-id']) as GroupedModules
+  }, [modulesList, moduleTypes])
+
   const onChangeModuleId = (e: ChangeEvent<HTMLSelectElement>) => {
     setModuleId((e.target as HTMLSelectElement).value)
   }
 
+  const { fetching: getModulesList, isLoading: getModulesListIsLoading } = useFetching(async () => {
+    const res = await ScreenService.getModulesList()
+
+    setModulesList(res)
+  })
+
+  const { fetching: getModulesTypesList, isLoading: getModulesTypesListIsLoading } = useFetching(
+    async () => {
+      const res = await ScreenService.getModuleTypes()
+
+      setModuleTypes(res)
+    }
+  )
+
+  const { fetching: getModuleInfo } = useFetching(async () => {
+    const res = await ScreenService.getModuleInfo(moduleId)
+
+    setModuleInfo(res)
+  })
+
+  useEffect(() => {
+    Promise.allSettled([getModulesList(), getModulesTypesList()])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    if (moduleId) getModuleInfo()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [moduleId])
+
+  useEffect(() => {
+    if (!groupedModules) return
+
+    setModuleId(Object.values(groupedModules)[0][0].id.toString())
+  }, [groupedModules])
   return (
     <label>
       Модуль
@@ -24,16 +76,25 @@ const ModuleSelect = ({ moduleId, setModuleId, modulesList }: Props) => {
           value={moduleId}
           class={[cls.moduleSelect, commonCls.formInput].join(' ')}
         >
-          {!modulesList.length ? <option selected>Загрузка</option> : null}
-
-          {modulesList.map(({ name, id }, idx) => (
-            <option
-              key={id}
-              value={id}
-            >
-              {name}
-            </option>
-          ))}
+          {!groupedModules ? (
+            <option selected>Загрузка</option>
+          ) : (
+            Object.entries(groupedModules).map(([moduleTypeId, modulesList]) => (
+              <optgroup
+                label={moduleTypes![moduleTypeId].name}
+                key={moduleTypeId}
+              >
+                {(modulesList as ModulesListItem[]).map(({ name, id }, idx) => (
+                  <option
+                    key={id}
+                    value={id}
+                  >
+                    {name}
+                  </option>
+                ))}
+              </optgroup>
+            ))
+          )}
         </select>
       </div>
     </label>

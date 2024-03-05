@@ -1,15 +1,37 @@
-import db from '../../db.json'
 import getController from '@/api/getController'
+import profiles from '../../db/json/filtered/profiles.json'
+import corners from '../../db/json/filtered/corners.json'
+import powerUnits from '../../db/json/filtered/powerUnits.json'
+import galvanization from '../../db/json/filtered/galvanization.json'
+import modules from '../../db/json/filtered/modules.json'
+import controllers from '../../db/json/filtered/controllers.json'
+import moduleTypes from '../../db/json/modules-types.json'
+import { DBItem } from '@/types/dbItem'
+
+const db = {
+  modules,
+  controllers,
+  profiles,
+  corners,
+  powerUnits,
+  galvanization,
+  moduleTypes,
+}
 
 const fakeBackend = {
-  // getControllers: async <T = unknown>() => db.controllers as T,
-  getPowerUnits: async <T = unknown>() => db.powerUnits as T,
-  getProfiles: async <T = unknown>() => db.profiles as T,
-  getGalvanizations: async <T = unknown>() => db.galvanizations as T,
-  getCorners: async <T = unknown>() => db.corners as T,
-  getModulesList: async <T = unknown>() => db.modules.map(({ name, id }) => ({ name, id })) as T,
+  getPowerUnits: async <T = DBItem[]>() => db.powerUnits as T,
+  getProfiles: async <T = DBItem[]>() => db.profiles as T,
+  getGalvanizations: async <T = DBItem[]>() => db.galvanization as T,
+  getCorners: async <T = DBItem[]>() => db.corners as T,
+  getModulesList: async <T = DBItem[]>() =>
+    db.modules.map((module) => ({
+      name: module.name,
+      id: module.id,
+      'parent-id': module['parent-id'],
+    })) as Array<Pick<DBItem, 'name' | 'id' | 'parent-id'>>,
+  getModuleTypes: async <T = DBItem[]>() => db.moduleTypes,
 
-  async getModuleInfo<T = unknown>(id: number | string) {
+  async getModuleInfo<T = DBItem>(id: number | string) {
     const modules = db.modules
     const targetModuleId = +id
     const module = modules.find((module) => module.id === targetModuleId)
