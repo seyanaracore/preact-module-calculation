@@ -7,7 +7,8 @@
 		"deploy": "vite build",
 		"preview": "vite preview",
 		"lint": "eslint src/**/*.{tsx,ts}",
-		"type-check": "tsc --noEmit"
+		"type-check": "tsc --noEmit",
+		"filter-db": "ts-node-esm filter-by-module-ids.ts"
 	},
 	"dependencies": {
 		"bootstrap": "^5.3.2",
