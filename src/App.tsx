@@ -8,7 +8,8 @@ import cls from './app.module.scss'
 import { StoreContext } from '@/context'
 
 const App = () => {
-  const { setProfile, setGalvanization, setPowerUnit, setCorner } = useContext(StoreContext)
+  const { setProfile, setGalvanization, setPowerUnit, setCorner, setMagnet } =
+    useContext(StoreContext)
 
   const { fetching: getProfile, isLoading: getProfileIsLoading } = useFetching(async () => {
     const res = await ScreenService.getProfile()
@@ -24,31 +25,28 @@ const App = () => {
     }
   )
 
-  const { fetching: getPowerUnit, isLoading: getPowerUnitIsLoading } = useFetching(async () => {
-    const res = await ScreenService.getPowerUnit()
-
-    setPowerUnit(res)
-  })
-
   const { fetching: getCorner, isLoading: getCornerIsLoading } = useFetching(async () => {
     const res = await ScreenService.getCorner()
 
     setCorner(res)
   })
 
+  const { fetching: getMagnet, isLoading: getMagnetIsLoading } = useFetching(async () => {
+    const res = await ScreenService.getMagnet()
+
+    setMagnet(res)
+  })
+
   const isLoading = useMemo(
     () =>
-      [
-        getProfileIsLoading,
-        getGalvanizationIsLoading,
-        getPowerUnitIsLoading,
-        getCornerIsLoading,
-      ].some(Boolean),
-    [getProfileIsLoading, getGalvanizationIsLoading, getPowerUnitIsLoading, getCornerIsLoading]
+      [getProfileIsLoading, getGalvanizationIsLoading, getCornerIsLoading, getMagnetIsLoading].some(
+        Boolean
+      ),
+    [getProfileIsLoading, getGalvanizationIsLoading, getCornerIsLoading, getMagnetIsLoading]
   )
 
   useEffect(() => {
-    Promise.allSettled([getProfile(), getGalvanization(), getPowerUnit(), getCorner()])
+    Promise.allSettled([getProfile(), getGalvanization(), getCorner(), getMagnet()])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

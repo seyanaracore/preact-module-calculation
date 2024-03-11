@@ -3,12 +3,14 @@ import {
   ControllerItem,
   CornerItem,
   GalvanizationItem,
+  MagnetItem,
   ModuleItem,
   ModulesListItem,
   ModuleTypeItem,
   ModuleTypeItemById,
   PowerUnitItem,
   ProfileItem,
+  ReceivingItem,
 } from '@/types'
 import { ReactNode, useState } from 'react'
 import { StateUpdater } from 'preact/hooks'
@@ -23,7 +25,9 @@ type States = {
   galvanization: UseState<GalvanizationItem | undefined>
   powerUnit: UseState<PowerUnitItem | undefined>
   corner: UseState<CornerItem | undefined>
+  magnet: UseState<MagnetItem | undefined>
   moduleTypes: UseState<ModuleTypeItemById | undefined>
+  receivingCard: UseState<ReceivingItem | undefined | null>
 
   modulesInWidth: UseState<number>
   modulesInHeight: UseState<number>
@@ -53,7 +57,9 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
   const [galvanization, setGalvanization] = useState<GalvanizationItem>()
   const [powerUnit, setPowerUnit] = useState<PowerUnitItem>()
   const [corner, setCorner] = useState<CornerItem>()
+  const [magnet, setMagnet] = useState<MagnetItem>()
   const [moduleTypes, setModuleTypes] = useState<ModuleTypeItemById>()
+  const [receivingCard, setReceivingCard] = useState<ReceivingItem | null>()
 
   const storeValue: Store = {
     moduleId,
@@ -78,6 +84,10 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
     setCorner,
     moduleTypes,
     setModuleTypes,
+    receivingCard,
+    setReceivingCard,
+    magnet,
+    setMagnet,
   }
 
   return <StoreContext.Provider value={storeValue}>{children}</StoreContext.Provider>

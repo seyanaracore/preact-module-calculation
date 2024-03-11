@@ -3,3 +3,7 @@ export enum ModuleTypeId {
   outdoor = 2258,
   interior = 2257,
 }
+
+export enum ModuleManufacturer {
+  QIANG_LI = 'Qiang Li',
+}

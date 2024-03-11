@@ -40,6 +40,18 @@ export type ModuleTypeItem = {
   id: ModuleTypeId
 }
 
+export type ReceivingItem = {
+  name: string
+  price: number
+  id: number
+}
+
+export type MagnetItem = {
+  name: string
+  price: number
+  id: number
+}
+
 export type ModuleTypeItemById = Record<ModuleTypeId, ModuleTypeItem>
 
 export type CornerItem = {

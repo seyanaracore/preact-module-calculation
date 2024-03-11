@@ -19,6 +19,7 @@ const ModuleSelect = () => {
     moduleTypes,
     setModuleInfo,
     setModuleTypes,
+    setPowerUnit,
   } = useContext(StoreContext)
 
   const groupedModules = useMemo<GroupedModules | null>(() => {
@@ -30,6 +31,14 @@ const ModuleSelect = () => {
   const onChangeModuleId = (e: ChangeEvent<HTMLSelectElement>) => {
     setModuleId((e.target as HTMLSelectElement).value)
   }
+
+  const { fetching: getPowerUnit, isLoading: getPowerUnitIsLoading } = useFetching(async () => {
+    if (!moduleId) return
+
+    const res = await ScreenService.getPowerUnit(moduleId)
+
+    setPowerUnit(res)
+  })
 
   const { fetching: getModulesList, isLoading: getModulesListIsLoading } = useFetching(async () => {
     const res = await ScreenService.getModulesList()
@@ -57,7 +66,9 @@ const ModuleSelect = () => {
   }, [])
 
   useEffect(() => {
-    if (moduleId) getModuleInfo()
+    if (!moduleId) return
+    getModuleInfo()
+    getPowerUnit()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [moduleId])
 

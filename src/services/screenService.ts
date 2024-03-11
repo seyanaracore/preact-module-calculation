@@ -9,6 +9,8 @@ import {
   CornerItem,
   ModuleTypeItem,
   ModuleTypeItemById,
+  ReceivingItem,
+  MagnetItem,
 } from '@/types'
 import getLedsAmount from '@/helpers/getLedsAmount'
 import getModuleSizesFields from '@/helpers/getModuleSizesFields'
@@ -63,12 +65,6 @@ const screenService = {
     return res[0]
   },
 
-  async getPowerUnit(): Promise<PowerUnitItem> {
-    const res = await api.getPowerUnits()
-
-    return res[0]
-  },
-
   async getCorner(): Promise<CornerItem> {
     const res = await api.getCorners()
 
@@ -77,6 +73,18 @@ const screenService = {
 
   async getGalvanization(): Promise<GalvanizationItem> {
     const res = await api.getGalvanizations()
+
+    return res[0]
+  },
+
+  async getReceivingCard(): Promise<ReceivingItem> {
+    const res = await api.getReceivingCards()
+
+    return res[0]
+  },
+
+  async getMagnet(): Promise<MagnetItem> {
+    const res = await api.getMagnets()
 
     return res[0]
   },
@@ -95,6 +103,10 @@ const screenService = {
     modulesInHeight: number
   }): Promise<ControllerItem> {
     return api.getController(params)
+  },
+
+  async getPowerUnit(moduleId: number | string): Promise<PowerUnitItem> {
+    return api.getPowerUnit(moduleId)
   },
 }
 
