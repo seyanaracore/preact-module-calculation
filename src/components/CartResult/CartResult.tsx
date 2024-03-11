@@ -6,6 +6,8 @@ import useFetching from '@/hooks/useFetching'
 import ScreenService from '@/services/screenService'
 import useIsFullColorModule from '@/hooks/useIsFullColorModule'
 import useCartState from '@/hooks/useCartState'
+import { currencyFormat } from '@/utils'
+import { useCartResultPrice } from '@/hooks/useCartPrice'
 
 const CartResult = () => {
   const { modulesInHeight, modulesInWidth, moduleInfo, moduleId, setController, setReceivingCard } =
@@ -13,6 +15,7 @@ const CartResult = () => {
 
   const isFullColorModule = useIsFullColorModule()
   const cartState = useCartState()
+  const cartResultPrice = useCartResultPrice()
 
   const { fetching: getController, isError: getControllerIsError } = useFetching(
     async (payload: Parameters<typeof ScreenService.getController>[0]) => {
@@ -80,6 +83,10 @@ const CartResult = () => {
           )}
         </tbody>
       </table>
+
+      <p className={cls.summaryPrice}>
+        Стоимость готового изделия: {currencyFormat.format(cartResultPrice)}
+      </p>
     </div>
   )
 }
