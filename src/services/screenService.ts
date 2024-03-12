@@ -11,6 +11,7 @@ import {
   ModuleTypeItemById,
   ReceivingItem,
   MagnetItem,
+  CabinetItem,
 } from '@/types'
 import getLedsAmount from '@/helpers/getLedsAmount'
 import getModuleSizesFields from '@/helpers/getModuleSizesFields'
@@ -85,6 +86,12 @@ const screenService = {
 
   async getMagnet(): Promise<MagnetItem> {
     const res = await api.getMagnets()
+
+    return res[0]
+  },
+
+  async getCabinet(): Promise<CabinetItem> {
+    const res = await api.getCabinets()
 
     return res[0]
   },

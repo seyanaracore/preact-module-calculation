@@ -6,6 +6,7 @@ import galvanization from '../../db/json/filtered/galvanization.json'
 import modules from '../../db/json/filtered/modules.json'
 import controllers from '../../db/json/filtered/controllers.json'
 import receivingCards from '../../db/json/filtered/receivingCards.json'
+import cabinets from '../../db/json/filtered/cabinets.json'
 import magnets from '../../db/json/filtered/magnets.json'
 import moduleTypes from '../../db/json/modules-types.json'
 import { DBItem } from '@/types/dbItem'
@@ -22,6 +23,7 @@ const db = {
   moduleTypes,
   receivingCards,
   magnets,
+  cabinets,
 }
 
 const fakeBackend = {
@@ -30,6 +32,7 @@ const fakeBackend = {
   getGalvanizations: async <T = DBItem[]>() => db.galvanization as T,
   getMagnets: async <T = DBItem[]>() => db.magnets as T,
   getCorners: async <T = DBItem[]>() => db.corners as T,
+  getCabinets: async <T = DBItem[]>() => db.cabinets as T,
   getModulesList: async <T = DBItem[]>() =>
     db.modules.map((module) => ({
       name: module.name,

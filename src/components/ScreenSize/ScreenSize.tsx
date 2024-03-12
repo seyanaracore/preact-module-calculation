@@ -3,6 +3,10 @@ import { useContext, useMemo } from 'react'
 import ModuleAmountInput from '@/components/ModuleAmountInput'
 import { StoreContext } from '@/context'
 import { ModuleImplementationType } from '@/enums'
+import {
+  useHeightModuleMultiplicity,
+  useWidthModuleMultiplicity,
+} from '@/hooks/useCabinetMultiplicity'
 
 const ScreenSize = () => {
   const {
@@ -14,25 +18,8 @@ const ScreenSize = () => {
     implementationType,
   } = useContext(StoreContext)
 
-  /**
-   * Кратность по ширине, в зависимости от типа исполнения
-   * @example 1,2,3/2,4,8
-   */
-  const widthAmountInputMultiplicity = useMemo(() => {
-    if (implementationType === ModuleImplementationType.Cabinet640x640) {
-      return 2
-    }
-  }, [implementationType])
-
-  /**
-   * Кратность по высоте, в зависимости от типа исполнения
-   * @example 1,2,3/4,8,12
-   */
-  const heightAmountInputMultiplicity = useMemo(() => {
-    if (implementationType === ModuleImplementationType.Cabinet640x640) {
-      return 4
-    }
-  }, [implementationType])
+  const widthAmountInputMultiplicity = useWidthModuleMultiplicity()
+  const heightAmountInputMultiplicity = useHeightModuleMultiplicity()
 
   if (!moduleInfo) return <div>Загрузка...</div>
 

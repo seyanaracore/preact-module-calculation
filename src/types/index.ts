@@ -52,6 +52,12 @@ export type MagnetItem = {
   id: number
 }
 
+export type CabinetItem = {
+  name: string
+  price: number
+  id: number
+}
+
 export type ModuleTypeItemById = Record<ModuleTypeId, ModuleTypeItem>
 
 export type CornerItem = {

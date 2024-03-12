@@ -2,6 +2,10 @@ import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
 import useModulesSizes from '@/hooks/useModulesSizes'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
+import {
+  useHeightModuleMultiplicity,
+  useWidthModuleMultiplicity,
+} from '@/hooks/useCabinetMultiplicity'
 
 export { default as useReceivingCardAmount } from './useReceivingCardAmount'
 export { default as usePowerUnitAmount } from './usePowerUnitAmount'
@@ -59,5 +63,21 @@ export const useGalvanizationAmount = () => {
   return useMemo(
     () => roundToLargerInt(modulesSummaryHeight * modulesInWidth + modulesSummaryHeight),
     [modulesSummaryHeight, modulesInWidth]
+  )
+}
+
+/**
+ * Количество кабинетов
+ */
+export const useCabinetsAmount = () => {
+  const { modulesInWidth, modulesInHeight } = useContext(StoreContext)
+  const widthAmountInputMultiplicity = useWidthModuleMultiplicity()
+  const heightAmountInputMultiplicity = useHeightModuleMultiplicity()
+
+  return useMemo(
+    () =>
+      (modulesInWidth / widthAmountInputMultiplicity) *
+      (modulesInHeight / heightAmountInputMultiplicity),
+    [modulesInWidth, modulesInHeight, widthAmountInputMultiplicity, heightAmountInputMultiplicity]
   )
 }

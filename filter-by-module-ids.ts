@@ -8,6 +8,7 @@ import powerUnits from './db/json/power-units.json' assert { type: 'json' }
 import galvanization from './db/json/galvanization.json' assert { type: 'json' }
 import receivingCards from './db/json/receiving-cards.json' assert { type: 'json' }
 import magnets from './db/json/magnets.json' assert { type: 'json' }
+import cabinets from './db/json/cabinets.json' assert { type: 'json' }
 
 import path from 'path'
 import fs from 'fs'
@@ -36,6 +37,7 @@ const filerMap: Record<keyof typeof requiredIds, Array<any>> = {
   galvanization,
   receivingCards,
   magnets,
+  cabinets,
 }
 
 const uniqByKeepLast = <T>(list: Array<T>, key: (i: T) => T[keyof T]) => {

@@ -2,6 +2,7 @@ import { useContext, useMemo } from 'react'
 import type { CartItem as ICartItem } from '@/components/CartResult/types'
 import { StoreContext } from '@/context'
 import {
+  useCabinetsAmount,
   useGalvanizationAmount,
   useMagnetsAmount,
   useModulesTotalAmount,
@@ -29,6 +30,7 @@ export const useCartState = () => {
     profile,
     galvanization,
     magnet,
+    cabinet,
   } = useContext(StoreContext)
 
   const modulesTotalAmount = useModulesTotalAmount()
@@ -38,6 +40,7 @@ export const useCartState = () => {
   const galvanizationAmount = useGalvanizationAmount()
   const powerUnitsAmount = usePowerUnitAmount(totalConsumption)
   const receivingCardAmount = useReceivingCardAmount()
+  const cabinetsAmount = useCabinetsAmount()
   const totalProfilePrice = useProfileTotalPrice()
   const totalGalvanizationPrice = useGalvanizationTotalPrice()
   const isCabinetImplementation = useIsCabinetImplementation()
@@ -131,6 +134,18 @@ export const useCartState = () => {
               totalPrice: receivingCard.price * receivingCardAmount,
             }
 
+    const cabinetState =
+      cabinet === null
+        ? getLoadingState('Кабинет')
+        : !cabinet
+          ? undefined
+          : {
+              title: cabinet.name,
+              unit: 'шт.',
+              amount: cabinetsAmount,
+              totalPrice: cabinet.price * cabinetsAmount,
+            }
+
     const monolithicImplementationCartState = [
       moduleState,
       powerUnitState,
@@ -143,7 +158,7 @@ export const useCartState = () => {
     ]
 
     if (isCabinetImplementation)
-      return [moduleState, powerUnitState, controllerState, receivingCardState]
+      return [moduleState, powerUnitState, controllerState, cabinetState, receivingCardState]
 
     return monolithicImplementationCartState
   }, [
@@ -163,6 +178,8 @@ export const useCartState = () => {
     magnetsAmount,
     receivingCard,
     receivingCardAmount,
+    cabinet,
+    cabinetsAmount,
     isCabinetImplementation,
   ])
 }
