@@ -4,7 +4,7 @@ import { StoreContext } from '@/context'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
 
 // mm
-const galvanizationUnitLen = 300
+const galvanizationUnitLen = 3000
 
 const useGalvanizationTotalPrice = () => {
   const { galvanization } = useContext(StoreContext)
