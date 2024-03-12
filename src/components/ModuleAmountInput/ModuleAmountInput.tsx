@@ -77,7 +77,7 @@ const ModuleAmountInput = ({
   const updateInputAmount = () => {
     if (!numberInputRef.current) return
 
-    numberInputRef.current.value = amount.toString()
+    numberInputRef.current.value = amountWithImplementationType.toString()
   }
 
   const onChangeInputAmount = (e: ChangeEvent<HTMLInputElement>) => {
