@@ -12,8 +12,7 @@ import {
 } from '@/hooks/useAmounts'
 import useProfileTotalPrice from '@/hooks/useProfileTotalPrice'
 import useGalvanizationTotalPrice from '@/hooks/useGalvanizationTotalPrice'
-import ModuleImplementationType from '@/enums/ModuleImplementationType'
-import { useIsCabinet640ModuleImplementation } from '@/hooks/useIsCabinet640ModuleImplementation'
+import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 
 const getLoadingState = (title: string) => ({
   title,
@@ -30,7 +29,6 @@ export const useCartState = () => {
     profile,
     galvanization,
     magnet,
-    implementationType,
   } = useContext(StoreContext)
 
   const modulesTotalAmount = useModulesTotalAmount()
@@ -42,7 +40,7 @@ export const useCartState = () => {
   const receivingCardAmount = useReceivingCardAmount()
   const totalProfilePrice = useProfileTotalPrice()
   const totalGalvanizationPrice = useGalvanizationTotalPrice()
-  const isCabinet640Implementation = useIsCabinet640ModuleImplementation()
+  const isCabinetImplementation = useIsCabinetImplementation()
 
   return useMemo<Array<ICartItem | undefined>>(() => {
     const totalModulePrice = !moduleInfo ? 0 : moduleInfo.price * modulesTotalAmount
@@ -144,7 +142,7 @@ export const useCartState = () => {
       receivingCardState,
     ]
 
-    if (isCabinet640Implementation)
+    if (isCabinetImplementation)
       return [moduleState, powerUnitState, controllerState, receivingCardState]
 
     return monolithicImplementationCartState
@@ -165,7 +163,7 @@ export const useCartState = () => {
     magnetsAmount,
     receivingCard,
     receivingCardAmount,
-    isCabinet640Implementation,
+    isCabinetImplementation,
   ])
 }
 

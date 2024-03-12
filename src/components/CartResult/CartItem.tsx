@@ -1,4 +1,3 @@
-import cls from './styles.module.scss'
 import { currencyFormat } from '@/utils'
 import type { CartItem as ICartItem } from './types'
 

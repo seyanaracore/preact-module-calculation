@@ -2,6 +2,7 @@ import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
 
+// Количество принимающих карта
 const useReceivingCardAmount = () => {
   const { moduleInfo, modulesInHeight, modulesInWidth, receivingCard } = useContext(StoreContext)
 

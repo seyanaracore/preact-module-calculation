@@ -1,40 +1,38 @@
-import { ModuleItem } from '@/types'
 import cls from './styles.module.scss'
 import { useContext, useMemo } from 'react'
-import { StateUpdater } from 'preact/hooks'
 import ModuleAmountInput from '@/components/ModuleAmountInput'
 import { StoreContext } from '@/context'
-import { useIsCabinet640ModuleImplementation } from '@/hooks/useIsCabinet640ModuleImplementation'
-import { heightModulesAmountMultiplicity, widthModulesAmountMultiplicity } from '@/consts'
-import { ModuleLabelUnit } from '@/enums/ModuleLabelUnit'
-
-type ScreenSizeProps = {
-  width: ModuleItem['width']
-  height: ModuleItem['height']
-  modulesInWidth: number
-  modulesInHeight: number
-  setModulesInWidth: StateUpdater<number>
-  setModulesInHeight: StateUpdater<number>
-}
+import { ModuleImplementationType } from '@/enums'
 
 const ScreenSize = () => {
-  const { modulesInHeight, modulesInWidth, moduleInfo, setModulesInHeight, setModulesInWidth } =
-    useContext(StoreContext)
+  const {
+    modulesInHeight,
+    modulesInWidth,
+    moduleInfo,
+    setModulesInHeight,
+    setModulesInWidth,
+    implementationType,
+  } = useContext(StoreContext)
 
-  const isCabinet640Implementation = useIsCabinet640ModuleImplementation()
-
+  /**
+   * Кратность по ширине, в зависимости от типа исполнения
+   * @example 1,2,3/2,4,8
+   */
   const widthAmountInputMultiplicity = useMemo(() => {
-    if (isCabinet640Implementation) return widthModulesAmountMultiplicity
-  }, [isCabinet640Implementation])
+    if (implementationType === ModuleImplementationType.Cabinet640x640) {
+      return 2
+    }
+  }, [implementationType])
 
+  /**
+   * Кратность по высоте, в зависимости от типа исполнения
+   * @example 1,2,3/4,8,12
+   */
   const heightAmountInputMultiplicity = useMemo(() => {
-    if (isCabinet640Implementation) return heightModulesAmountMultiplicity
-  }, [isCabinet640Implementation])
-
-  const labelUnit = useMemo(() => {
-    if (isCabinet640Implementation) return ModuleLabelUnit.Cabinet
-    return ModuleLabelUnit.Module
-  }, [isCabinet640Implementation])
+    if (implementationType === ModuleImplementationType.Cabinet640x640) {
+      return 4
+    }
+  }, [implementationType])
 
   if (!moduleInfo) return <div>Загрузка...</div>
 
@@ -49,7 +47,7 @@ const ScreenSize = () => {
           setAmount={setModulesInWidth}
           multiplicity={widthAmountInputMultiplicity}
           amount={modulesInWidth}
-          labelUnit={labelUnit}
+          implementationType={implementationType}
         />
         <ModuleAmountInput
           unit={moduleInfo.height}
@@ -57,7 +55,7 @@ const ScreenSize = () => {
           setAmount={setModulesInHeight}
           multiplicity={heightAmountInputMultiplicity}
           amount={modulesInHeight}
-          labelUnit={labelUnit}
+          implementationType={implementationType}
         />
       </div>
     </div>

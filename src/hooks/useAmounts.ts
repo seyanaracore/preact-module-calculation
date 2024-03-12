@@ -6,12 +6,18 @@ import roundToLargerInt from '@/helpers/roundToLargerInt'
 export { default as useReceivingCardAmount } from './useReceivingCardAmount'
 export { default as usePowerUnitAmount } from './usePowerUnitAmount'
 
+/**
+ * Суммарное кол-во модулей
+ */
 export const useModulesTotalAmount = () => {
   const { modulesInWidth, modulesInHeight } = useContext(StoreContext)
 
   return useMemo(() => modulesInWidth * modulesInHeight, [modulesInHeight, modulesInWidth])
 }
 
+/**
+ * Суммарное потребление из кол-ва модулей
+ */
 export const useTotalConsumption = () => {
   const modulesTotalAmount = useModulesTotalAmount()
   const { moduleInfo } = useContext(StoreContext)
@@ -22,6 +28,9 @@ export const useTotalConsumption = () => {
   )
 }
 
+/**
+ * Количество профиля
+ */
 export const useProfileAmount = () => {
   const { modulesSummaryWidth, modulesSummaryHeight } = useModulesSizes()
 
@@ -31,12 +40,18 @@ export const useProfileAmount = () => {
   )
 }
 
+/**
+ * Количество магнитов
+ */
 export const useMagnetsAmount = () => {
   const modulesTotalAmount = useModulesTotalAmount()
 
   return useMemo(() => modulesTotalAmount * 4, [modulesTotalAmount])
 }
 
+/**
+ * Количество оцинковки
+ */
 export const useGalvanizationAmount = () => {
   const { modulesSummaryHeight } = useModulesSizes()
   const { modulesInWidth } = useContext(StoreContext)

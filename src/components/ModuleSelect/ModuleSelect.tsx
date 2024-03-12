@@ -32,7 +32,7 @@ const ModuleSelect = () => {
     setModuleId((e.target as HTMLSelectElement).value)
   }
 
-  const { fetching: getPowerUnit, isLoading: getPowerUnitIsLoading } = useFetching(async () => {
+  const { fetching: getPowerUnit } = useFetching(async () => {
     if (!moduleId) return
 
     const res = await ScreenService.getPowerUnit(moduleId)
@@ -40,19 +40,17 @@ const ModuleSelect = () => {
     setPowerUnit(res)
   })
 
-  const { fetching: getModulesList, isLoading: getModulesListIsLoading } = useFetching(async () => {
+  const { fetching: getModulesList } = useFetching(async () => {
     const res = await ScreenService.getModulesList()
 
     setModulesList(res)
   })
 
-  const { fetching: getModulesTypesList, isLoading: getModulesTypesListIsLoading } = useFetching(
-    async () => {
-      const res = await ScreenService.getModuleTypes()
+  const { fetching: getModulesTypesList } = useFetching(async () => {
+    const res = await ScreenService.getModuleTypes()
 
-      setModuleTypes(res)
-    }
-  )
+    setModuleTypes(res)
+  })
 
   const { fetching: getModuleInfo } = useFetching(async () => {
     const res = await ScreenService.getModuleInfo(moduleId)

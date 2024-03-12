@@ -1,5 +1,5 @@
 import cls from './styles.module.scss'
-import { useContext, useEffect, useMemo } from 'react'
+import { useContext, useEffect } from 'react'
 import CartItem from './CartItem'
 import { StoreContext } from '@/context'
 import useFetching from '@/hooks/useFetching'
@@ -7,7 +7,7 @@ import ScreenService from '@/services/screenService'
 import useIsFullColorModule from '@/hooks/useIsFullColorModule'
 import useCartState from '@/hooks/useCartState'
 import { currencyFormat } from '@/utils'
-import { useCartResultPrice } from '@/hooks/useCartPrice'
+import { useFinishedProductPrice } from '@/hooks/useCartPrice'
 
 const CartResult = () => {
   const { modulesInHeight, modulesInWidth, moduleInfo, moduleId, setController, setReceivingCard } =
@@ -15,7 +15,7 @@ const CartResult = () => {
 
   const isFullColorModule = useIsFullColorModule()
   const cartState = useCartState()
-  const cartResultPrice = useCartResultPrice()
+  const cartResultPrice = useFinishedProductPrice()
 
   const { fetching: getController, isError: getControllerIsError } = useFetching(
     async (payload: Parameters<typeof ScreenService.getController>[0]) => {

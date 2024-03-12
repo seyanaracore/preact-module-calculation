@@ -2,6 +2,9 @@ import { useMemo } from 'react'
 import useCartState from '@/hooks/useCartState'
 import { useModulesTotalAmount } from '@/hooks/useAmounts'
 
+/**
+ * Суммарная стоимость корзины
+ */
 export const useCartSummaryPrice = () => {
   const cartState = useCartState()
 
@@ -16,7 +19,10 @@ export const useCartSummaryPrice = () => {
   )
 }
 
-export const useCartResultPrice = () => {
+/**
+ * Суммарная стоимость готового изделия
+ */
+export const useFinishedProductPrice = () => {
   const cartSummaryPrice = useCartSummaryPrice()
   const modulesTotalAmount = useModulesTotalAmount()
 

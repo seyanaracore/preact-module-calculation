@@ -1,8 +1,9 @@
 import cls from './styles.module.scss'
 import { ChangeEvent, useEffect, useMemo, useRef } from 'react'
 import commonCls from '@/assets/scss/common.module.scss'
-import { ModuleLabelUnit } from '@/enums/ModuleLabelUnit'
-import roundToLargerInt from '@/helpers/roundToLargerInt'
+import { ModuleLabelUnit } from '@/consts'
+import { ModuleImplementationType } from '@/enums'
+import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 
 const getSize = (mmSize: number) => mmSize / 1000
 
@@ -14,31 +15,43 @@ const ModuleAmountInput = ({
   amount,
   setAmount,
   label,
+  implementationType,
   multiplicity = 1,
-  labelUnit = ModuleLabelUnit.Module,
 }: {
   unit: number
   label: string
   setAmount: (value: number) => void
   amount: number
+  implementationType: ModuleImplementationType
   multiplicity?: number
-  labelUnit?: ModuleLabelUnit
 }) => {
   const id = `module-calc-input-${label}`
+  const isCabinetImplementation = useIsCabinetImplementation()
 
-  const isCabinetUnit = useMemo(
-    () => labelUnit === ModuleLabelUnit.Cabinet && typeof multiplicity !== 'undefined',
-    [labelUnit, multiplicity]
-  )
+  /**
+   * заголовок в чём считается
+   * @example 'мод' | 'каб'
+   */
+  const labelUnit = useMemo(() => {
+    return ModuleLabelUnit[implementationType]
+  }, [implementationType])
 
-  const getValueWithCabinetUnit = (val: number) => (isCabinetUnit ? val / multiplicity : val)
+  /**
+   * Значение в мм
+   *
+   * unit * module amounts = 360 * 2 = 740
+   */
   const targetValue = useMemo(() => unit * amount, [amount, unit])
   const numberInputRef = useRef<HTMLInputElement>(null)
 
-  const handledAmountWithCabinetUnit = useMemo(
-    () => getValueWithCabinetUnit(amount),
-    [amount, isCabinetUnit, multiplicity]
-  )
+  /**
+   * Кол-во модулей деленая переданную кратность, кратность 4 = 4 модуля = 1 labelUnit (напр. каб.)
+   */
+  const amountWithImplementationType = useMemo(() => {
+    if (isCabinetImplementation) return amount / multiplicity
+
+    return amount
+  }, [amount, isCabinetImplementation, multiplicity])
 
   const increase = () => {
     const newAmount = amount + multiplicity
@@ -82,20 +95,26 @@ const ModuleAmountInput = ({
     setAmount(number * multiplicity)
   }
 
-  useEffect(() => setAmountNumberInputWidth, [handledAmountWithCabinetUnit])
+  useEffect(() => setAmountNumberInputWidth, [amountWithImplementationType])
 
   useEffect(() => {
     setAmountNumberInputWidth()
   }, [])
 
+  /**
+   * Обработчик изменения кратности
+   */
   useEffect(() => {
+    // если кратность по умолчанию - выходим
     if (multiplicity <= 1) return
 
+    // если кол-во модулей меньше переданной кратности - ставим минимальное значение - значение кратности, напр. 2
     if (amount < multiplicity) {
       setAmount(multiplicity)
       return
     }
 
+    // если текущее кол-во не подходит переданной кратности, то добиваем необходимое кол-во модулей в большую сторону
     if (amount % multiplicity) {
       setAmount(amount + (multiplicity - (amount % multiplicity)))
     }
@@ -109,7 +128,7 @@ const ModuleAmountInput = ({
         <div className={cls.moduleAmountInputSide}>
           <label className={cls.moduleAmountInfo}>
             <input
-              value={handledAmountWithCabinetUnit}
+              value={amountWithImplementationType}
               min={1}
               id={id}
               className={cls.moduleAmountInputNumber}
