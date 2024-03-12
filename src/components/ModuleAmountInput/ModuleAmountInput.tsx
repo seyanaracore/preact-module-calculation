@@ -1,6 +1,8 @@
 import cls from './styles.module.scss'
 import { ChangeEvent, useEffect, useMemo, useRef } from 'react'
 import commonCls from '@/assets/scss/common.module.scss'
+import { ModuleLabelUnit } from '@/enums/ModuleLabelUnit'
+import roundToLargerInt from '@/helpers/roundToLargerInt'
 
 const getSize = (mmSize: number) => mmSize / 1000
 
@@ -12,24 +14,44 @@ const ModuleAmountInput = ({
   amount,
   setAmount,
   label,
+  multiplicity = 1,
+  labelUnit = ModuleLabelUnit.Module,
 }: {
   unit: number
   label: string
   setAmount: (value: number) => void
   amount: number
+  multiplicity?: number
+  labelUnit?: ModuleLabelUnit
 }) => {
   const id = `module-calc-input-${label}`
+
+  const isCabinetUnit = useMemo(
+    () => labelUnit === ModuleLabelUnit.Cabinet && typeof multiplicity !== 'undefined',
+    [labelUnit, multiplicity]
+  )
+
+  const getValueWithCabinetUnit = (val: number) => (isCabinetUnit ? val / multiplicity : val)
   const targetValue = useMemo(() => unit * amount, [amount, unit])
   const numberInputRef = useRef<HTMLInputElement>(null)
 
+  const handledAmountWithCabinetUnit = useMemo(
+    () => getValueWithCabinetUnit(amount),
+    [amount, isCabinetUnit, multiplicity]
+  )
+
   const increase = () => {
-    setAmount(amount + 1)
+    const newAmount = amount + multiplicity
+
+    setAmount(newAmount)
   }
 
   const reduce = () => {
-    if (amount <= 1) return
+    const newAmount = amount - multiplicity
 
-    setAmount(amount - 1)
+    if (newAmount < 1) return
+
+    setAmount(newAmount)
   }
 
   const setAmountNumberInputWidth = () => {
@@ -57,14 +79,28 @@ const ModuleAmountInput = ({
 
     if (isEmpty || number < 1) return
 
-    setAmount(number)
+    setAmount(number * multiplicity)
   }
 
-  useEffect(() => setAmountNumberInputWidth, [amount])
+  useEffect(() => setAmountNumberInputWidth, [handledAmountWithCabinetUnit])
 
   useEffect(() => {
     setAmountNumberInputWidth()
   }, [])
+
+  useEffect(() => {
+    if (multiplicity <= 1) return
+
+    if (amount < multiplicity) {
+      setAmount(multiplicity)
+      return
+    }
+
+    if (amount % multiplicity) {
+      setAmount(amount + (multiplicity - (amount % multiplicity)))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [multiplicity])
 
   return (
     <div className={cls.moduleAmountInputContainer}>
@@ -73,7 +109,7 @@ const ModuleAmountInput = ({
         <div className={cls.moduleAmountInputSide}>
           <label className={cls.moduleAmountInfo}>
             <input
-              value={amount}
+              value={handledAmountWithCabinetUnit}
               min={1}
               id={id}
               className={cls.moduleAmountInputNumber}
@@ -83,7 +119,7 @@ const ModuleAmountInput = ({
               inputmode="numeric"
               ref={numberInputRef}
             />
-            мод
+            {labelUnit}
           </label>
           <div className={cls.moduleControlButtonsContainer}>
             <button

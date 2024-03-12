@@ -6,6 +6,7 @@ import useFetching from '@/hooks/useFetching'
 import CartResult from '@/components/CartResult'
 import cls from './app.module.scss'
 import { StoreContext } from '@/context'
+import ImplementationTypeSelect from '@/components/ImplementationTypeSelect'
 
 const App = () => {
   const { setProfile, setGalvanization, setPowerUnit, setCorner, setMagnet } =
@@ -57,6 +58,7 @@ const App = () => {
       <form class={cls.form}>
         <ModuleSelect />
         <ScreenSize />
+        <ImplementationTypeSelect />
       </form>
       <CartResult />
     </div>

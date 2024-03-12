@@ -6,7 +6,6 @@ import {
   MagnetItem,
   ModuleItem,
   ModulesListItem,
-  ModuleTypeItem,
   ModuleTypeItemById,
   PowerUnitItem,
   ProfileItem,
@@ -14,6 +13,7 @@ import {
 } from '@/types'
 import { ReactNode, useState } from 'react'
 import { StateUpdater } from 'preact/hooks'
+import { ModuleImplementationType } from '@/enums'
 
 type UseState<S> = [S, StateUpdater<S>]
 
@@ -28,6 +28,7 @@ type States = {
   magnet: UseState<MagnetItem | undefined>
   moduleTypes: UseState<ModuleTypeItemById | undefined>
   receivingCard: UseState<ReceivingItem | undefined | null>
+  implementationType: UseState<ModuleImplementationType>
 
   modulesInWidth: UseState<number>
   modulesInHeight: UseState<number>
@@ -61,6 +62,10 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
   const [moduleTypes, setModuleTypes] = useState<ModuleTypeItemById>()
   const [receivingCard, setReceivingCard] = useState<ReceivingItem | null>()
 
+  const [implementationType, setImplementationType] = useState<ModuleImplementationType>(
+    ModuleImplementationType.Monolithic
+  )
+
   const storeValue: Store = {
     moduleId,
     setModuleId,
@@ -88,6 +93,8 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
     setReceivingCard,
     magnet,
     setMagnet,
+    implementationType,
+    setImplementationType,
   }
 
   return <StoreContext.Provider value={storeValue}>{children}</StoreContext.Provider>
