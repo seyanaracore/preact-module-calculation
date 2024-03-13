@@ -7,7 +7,7 @@ import ScreenService from '@/services/screenService'
 import useIsFullColorModule from '@/hooks/useIsFullColorModule'
 import useCartState from '@/hooks/useCartState'
 import { currencyFormat } from '@/utils'
-import { useFinishedProductPrice } from '@/hooks/useCartPrice'
+import { useCartSummaryPrice, useFinishedProductPrice } from '@/hooks/useCartPrice'
 
 const CartResult = () => {
   const { modulesInHeight, modulesInWidth, moduleInfo, moduleId, setController, setReceivingCard } =
@@ -15,7 +15,8 @@ const CartResult = () => {
 
   const isFullColorModule = useIsFullColorModule()
   const cartState = useCartState()
-  const cartResultPrice = useFinishedProductPrice()
+  const finishedProductPrice = useFinishedProductPrice()
+  const summaryPrice = useCartSummaryPrice()
 
   const { fetching: getController, isError: getControllerIsError } = useFetching(
     async (payload: Parameters<typeof ScreenService.getController>[0]) => {
@@ -84,8 +85,10 @@ const CartResult = () => {
         </tbody>
       </table>
 
-      <p className={cls.summaryPrice}>
-        Стоимость готового изделия: {currencyFormat.format(cartResultPrice)}
+      <p className={cls.summaryPrice}>Сумма: {currencyFormat.format(summaryPrice)}</p>
+
+      <p className={cls.finishedProductPrice}>
+        Стоимость готового изделия: {currencyFormat.format(finishedProductPrice)}
       </p>
     </div>
   )
