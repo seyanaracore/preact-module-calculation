@@ -4,6 +4,8 @@ import getControllerForMonochrome from '@/api/getController/monochromeController
 import { ModuleTypeId } from '@/api/enums'
 import getControllerForFullColor from '@/api/getController/fullColorController'
 
+export type BackControllerItem = Omit<ControllerItem, 'link'>
+
 type GetControllerParams = {
   moduleId: number | string
   modulesInWidth: number
@@ -13,7 +15,7 @@ type GetControllerParams = {
 async function getController({ moduleId, modulesInWidth, modulesInHeight }: GetControllerParams) {
   const targetModuleId = +moduleId
   const module = modules.find((module) => module.id === targetModuleId)
-  let targetController: ControllerItem | undefined
+  let targetController: BackControllerItem | undefined
 
   if (!module) throw new Error(`Target module not found, id ${moduleId}`)
 

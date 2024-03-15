@@ -1,0 +1,66 @@
+/* stylelint-disable at-rule-empty-line-before */
+@use '../variables' as *;
+@import '../functions/media';
+
+@mixin media-up($name, $breakpoints: $breakpoints) {
+  $min: media-min($name, $breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-down($name, $breakpoints: $breakpoints) {
+  $max: media-max($name, $breakpoints);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-between($lower, $upper, $breakpoints: $breakpoints) {
+  $min: media-min($lower, $breakpoints);
+  $max: media-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin media-only($name, $breakpoints: $breakpoints) {
+  $min: media-min($name, $breakpoints);
+  $next: media-next($name, $breakpoints);
+  $max: media-max($next);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-down($next, $breakpoints) {
+      @content;
+    }
+  }
+}

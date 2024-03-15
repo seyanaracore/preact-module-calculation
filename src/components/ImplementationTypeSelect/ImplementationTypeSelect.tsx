@@ -48,14 +48,14 @@ const ImplementationTypeSelect = () => {
   }, [isCabinetImplementation])
 
   return (
-    <label>
+    <label class={commonCls.labelMargin}>
       Тип исполнения
       <br />
-      <div class={cls.moduleSelectContainer}>
+      <div class={[commonCls.selectContainer, commonCls.mediaLgWidth100].join(' ')}>
         <select
           onChange={onChangeImplementationType}
           value={implementationType}
-          class={[cls.moduleSelect, commonCls.formInput].join(' ')}
+          class={[commonCls.select, commonCls.formInput].join(' ')}
         >
           {implementationTypesList.map((implementationTypeItem) => (
             <option

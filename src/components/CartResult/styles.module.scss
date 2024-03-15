@@ -3,10 +3,6 @@
   overflow-x: auto;
 }
 
-.table {
-  min-width: 400px;
-}
-
 .summary-price {
   text-align: right;
   font-weight: 600;
@@ -15,4 +11,40 @@
 .finished-product-price {
   text-align: right;
   font-weight: bold;
+}
+
+.excel-export-btn {
+  width: 200px;
+  background: white;
+  border: 1px solid $red-color;
+  color: $red-color;
+  transition: .2s;
+  padding: 9px;
+  display: flex;
+  justify-content: center;
+
+  & > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &:hover {
+    color: white;
+    background: $red-color;
+    cursor: pointer;
+  }
+}
+
+.table-head {
+  color: white;
+  background: $red-color;
+}
+
+.link {
+  color: black;
+
+  &:visited {
+    color: black;
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/upage/:path(.*)",
+      "destination": "https://ledexpress.ru/upage/:path"
+    }
+  ]
+}

@@ -1,11 +1,22 @@
 .root {
   max-width: 1200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form {
   padding: 1rem;
-  border: 1px solid black;
+  border: 1px solid $red-color;
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: $margin-base;
+
+  @include media-down(lg-x) {
+    flex-direction: column;
+  }
 }
+//
+//.calc-title {
+//  font-size: 28px;
+//  line-height: 46px;
+//  margin-bottom: 4px;
+//}

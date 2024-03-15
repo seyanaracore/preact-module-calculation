@@ -1,0 +1,11 @@
+@use './str-replace' as *;
+
+@function remove-prefix-from-var-name($var, $prefix, $toLower: false) {
+  $var: str-replace($var, $prefix);
+
+  @if  $toLower {
+    @return to-lower-case($var);
+  }
+
+  @return to-lower-case(str-slice($var, 0, 1)) + str-slice($var, 2, str-length($var));
+};

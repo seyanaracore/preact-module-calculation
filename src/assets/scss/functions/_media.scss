@@ -1,0 +1,29 @@
+@function media-max($name, $breakpoints: $breakpoints) {
+  $max: map-get($breakpoints, $name);
+
+  @return if($max and $max > 0, $max - 0.02, null);
+}
+
+@function media-min($name, $breakpoints: $breakpoints) {
+  $min: map-get($breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+@function media-next(
+  $name,
+  $breakpoints: $breakpoints,
+  $breakpoint-names: map-keys($breakpoints)
+) {
+  $n: index($breakpoint-names, $name);
+
+  @if not $n {
+    @error "Брейкпоинт `#{$name}` не найден в `#{$breakpoints}`";
+  }
+
+  @return if(
+    $n < length($breakpoint-names),
+    nth($breakpoint-names, $n + 1),
+    null
+  );
+}

@@ -76,14 +76,14 @@ const ModuleSelect = () => {
     setModuleId(Object.values(groupedModules)[0][0].id.toString())
   }, [groupedModules])
   return (
-    <label>
+    <label class={commonCls.labelMargin}>
       Модуль
       <br />
-      <div class={cls.moduleSelectContainer}>
+      <div class={[commonCls.selectContainer, commonCls.mediaLgWidth100].join(' ')}>
         <select
           onChange={onChangeModuleId}
           value={moduleId}
-          class={[cls.moduleSelect, commonCls.formInput].join(' ')}
+          class={[commonCls.select, commonCls.formInput].join(' ')}
         >
           {!groupedModules ? (
             <option selected>Загрузка</option>

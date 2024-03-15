@@ -1,5 +1,8 @@
 .module-amount-inputs-container {
   gap: 12px;
   display: flex;
-  flex-wrap: wrap;
+
+  @include media-down(lg-x) {
+    flex-direction: column;
+  }
 }

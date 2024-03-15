@@ -13,6 +13,8 @@ import { DBItem } from '@/types/dbItem'
 import { PowerUnitItem } from '@/types'
 import { ModuleManufacturer } from '@/api/enums'
 
+type BackPowerUnit = Omit<PowerUnitItem, 'link'>
+
 const db = {
   modules,
   controllers,
@@ -53,13 +55,13 @@ const fakeBackend = {
 
   getReceivingCards: <T = DBItem[]>() => db.receivingCards as T,
 
-  async getPowerUnit(moduleId: number | string): Promise<PowerUnitItem> {
+  async getPowerUnit(moduleId: number | string): Promise<BackPowerUnit> {
     const targetModuleId = +moduleId
     const targetModule = db.modules.find((moduleItem) => moduleItem.id === targetModuleId)
 
     if (!targetModule) throw new Error('Module not found')
 
-    let powerUnit: PowerUnitItem | undefined
+    let powerUnit: BackPowerUnit | undefined
 
     if (targetModule.proizvoditel === ModuleManufacturer.QIANG_LI) {
       powerUnit = db.powerUnits.find((powerUnit) => powerUnit.id === 2908)

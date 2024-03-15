@@ -8,7 +8,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 220px;
+  box-sizing: border-box;
+  margin-bottom: calc($label-margin / 2);
+
+  @include media-up(lg-x) {
+    width: 220px;
+  }
 }
 
 .module-amount-input-number {
@@ -16,14 +21,13 @@
   margin-right: 2px;
   border: none;
   background: none;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .module-amount-input-side {
   display: flex;
   align-items: center;
-}
-
-.module-amount-formatted {
 }
 
 .modules-amount-inputs-container {
@@ -50,6 +54,7 @@
   justify-content: center;
 
   &:hover {
+    cursor: pointer;
     background: rgb(226 226 226 / 76%);
   }
 }

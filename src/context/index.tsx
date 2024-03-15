@@ -11,6 +11,7 @@ import {
   ProfileItem,
   ReceivingItem,
   CabinetItem,
+  Table,
 } from '@/types'
 import { ReactNode, useState } from 'react'
 import { StateUpdater } from 'preact/hooks'
@@ -31,6 +32,7 @@ type States = {
   receivingCard: UseState<ReceivingItem | undefined | null>
   cabinet: UseState<CabinetItem | undefined | null>
   implementationType: UseState<ModuleImplementationType>
+  table: UseState<Table | null>
 
   modulesInWidth: UseState<number>
   modulesInHeight: UseState<number>
@@ -64,6 +66,7 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
   const [moduleTypes, setModuleTypes] = useState<ModuleTypeItemById>()
   const [receivingCard, setReceivingCard] = useState<ReceivingItem | null>()
   const [cabinet, setCabinet] = useState<CabinetItem | null>()
+  const [table, setTable] = useState<Table | null>(null)
 
   const [implementationType, setImplementationType] = useState<ModuleImplementationType>(
     ModuleImplementationType.Monolithic
@@ -100,6 +103,8 @@ export const StoreProvider = ({ children }: { children: ReactNode }) => {
     setImplementationType,
     cabinet,
     setCabinet,
+    table,
+    setTable,
   }
 
   return <StoreContext.Provider value={storeValue}>{children}</StoreContext.Provider>

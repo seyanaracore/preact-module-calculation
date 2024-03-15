@@ -9,3 +9,10 @@ export const ModuleLabelUnit: Record<ModuleImplementationType, string> = {
 export const CabinetImplementationsList = [ModuleImplementationType.Cabinet640x640]
 /** Типы полноцветных модулей */
 export const FullColorModulesTypesList = [ModuleTypeId.outdoor, ModuleTypeId.interior]
+export const dataTableBaseConfig = {
+  searching: false,
+  search: false,
+  paging: false,
+  ordering: false,
+  info: false,
+}

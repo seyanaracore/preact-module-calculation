@@ -1,10 +1,30 @@
 import { fileURLToPath, URL } from 'url'
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig } from 'vite'
 import preact from '@preact/preset-vite'
+import { viteExternalsPlugin } from 'vite-plugin-externals'
 
 // https://vitejs.dev/config/
+
+const isBuild = !!(process.env.NODE_ENV === 'production' && process.env.lib)
+
 export default defineConfig({
-  plugins: [preact()],
+  plugins: [
+    preact(),
+    viteExternalsPlugin({
+      jquery: 'jQuery',
+    }),
+  ],
+  server: {
+    cors: false,
+    proxy: {
+      // with options: http://localhost:5173/api/bar-> http://jsonplaceholder.typicode.com/bar
+      '/upage': {
+        secure: false,
+        target: 'https://ledexpress.ru',
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: [{ find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) }],
   },
@@ -12,8 +32,16 @@ export default defineConfig({
     modules: {
       localsConvention: 'camelCase',
     },
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "@/assets/scss/_variables.scss" as *;
+          @use "@/assets/scss/mixins" as *;
+        `,
+      },
+    },
   },
-  build: process.env.lib
+  build: isBuild
     ? {
         target: 'es6',
         lib: {

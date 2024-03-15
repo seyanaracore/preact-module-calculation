@@ -1,5 +1,5 @@
 import cls from './styles.module.scss'
-import { ChangeEvent, useEffect, useMemo, useRef } from 'react'
+import { ChangeEvent, useEffect, useId, useMemo, useRef } from 'react'
 import commonCls from '@/assets/scss/common.module.scss'
 import { ModuleLabelUnit } from '@/consts'
 import { ModuleImplementationType } from '@/enums'
@@ -25,7 +25,7 @@ const ModuleAmountInput = ({
   implementationType: ModuleImplementationType
   multiplicity?: number
 }) => {
-  const id = `module-calc-input-${label}`
+  const id = useId()
   const isCabinetImplementation = useIsCabinetImplementation()
 
   /**
@@ -123,7 +123,11 @@ const ModuleAmountInput = ({
 
   return (
     <div className={cls.moduleAmountInputContainer}>
-      <div className={[cls.moduleAmountInput, commonCls.formInput].join(' ')}>
+      <div
+        className={[cls.moduleAmountInput, commonCls.formInput, commonCls.mediaLgWidth100].join(
+          ' '
+        )}
+      >
         <span className={cls.moduleAmountFormatted}>{format(targetValue)}</span>
         <div className={cls.moduleAmountInputSide}>
           <label className={cls.moduleAmountInfo}>

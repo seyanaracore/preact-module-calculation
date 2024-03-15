@@ -45,84 +45,95 @@ export const useCartState = () => {
   const totalGalvanizationPrice = useGalvanizationTotalPrice()
   const isCabinetImplementation = useIsCabinetImplementation()
 
-  return useMemo<Array<ICartItem | undefined>>(() => {
+  return useMemo<ICartItem[]>(() => {
     const totalModulePrice = !moduleInfo ? 0 : moduleInfo.price * modulesTotalAmount
     const totalPowerUnitPrice = !powerUnit ? 0 : powerUnitsAmount * powerUnit.price
 
-    const moduleState = !moduleInfo
+    const moduleState: ICartItem = !moduleInfo
       ? getLoadingState('Модуль')
       : {
           title: moduleInfo.name,
-          name: moduleInfo.name,
+          link: moduleInfo.link,
           amount: modulesTotalAmount,
+          id: moduleInfo.id,
           unit: 'шт.',
           price: moduleInfo.price,
           totalPrice: totalModulePrice,
         }
 
-    const powerUnitState = !powerUnit
+    const powerUnitState: ICartItem = !powerUnit
       ? getLoadingState('Бл. пит.')
       : {
-          title: `Бл. пит. ${powerUnit.name || ''}`,
-          name: powerUnit.name || '',
+          title: powerUnit.name,
+          link: powerUnit.link,
+          id: powerUnit.id,
           amount: powerUnitsAmount,
           unit: 'шт.',
-          price: powerUnit.price || '',
+          price: powerUnit.price,
           totalPrice: totalPowerUnitPrice,
         }
 
-    const controllerState = !controller
+    const controllerState: ICartItem = !controller
       ? getLoadingState('Контроллер')
       : {
           title: `Контроллер ${controller.name}`,
-          name: controller.name,
           price: controller.price,
+          link: controller.link,
           unit: 'шт.',
+          id: controller.id,
           amount: 1,
           totalPrice: controller.price,
         }
 
-    const profileState = !profile
+    const profileState: ICartItem = !profile
       ? getLoadingState('Профиль')
       : {
           title: profile.name,
-          name: profile.name,
+          link: profile.link,
+          id: profile.id,
           unit: 'мм.',
           amount: profileAmount,
+          price: profile.price,
           totalPrice: totalProfilePrice,
         }
 
-    const galvanizationState = !galvanization
+    const galvanizationState: ICartItem = !galvanization
       ? getLoadingState('Оцинковка')
       : {
           title: galvanization.name,
-          name: galvanization.name,
+          link: galvanization.link,
+          id: galvanization.id,
           unit: 'мм.',
           amount: galvanizationAmount,
+          price: galvanization.price,
           totalPrice: totalGalvanizationPrice,
         }
 
-    const cornerState = !corner
+    const cornerState: ICartItem = !corner
       ? getLoadingState('Уголок')
       : {
           title: corner.name,
-          name: corner.name,
+          link: corner.link,
+          price: corner.price,
+          id: corner.id,
           unit: 'шт.',
           amount: 4,
           totalPrice: 4 * corner.price,
         }
 
-    const magnetState = !magnet
+    const magnetState: ICartItem = !magnet
       ? getLoadingState('Магнит')
       : {
           title: magnet.name,
-          name: magnet.name,
+          link: magnet.link,
+          id: magnet.id,
+          price: magnet.price,
           unit: 'шт.',
           amount: magnetsAmount,
           totalPrice: magnetsAmount * magnet.price,
         }
 
-    const receivingCardState =
+    const receivingCardState: ICartItem | undefined =
       receivingCard === null
         ? getLoadingState('Принимающая карта')
         : !receivingCard
@@ -130,17 +141,23 @@ export const useCartState = () => {
           : {
               title: `Принимающая карта ${receivingCard.name}`,
               unit: 'шт.',
+              id: receivingCard.id,
+              link: receivingCard.link,
+              price: receivingCard.price,
               amount: receivingCardAmount,
               totalPrice: receivingCard.price * receivingCardAmount,
             }
 
-    const cabinetState =
+    const cabinetState: ICartItem | undefined =
       cabinet === null
         ? getLoadingState('Кабинет')
         : !cabinet
           ? undefined
           : {
               title: cabinet.name,
+              price: cabinet.price,
+              link: cabinet.link,
+              id: cabinet.id,
               unit: 'шт.',
               amount: cabinetsAmount,
               totalPrice: cabinet.price * cabinetsAmount,
@@ -150,17 +167,23 @@ export const useCartState = () => {
       moduleState,
       powerUnitState,
       controllerState,
+      receivingCardState,
       profileState,
       galvanizationState,
       cornerState,
       magnetState,
-      receivingCardState,
     ]
 
     if (isCabinetImplementation)
-      return [moduleState, powerUnitState, controllerState, cabinetState, receivingCardState]
+      return [
+        moduleState,
+        powerUnitState,
+        controllerState,
+        receivingCardState,
+        cabinetState,
+      ].filter(Boolean)
 
-    return monolithicImplementationCartState
+    return monolithicImplementationCartState.filter(Boolean)
   }, [
     moduleInfo,
     modulesTotalAmount,

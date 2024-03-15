@@ -18,40 +18,28 @@ const App = () => {
     setProfile(res)
   })
 
-  const { fetching: getGalvanization, isLoading: getGalvanizationIsLoading } = useFetching(
-    async () => {
-      const res = await ScreenService.getGalvanization()
+  const { fetching: getGalvanization } = useFetching(async () => {
+    const res = await ScreenService.getGalvanization()
 
-      setGalvanization(res)
-    }
-  )
+    setGalvanization(res)
+  })
 
-  const { fetching: getCorner, isLoading: getCornerIsLoading } = useFetching(async () => {
+  const { fetching: getCorner } = useFetching(async () => {
     const res = await ScreenService.getCorner()
 
     setCorner(res)
   })
 
-  const { fetching: getMagnet, isLoading: getMagnetIsLoading } = useFetching(async () => {
+  const { fetching: getMagnet } = useFetching(async () => {
     const res = await ScreenService.getMagnet()
 
     setMagnet(res)
   })
 
-  const isLoading = useMemo(
-    () =>
-      [getProfileIsLoading, getGalvanizationIsLoading, getCornerIsLoading, getMagnetIsLoading].some(
-        Boolean
-      ),
-    [getProfileIsLoading, getGalvanizationIsLoading, getCornerIsLoading, getMagnetIsLoading]
-  )
-
   useEffect(() => {
     Promise.allSettled([getProfile(), getGalvanization(), getCorner(), getMagnet()])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  if (isLoading) return <div>Загрузка...</div>
 
   return (
     <div class={cls.root}>
