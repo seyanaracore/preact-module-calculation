@@ -1,12 +1,12 @@
-import { useContext, useMemo } from 'react'
-import { StoreContext } from '@/context'
+import { useMemo } from 'react'
 import { FullColorModulesTypesList } from '@/consts'
+import { useQueryModuleInfo } from '@/query'
 
 /**
  * Текущий модуль - полноцветный
  */
 const useIsFullColorModule = () => {
-  const { moduleInfo } = useContext(StoreContext)
+  const { data: moduleInfo } = useQueryModuleInfo()
 
   return useMemo(
     () => (!moduleInfo ? false : FullColorModulesTypesList.includes(moduleInfo?.typeId)),

@@ -14,6 +14,17 @@ import {
 import useProfileTotalPrice from '@/hooks/useProfileTotalPrice'
 import useGalvanizationTotalPrice from '@/hooks/useGalvanizationTotalPrice'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
+import {
+  useQueryCabinet,
+  useQueryController,
+  useQueryCorner,
+  useQueryGalvanization,
+  useQueryMagnet,
+  useQueryModuleInfo,
+  useQueryPowerUnit,
+  useQueryProfile,
+  useQueryReceivingCart,
+} from '@/query'
 
 const getLoadingState = (title: string) => ({
   title,
@@ -21,18 +32,15 @@ const getLoadingState = (title: string) => ({
 })
 
 export const useCartState = () => {
-  const {
-    moduleInfo,
-    powerUnit,
-    corner,
-    controller,
-    receivingCard,
-    profile,
-    galvanization,
-    magnet,
-    cabinet,
-  } = useContext(StoreContext)
-
+  const { data: moduleInfo } = useQueryModuleInfo()
+  const { data: powerUnit } = useQueryPowerUnit()
+  const { data: corner } = useQueryCorner()
+  const { data: controller } = useQueryController()
+  const { data: receivingCard } = useQueryReceivingCart()
+  const { data: profile } = useQueryProfile()
+  const { data: galvanization } = useQueryGalvanization()
+  const { data: magnet } = useQueryMagnet()
+  const { data: cabinet } = useQueryCabinet()
   const modulesTotalAmount = useModulesTotalAmount()
   const totalConsumption = useTotalConsumption()
   const profileAmount = useProfileAmount()

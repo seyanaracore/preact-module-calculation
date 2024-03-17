@@ -7,17 +7,18 @@ import {
   useWidthModuleMultiplicity,
 } from '@/hooks/useCabinetMultiplicity'
 import commonCls from '@/assets/scss/common.module.scss'
+import { useQueryModuleInfo } from '@/query'
 
 const ScreenSize = () => {
   const {
     modulesInHeight,
     modulesInWidth,
-    moduleInfo,
     setModulesInHeight,
     setModulesInWidth,
     implementationType,
   } = useContext(StoreContext)
 
+  const { data: moduleInfo } = useQueryModuleInfo()
   const widthAmountInputMultiplicity = useWidthModuleMultiplicity()
   const heightAmountInputMultiplicity = useHeightModuleMultiplicity()
 

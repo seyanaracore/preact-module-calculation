@@ -1,14 +1,14 @@
 import { useProfileAmount } from '@/hooks/useAmounts'
-import { useContext, useMemo } from 'react'
-import { StoreContext } from '@/context'
+import { useMemo } from 'react'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
+import { useQueryProfile } from '@/query'
 
 // мм
 const profileUnitLen = 5800
 
 // Суммарная стоимость профиля
 const useProfileTotalPrice = () => {
-  const { profile } = useContext(StoreContext)
+  const { data: profile } = useQueryProfile()
   // кол-во мм
   const profileAmount = useProfileAmount()
 

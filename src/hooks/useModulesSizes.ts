@@ -1,8 +1,10 @@
 import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
+import { useQueryModuleInfo } from '@/query'
 
 const useModulesSizes = () => {
-  const { moduleInfo, modulesInWidth, modulesInHeight } = useContext(StoreContext)
+  const { data: moduleInfo } = useQueryModuleInfo()
+  const { modulesInWidth, modulesInHeight } = useContext(StoreContext)
 
   /**
    * Суммарная ширина модулей

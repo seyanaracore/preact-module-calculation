@@ -15,26 +15,9 @@ import {
 } from '@/types'
 import getLedsAmount from '@/helpers/getLedsAmount'
 import getModuleSizesFields from '@/helpers/getModuleSizesFields'
-import { ModuleTypeId } from '@/api/enums'
 import ky from 'ky'
 import UPageI from '@/types/upage'
 
-// const delay = 0
-
-// const api = Object.fromEntries(
-//   Object.entries(fakeBackend).map(([k, v]) => {
-//     return [
-//       k,
-//       (...args: any[]) =>
-//         new Promise((res) => {
-//           setTimeout(async () => {
-//             // @ts-ignore
-//             res(await v(...args))
-//           }, delay)
-//         }),
-//     ]
-//   })
-// ) as unknown as typeof fakeBackend
 const api = fakeBackend
 const isBuild = !!(process.env.NODE_ENV === 'production' && process.env.lib)
 
@@ -57,7 +40,7 @@ const getActualPriceAndLink = async (id: number | string) => {
   }
 }
 
-const screenService = {
+const ScreenService = {
   getModulesList(): Promise<ModulesListItem[]> {
     return api.getModulesList()
   },
@@ -191,4 +174,4 @@ const screenService = {
   },
 }
 
-export default screenService
+export default ScreenService

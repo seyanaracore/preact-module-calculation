@@ -6,6 +6,7 @@ import {
   useHeightModuleMultiplicity,
   useWidthModuleMultiplicity,
 } from '@/hooks/useCabinetMultiplicity'
+import { useQueryModuleInfo } from '@/query'
 
 export { default as useReceivingCardAmount } from './useReceivingCardAmount'
 export { default as usePowerUnitAmount } from './usePowerUnitAmount'
@@ -24,7 +25,7 @@ export const useModulesTotalAmount = () => {
  */
 export const useTotalConsumption = () => {
   const modulesTotalAmount = useModulesTotalAmount()
-  const { moduleInfo } = useContext(StoreContext)
+  const { data: moduleInfo } = useQueryModuleInfo()
 
   return useMemo(
     () => (!moduleInfo ? 0 : moduleInfo.consumption * modulesTotalAmount),

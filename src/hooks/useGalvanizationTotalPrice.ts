@@ -2,6 +2,7 @@ import { useGalvanizationAmount } from '@/hooks/useAmounts'
 import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
+import { useQueryGalvanization } from '@/query'
 
 // мм
 const galvanizationUnitLen = 3000
@@ -10,7 +11,7 @@ const galvanizationUnitLen = 3000
  * Суммарная стоимость оцинковки
  */
 const useGalvanizationTotalPrice = () => {
-  const { galvanization } = useContext(StoreContext)
+  const { data: galvanization } = useQueryGalvanization()
   // кол-во мм
   const galvanizationAmount = useGalvanizationAmount()
 

@@ -3,10 +3,13 @@ import { StoreContext } from '@/context'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 import { useCabinetsAmount } from '@/hooks/useAmounts'
+import { useQueryModuleInfo, useQueryReceivingCart } from '@/query'
 
 // Количество принимающих карта
 const useReceivingCardAmount = () => {
-  const { moduleInfo, modulesInHeight, modulesInWidth, receivingCard } = useContext(StoreContext)
+  const { data: receivingCard } = useQueryReceivingCart()
+  const { data: moduleInfo } = useQueryModuleInfo()
+  const { modulesInHeight, modulesInWidth } = useContext(StoreContext)
   const isCabinetImplementation = useIsCabinetImplementation()
   const cabinetsAmount = useCabinetsAmount()
 

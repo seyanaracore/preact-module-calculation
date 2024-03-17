@@ -1,25 +1,12 @@
 import { ChangeEvent, useContext, useEffect } from 'react'
-import cls from './styles.module.scss'
 import commonCls from '@/assets/scss/common.module.scss'
 import { StoreContext } from '@/context'
 import { ModuleImplementationType } from '@/enums'
 import useModuleImplementationTypes from '@/hooks/useModuleImplementationTypes'
-import useFetching from '@/hooks/useFetching'
-import ScreenService from '@/services/screenService'
-import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 
 const ImplementationTypeSelect = () => {
-  const { implementationType, setImplementationType, cabinet, setCabinet } =
-    useContext(StoreContext)
-
+  const { implementationType, setImplementationType } = useContext(StoreContext)
   const moduleImplementationTypes = useModuleImplementationTypes()
-  const isCabinetImplementation = useIsCabinetImplementation()
-
-  const { fetching: getCabinet } = useFetching(async () => {
-    const res = await ScreenService.getCabinet()
-
-    setCabinet(res)
-  })
 
   const implementationTypesList = [
     {
@@ -41,11 +28,6 @@ const ImplementationTypeSelect = () => {
       setImplementationType(ModuleImplementationType.Monolithic)
     }
   }, [moduleImplementationTypes, implementationType])
-
-  useEffect(() => {
-    if (isCabinetImplementation) getCabinet()
-    else setCabinet(null)
-  }, [isCabinetImplementation])
 
   return (
     <label class={commonCls.labelMargin}>
