@@ -25,7 +25,14 @@ const useReceivingCardAmount = () => {
       ((moduleInfo.ledsInHeight * modulesInHeight) / 256) *
         ((moduleInfo.ledsInWidth * modulesInWidth) / 256)
     )
-  }, [moduleInfo, modulesInHeight, modulesInWidth, receivingCard])
+  }, [
+    cabinetsAmount,
+    isCabinetImplementation,
+    moduleInfo,
+    modulesInHeight,
+    modulesInWidth,
+    receivingCard,
+  ])
 }
 
 export default useReceivingCardAmount
