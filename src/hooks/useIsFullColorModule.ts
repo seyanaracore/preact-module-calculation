@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { FullColorModulesTypesList } from '@/consts'
+import { fullColorModulesTypesList } from '@/consts'
 import { useQueryModuleInfo } from '@/query'
 
 /**
@@ -9,7 +9,7 @@ const useIsFullColorModule = () => {
   const { data: moduleInfo } = useQueryModuleInfo()
 
   return useMemo(
-    () => (!moduleInfo ? false : FullColorModulesTypesList.includes(moduleInfo?.typeId)),
+    () => (!moduleInfo ? false : fullColorModulesTypesList.includes(moduleInfo?.typeId)),
     [moduleInfo]
   )
 }

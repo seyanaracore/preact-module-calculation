@@ -6,9 +6,9 @@ export const ModuleLabelUnit: Record<ModuleImplementationType, string> = {
   [ModuleImplementationType.Monolithic]: 'мод',
 }
 
-export const CabinetImplementationsList = [ModuleImplementationType.Cabinet640x640]
+export const cabinetImplementationsList = [ModuleImplementationType.Cabinet640x640]
 /** Типы полноцветных модулей */
-export const FullColorModulesTypesList = [ModuleTypeId.outdoor, ModuleTypeId.interior]
+export const fullColorModulesTypesList = [ModuleTypeId.outdoor, ModuleTypeId.interior]
 export const dataTableBaseConfig = {
   searching: false,
   search: false,
