@@ -18,7 +18,7 @@ const ScreenSize = () => {
     implementationType,
   } = useContext(StoreContext)
 
-  const { data: moduleInfo } = useQueryModuleInfo()
+  const { data: moduleInfo, isLoading } = useQueryModuleInfo()
   const widthAmountInputMultiplicity = useWidthModuleMultiplicity()
   const heightAmountInputMultiplicity = useHeightModuleMultiplicity()
 
@@ -26,28 +26,26 @@ const ScreenSize = () => {
     <div class={commonCls.labelMargin}>
       Размер экрана
       <br />
-      {!moduleInfo ? (
-        <div class={cls.moduleAmountInputsContainer}>Загрузка...</div>
-      ) : (
-        <div class={cls.moduleAmountInputsContainer}>
-          <ModuleAmountInput
-            unit={moduleInfo.width}
-            label="Ширина"
-            setAmount={setModulesInWidth}
-            multiplicity={widthAmountInputMultiplicity}
-            amount={modulesInWidth}
-            implementationType={implementationType}
-          />
-          <ModuleAmountInput
-            unit={moduleInfo.height}
-            label="Высота"
-            setAmount={setModulesInHeight}
-            multiplicity={heightAmountInputMultiplicity}
-            amount={modulesInHeight}
-            implementationType={implementationType}
-          />
-        </div>
-      )}
+      <div class={cls.moduleAmountInputsContainer}>
+        <ModuleAmountInput
+          unit={moduleInfo?.width}
+          label="Ширина"
+          setAmount={setModulesInWidth}
+          multiplicity={widthAmountInputMultiplicity}
+          amount={modulesInWidth}
+          implementationType={implementationType}
+          isLoading={isLoading}
+        />
+        <ModuleAmountInput
+          unit={moduleInfo?.height}
+          label="Высота"
+          setAmount={setModulesInHeight}
+          multiplicity={heightAmountInputMultiplicity}
+          amount={modulesInHeight}
+          implementationType={implementationType}
+          isLoading={isLoading}
+        />
+      </div>
     </div>
   )
 }

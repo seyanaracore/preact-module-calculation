@@ -11,6 +11,7 @@
 		"filter-db": "ts-node-esm filter-by-module-ids.ts"
 	},
 	"dependencies": {
+		"clsx": "^2.1.0",
 		"datatables.net-buttons-dt": "^3.0.1",
 		"datatables.net-dt": "^2.0.2",
 		"jquery": "3.5.1",

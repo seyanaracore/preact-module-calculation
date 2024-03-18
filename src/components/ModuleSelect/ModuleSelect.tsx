@@ -5,6 +5,7 @@ import groupBy from 'lodash-es/groupBy'
 import { ModuleTypeId } from '@/api/enums'
 import { ModulesListItem } from '@/types'
 import { useQueryModulesList, useQueryModuleTypes } from '@/query'
+import clsx from 'clsx'
 
 type GroupedModules = Record<ModuleTypeId, ModulesListItem[]>
 
@@ -12,6 +13,8 @@ const ModuleSelect = () => {
   const { moduleId, setModuleId } = useContext(StoreContext)
   const { data: modulesList } = useQueryModulesList()
   const { data: moduleTypes } = useQueryModuleTypes()
+  const containerClasses = clsx([commonCls.selectContainer, commonCls.mediaLgWidth100])
+  const selectClasses = clsx([commonCls.select, commonCls.formInput])
 
   const groupedModules = useMemo<GroupedModules | null>(() => {
     if (!modulesList?.length || !moduleTypes) return null
@@ -33,11 +36,11 @@ const ModuleSelect = () => {
     <label class={commonCls.labelMargin}>
       Модуль
       <br />
-      <div class={[commonCls.selectContainer, commonCls.mediaLgWidth100].join(' ')}>
+      <div class={containerClasses}>
         <select
           onChange={onChangeModuleId}
           value={moduleId}
-          class={[commonCls.select, commonCls.formInput].join(' ')}
+          class={selectClasses}
         >
           {!groupedModules ? (
             <option selected>Загрузка</option>

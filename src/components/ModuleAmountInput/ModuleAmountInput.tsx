@@ -4,6 +4,7 @@ import commonCls from '@/assets/scss/common.module.scss'
 import { ModuleLabelUnit } from '@/consts'
 import { ModuleImplementationType } from '@/enums'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
+import clsx from 'clsx'
 
 const getSize = (mmSize: number) => mmSize / 1000
 
@@ -17,16 +18,24 @@ const ModuleAmountInput = ({
   label,
   implementationType,
   multiplicity = 1,
+  isLoading,
 }: {
-  unit: number
+  unit?: number
   label: string
   setAmount: (value: number) => void
   amount: number
   implementationType: ModuleImplementationType
   multiplicity?: number
+  isLoading?: boolean
 }) => {
   const id = useId()
   const isCabinetImplementation = useIsCabinetImplementation()
+
+  const containerClasses = clsx([
+    cls.moduleAmountInput,
+    commonCls.formInput,
+    commonCls.mediaLgWidth100,
+  ])
 
   /**
    * заголовок в чём считается
@@ -41,7 +50,7 @@ const ModuleAmountInput = ({
    *
    * unit * module amounts = 360 * 2 = 740
    */
-  const targetValue = useMemo(() => unit * amount, [amount, unit])
+  const targetValue = useMemo(() => (unit || 1) * amount, [amount, unit])
   const numberInputRef = useRef<HTMLInputElement>(null)
 
   /**
@@ -99,7 +108,7 @@ const ModuleAmountInput = ({
 
   useEffect(() => {
     setAmountNumberInputWidth()
-  }, [])
+  }, [isLoading])
 
   /**
    * Обработчик изменения кратности
@@ -121,27 +130,34 @@ const ModuleAmountInput = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [multiplicity])
 
+  if (isLoading) {
+    return (
+      <div className={cls.moduleAmountInputContainer}>
+        <div className={containerClasses}>Загрузка...</div>
+      </div>
+    )
+  }
+
   return (
     <div className={cls.moduleAmountInputContainer}>
-      <div
-        className={[cls.moduleAmountInput, commonCls.formInput, commonCls.mediaLgWidth100].join(
-          ' '
-        )}
-      >
+      <div className={containerClasses}>
         <span className={cls.moduleAmountFormatted}>{format(targetValue)}</span>
         <div className={cls.moduleAmountInputSide}>
-          <label className={cls.moduleAmountInfo}>
-            <input
-              value={amountWithImplementationType}
-              min={1}
-              id={id}
-              className={cls.moduleAmountInputNumber}
-              onBlur={updateInputAmount}
-              onChange={onChangeInputAmount}
-              type="text"
-              inputmode="numeric"
-              ref={numberInputRef}
-            />
+          <input
+            value={amountWithImplementationType}
+            min={1}
+            id={id}
+            className={cls.moduleAmountInputNumber}
+            onBlur={updateInputAmount}
+            onChange={onChangeInputAmount}
+            type="text"
+            inputMode="numeric"
+            ref={numberInputRef}
+          />
+          <label
+            className={cls.moduleAmountInfo}
+            for={id}
+          >
             {labelUnit}
           </label>
           <div className={cls.moduleControlButtonsContainer}>

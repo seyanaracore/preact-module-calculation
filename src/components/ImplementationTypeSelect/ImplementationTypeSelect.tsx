@@ -3,10 +3,13 @@ import commonCls from '@/assets/scss/common.module.scss'
 import { StoreContext } from '@/context'
 import { ModuleImplementationType } from '@/enums'
 import useModuleImplementationTypes from '@/hooks/useModuleImplementationTypes'
+import clsx from 'clsx'
 
 const ImplementationTypeSelect = () => {
   const { implementationType, setImplementationType } = useContext(StoreContext)
   const moduleImplementationTypes = useModuleImplementationTypes()
+  const containerClasses = clsx([commonCls.selectContainer, commonCls.mediaLgWidth100])
+  const selectClasses = clsx([commonCls.select, commonCls.formInput])
 
   const implementationTypesList = [
     {
@@ -33,11 +36,11 @@ const ImplementationTypeSelect = () => {
     <label class={commonCls.labelMargin}>
       Тип исполнения
       <br />
-      <div class={[commonCls.selectContainer, commonCls.mediaLgWidth100].join(' ')}>
+      <div class={containerClasses}>
         <select
           onChange={onChangeImplementationType}
           value={implementationType}
-          class={[commonCls.select, commonCls.formInput].join(' ')}
+          class={selectClasses}
         >
           {implementationTypesList.map((implementationTypeItem) => (
             <option
