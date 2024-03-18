@@ -2,10 +2,19 @@ import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
 import useModulesSizes from '@/hooks/useModulesSizes'
 import { useQueryModuleInfo } from '@/query'
-import useSummaryResolution from '@/hooks/useSummaryResolution'
-import { useTotalConsumption } from '@/hooks/useAmounts'
+import {
+  useSummaryResolution,
+  useHeightResolution,
+  useWidthResolution,
+} from '@/hooks/useResolution'
+import {
+  useCabinetsInHeightAmount,
+  useCabinetsInWidthAmount,
+  useTotalConsumption,
+} from '@/hooks/useAmounts'
 import cls from '../styles.module.scss'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
+import ProductCharacteristicItem from '@/components/CalculatorTable/ProductCharacteristicTable/ProductCharacteristicItem'
 
 const increaseSummarySize = 50
 
@@ -14,74 +23,86 @@ const ProductCharacteristicTable = () => {
   const { modulesInWidth, modulesInHeight } = useContext(StoreContext)
   const { modulesSummaryWidth, modulesSummaryHeight } = useModulesSizes()
   const summaryResolution = useSummaryResolution()
+  const widthResolution = useWidthResolution()
+  const heightResolution = useHeightResolution()
   const totalConsumption = useTotalConsumption()
   const isCabinetImplementation = useIsCabinetImplementation()
+  const cabinetsInWidthAmount = useCabinetsInWidthAmount()
+  const cabinetsInHeightAmount = useCabinetsInHeightAmount()
+  const headersList = ['Характеристика', '', '', 'Значение']
 
   const productSizes = useMemo(() => {
     if (isCabinetImplementation) return [modulesSummaryWidth, modulesSummaryHeight]
     return [modulesSummaryWidth + increaseSummarySize, modulesSummaryHeight + increaseSummarySize]
   }, [isCabinetImplementation, modulesSummaryHeight, modulesSummaryWidth])
 
+  // При изменении кол-ва элементов поправить выгрузку экселя
+  const characteristicsList = useMemo(() => {
+    const firstItem = isCabinetImplementation
+      ? {
+          label: 'Количество кабинетов (в ширину × в высоту), шт:',
+          value: `${cabinetsInWidthAmount}x${cabinetsInHeightAmount}`,
+        }
+      : {
+          label: 'Количество модулей (в ширину × в высоту), шт:',
+          value: `${modulesInWidth}x${modulesInHeight}`,
+        }
+
+    return [
+      firstItem,
+      {
+        label: 'Разрешение одного модуля, пикс:',
+        value: `${moduleInfo?.ledsInWidth} x ${moduleInfo?.ledsInHeight}`,
+      },
+      {
+        label: 'Общее разрешение экрана, пикс:',
+        value: `${widthResolution} x ${heightResolution}`,
+      },
+      {
+        label: 'Количество пикселей:',
+        value: summaryResolution,
+      },
+      {
+        label: 'Потребляемая мощность:',
+        value: totalConsumption,
+      },
+      {
+        label: 'Размер конструкции, мм:',
+        value: `${productSizes[0]} x ${productSizes[1]}`,
+      },
+    ]
+  }, [
+    isCabinetImplementation,
+    cabinetsInWidthAmount,
+    cabinetsInHeightAmount,
+    modulesInWidth,
+    modulesInHeight,
+    moduleInfo?.ledsInWidth,
+    moduleInfo?.ledsInHeight,
+    summaryResolution,
+    totalConsumption,
+    productSizes,
+  ])
+
   return (
     <>
       <tr>
-        <td
-          scope="col"
-          className={cls.tableHead}
-        >
-          Характеристика
-        </td>
-        <td
-          scope="col"
-          className={cls.tableHead}
+        {headersList.map((headerItem, idx) => (
+          <td
+            scope="col"
+            key={idx}
+            className={cls.tableHead}
+          >
+            {headerItem}
+          </td>
+        ))}
+      </tr>
+      {characteristicsList.map((characteristicItem, idx) => (
+        <ProductCharacteristicItem
+          key={idx}
+          {...characteristicItem}
         />
-        <td
-          scope="col"
-          className={cls.tableHead}
-        />
-        <td
-          scope="col"
-          className={cls.tableHead}
-        >
-          Значение
-        </td>
-      </tr>
-      <tr>
-        <td>Количество модулей (в ширину × в высоту), шт:</td>
-        <td />
-        <td />
-        <td>
-          {modulesInWidth}x{modulesInHeight}
-        </td>
-      </tr>
-      <tr>
-        <td>Размер конструкции, мм:</td>
-        <td />
-        <td />
-        <td>
-          {productSizes[0]} x {productSizes[1]}
-        </td>
-      </tr>
-      <tr>
-        <td>Разрешение экрана, пикс:</td>
-        <td />
-        <td />
-        <td>
-          {moduleInfo?.ledsInWidth} x {moduleInfo?.ledsInHeight}
-        </td>
-      </tr>
-      <tr>
-        <td>Количество пискелей:</td>
-        <td />
-        <td />
-        <td>{summaryResolution}</td>
-      </tr>
-      <tr>
-        <td>Потребляемая мощность:</td>
-        <td />
-        <td />
-        <td>{totalConsumption}</td>
-      </tr>
+      ))}
     </>
   )
 }

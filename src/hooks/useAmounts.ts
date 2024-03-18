@@ -68,17 +68,37 @@ export const useGalvanizationAmount = () => {
 }
 
 /**
- * Количество кабинетов
+ * Количество кабинетов в ширину
  */
-export const useCabinetsAmount = () => {
-  const { modulesInWidth, modulesInHeight } = useContext(StoreContext)
+export const useCabinetsInWidthAmount = () => {
+  const { modulesInWidth } = useContext(StoreContext)
   const widthAmountInputMultiplicity = useWidthModuleMultiplicity()
+
+  return useMemo(
+    () => modulesInWidth / widthAmountInputMultiplicity,
+    [modulesInWidth, widthAmountInputMultiplicity]
+  )
+}
+
+/**
+ * Количество кабинетов в высоту
+ */
+export const useCabinetsInHeightAmount = () => {
+  const { modulesInHeight } = useContext(StoreContext)
   const heightAmountInputMultiplicity = useHeightModuleMultiplicity()
 
   return useMemo(
-    () =>
-      (modulesInWidth / widthAmountInputMultiplicity) *
-      (modulesInHeight / heightAmountInputMultiplicity),
-    [modulesInWidth, modulesInHeight, widthAmountInputMultiplicity, heightAmountInputMultiplicity]
+    () => modulesInHeight / heightAmountInputMultiplicity,
+    [modulesInHeight, heightAmountInputMultiplicity]
   )
+}
+
+/**
+ * Количество кабинетов
+ */
+export const useCabinetsAmount = () => {
+  const cabinetsInWidth = useCabinetsInWidthAmount()
+  const cabinetsInHeight = useCabinetsInHeightAmount()
+
+  return useMemo(() => cabinetsInWidth * cabinetsInHeight, [cabinetsInHeight, cabinetsInWidth])
 }

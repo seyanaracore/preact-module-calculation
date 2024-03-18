@@ -62,7 +62,8 @@ export const realExcelExportButton = {
     const sheet = xlsx.xl.worksheets['sheet1.xml']
     const mergeCells = window.$('mergeCells', sheet)
 
-    mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A9:D9' } }))
+    // Номер строки зависит от кол-ва значений в характеристике продукта
+    mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A10:D10' } }))
     mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A2:D2' } }))
 
     window.$('c[r=A1] t', sheet).text(excelExportCalcTitle)
