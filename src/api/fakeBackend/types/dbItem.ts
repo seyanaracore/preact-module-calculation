@@ -2,7 +2,9 @@
 type EmptyField = string
 type OptionalIntField = number | EmptyField
 
-export type DBItem = {
+export default DBItem
+
+type DBItem = {
   id: number
   name: string
   'type-id': number
@@ -51,7 +53,7 @@ export type DBItem = {
   razmer_mm_shirina_vysota: OptionalIntField
   brend: string
   new: OptionalIntField
-  sila_toka_a: string
+  sila_toka_a: OptionalIntField
   shirina_mm: OptionalIntField
   kratnost_reza_sm: string
 }

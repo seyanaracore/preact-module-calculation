@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient } from 'react-query'
-import ScreenService from '@/api/ScreenService'
+import api from '@/api'
 import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
@@ -26,7 +26,7 @@ export const useQueryCabinet = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.Cabinet],
-    queryFn: ScreenService.getCabinet,
+    queryFn: api.getCabinet,
     enabled: isCabinetImplementation,
   })
 
@@ -40,7 +40,7 @@ export const useQueryCabinet = () => {
 export const useQueryProfile = () => {
   const queryClient = useQueryClient()
   // Queries
-  const query = useQuery({ queryKey: [QueryKey.Profile], queryFn: ScreenService.getProfile })
+  const query = useQuery({ queryKey: [QueryKey.Profile], queryFn: api.getProfile })
 
   return {
     ...query,
@@ -61,7 +61,7 @@ export const useQueryController = () => {
   const query = useQuery({
     queryKey: [QueryKey.Controller, controllerPayload],
     queryFn: () => {
-      return ScreenService.getController(controllerPayload)
+      return api.getController(controllerPayload)
     },
     enabled: !!moduleId,
   })
@@ -79,7 +79,7 @@ export const useQueryReceivingCart = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.ReceivingCart, isFullColorModule],
-    queryFn: ScreenService.getReceivingCard,
+    queryFn: api.getReceivingCard,
     enabled: isFullColorModule,
   })
 
@@ -95,7 +95,7 @@ export const useQueryGalvanization = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.Galvanization],
-    queryFn: ScreenService.getGalvanization,
+    queryFn: api.getGalvanization,
   })
 
   return {
@@ -110,7 +110,7 @@ export const useQueryCorner = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.Corner],
-    queryFn: ScreenService.getCorner,
+    queryFn: api.getCorner,
   })
 
   return {
@@ -125,7 +125,7 @@ export const useQueryMagnet = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.Magnet],
-    queryFn: ScreenService.getMagnet,
+    queryFn: api.getMagnet,
   })
 
   return {
@@ -141,7 +141,7 @@ export const useQueryPowerUnit = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.PowerUnit, moduleId],
-    queryFn: () => ScreenService.getPowerUnit(moduleId),
+    queryFn: () => api.getPowerUnit(moduleId),
     enabled: !!moduleId,
   })
 
@@ -157,7 +157,7 @@ export const useQueryModulesList = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.ModulesList],
-    queryFn: ScreenService.getModulesList,
+    queryFn: api.getModulesList,
   })
 
   return {
@@ -173,7 +173,7 @@ export const useQueryModuleInfo = () => {
 
   const query = useQuery({
     queryKey: [QueryKey.ModuleInfo, moduleId],
-    queryFn: () => ScreenService.getModuleInfo(moduleId),
+    queryFn: () => api.getModuleInfo(moduleId),
     enabled: !!moduleId,
   })
 
@@ -189,7 +189,7 @@ export const useQueryModuleTypes = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.ModuleTypes],
-    queryFn: ScreenService.getModuleTypes,
+    queryFn: api.getModuleTypes,
   })
 
   return {

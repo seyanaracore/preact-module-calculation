@@ -1,4 +1,4 @@
-import { DBItem } from '@/types/dbItem'
+import DBItem from '@/api/fakeBackend/types/dbItem'
 
 const getModuleSizesFields = (module: DBItem) => {
   const targetField = module['razmer_mm'] ? module['razmer_mm'] : module['razmer_mm_shirina_vysota']

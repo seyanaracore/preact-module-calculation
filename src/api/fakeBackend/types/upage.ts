@@ -1,4 +1,4 @@
-export default interface UPageI {
+export default interface UPage {
   page: Page
 }
 

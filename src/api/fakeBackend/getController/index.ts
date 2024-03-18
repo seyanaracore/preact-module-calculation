@@ -1,10 +1,11 @@
-import modules from '../../../db/json/filtered/modules.json'
 import { ControllerItem } from '@/types'
-import getControllerForMonochrome from '@/api/getController/monochromeController'
 import { ModuleTypeId } from '@/api/enums'
-import getControllerForFullColor from '@/api/getController/fullColorController'
-
-export type BackControllerItem = Omit<ControllerItem, 'link'>
+import modules from '../../../../db/json/filtered/modules.json'
+import getControllerForMonochrome from './monochromeController'
+import getControllerForFullColor from './fullColorController'
+import DBItem from '@/api/fakeBackend/types/dbItem'
+import getActualPriceAndLink from '@/api/fakeBackend/getActualPriceAndLink'
+import { DBItemWithLink } from '@/api/fakeBackend/types'
 
 type GetControllerParams = {
   moduleId: number | string
@@ -12,10 +13,14 @@ type GetControllerParams = {
   modulesInHeight: number
 }
 
-async function getController({ moduleId, modulesInWidth, modulesInHeight }: GetControllerParams) {
+async function getController<T extends DBItemWithLink>({
+  moduleId,
+  modulesInWidth,
+  modulesInHeight,
+}: GetControllerParams) {
   const targetModuleId = +moduleId
   const module = modules.find((module) => module.id === targetModuleId)
-  let targetController: BackControllerItem | undefined
+  let targetController: DBItem | undefined
 
   if (!module) throw new Error(`Target module not found, id ${moduleId}`)
 
@@ -30,7 +35,9 @@ async function getController({ moduleId, modulesInWidth, modulesInHeight }: GetC
 
   if (!targetController) throw new Error(`Target controller not found. Module id: ${moduleId}`)
 
-  return targetController
+  const { price, link } = await getActualPriceAndLink(targetController.id)
+
+  return { ...targetController, price, link } as T
 }
 
 export default getController

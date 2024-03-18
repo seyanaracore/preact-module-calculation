@@ -1,4 +1,4 @@
-import { DBItem } from '@/types/dbItem'
+import DBItem from '../types/dbItem'
 
 export type GetTargetControllerParams = {
   module: DBItem

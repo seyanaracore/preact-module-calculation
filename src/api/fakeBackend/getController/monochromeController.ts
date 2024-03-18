@@ -1,14 +1,13 @@
-import { ControllerItem } from '@/types'
-import controllers from '../../../db/json/filtered/controllers.json'
+import controllers from '../../../../db/json/filtered/controllers.json'
 import getLedsAmount from '@/helpers/getLedsAmount'
-import { GetTargetControllerParams } from '@/api/getController/types'
-import { BackControllerItem } from '@/api/getController/index'
+import { GetTargetControllerParams } from './types'
+import DBItem from '@/api/fakeBackend/types/dbItem'
 
 const getControllerForMonochrome = ({
   module,
   modulesInHeight,
   modulesInWidth,
-}: GetTargetControllerParams): BackControllerItem | undefined => {
+}: GetTargetControllerParams): DBItem | undefined => {
   const { ledsInWidth, ledsInHeight } = getLedsAmount(module)
   const summaryLedsWidth = ledsInWidth * modulesInWidth
   const summaryLedsHeight = ledsInHeight * modulesInHeight
