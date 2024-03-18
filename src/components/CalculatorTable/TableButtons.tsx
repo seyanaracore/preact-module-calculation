@@ -11,7 +11,6 @@ const TableButtons = ({ tableRef }: { tableRef: Ref<HTMLTableElement> }) => {
   const exportExcelHandler = async () => {
     if (!tableRef.current) return
 
-    // eslint-disable-next-line no-proto
     const clonedDomTable = tableRef.current.cloneNode(true) as HTMLTableElement
 
     const clonedInstanceTable = new DataTable(clonedDomTable, {
