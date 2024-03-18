@@ -28,8 +28,8 @@
   }
 
   &:disabled {
-    color: $gray-color-2;
-    border-color: $gray-color-2;
+    color: $grey-color-2;
+    border-color: $grey-color-2;
     cursor: not-allowed;
   }
 }
@@ -46,7 +46,7 @@
 
 .table-head {
   color: black;
-  background: $gray-color-2;
+  background: $grey-color;
   text-align: left;
   font-weight: normal;
 }
