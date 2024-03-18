@@ -25,17 +25,6 @@ function _createNode(doc: any, nodeName: any, opts: any) {
   return tempNode
 }
 
-export const loadExcelExportModule = async () => {
-  await import('datatables.net-buttons-dt')
-
-  const jszip = await import('jszip').then(({ default: m }) => m)
-
-  //@ts-ignore
-  await import('datatables.net-buttons/js/buttons.html5.mjs')
-
-  window.$.fn.dataTable.Buttons.jszip(jszip)
-}
-
 export const realExcelExportButton = {
   extend: 'excelHtml5',
   exportOptions: {
