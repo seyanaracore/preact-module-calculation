@@ -5,9 +5,15 @@ import { StoreContext, StoreProvider } from '@/context'
 import useCartState from '@/hooks/useCartState'
 import { ReactNode, useContext, useEffect, useMemo } from 'react'
 import 'datatables.net-dt/css/dataTables.dataTables.min.css'
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // default: true
+    },
+  },
+})
 
 const appDomElements = document.querySelectorAll(
   '[data-screen-calculator]'

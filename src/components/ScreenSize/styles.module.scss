@@ -1,5 +1,5 @@
 .module-amount-inputs-container {
-  gap: 12px;
+  gap: $margin-md;
   display: flex;
 
   @include media-down(lg-x) {

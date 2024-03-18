@@ -1,5 +1,5 @@
 .result-container {
-  margin-top: 12px;
+  margin-top: $margin-md;
   overflow-x: auto;
 }
 
@@ -22,6 +22,8 @@
   padding: 9px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: $margin-xs;
 
   & > span {
     display: inline-flex;
@@ -34,6 +36,16 @@
     background: $red-color;
     cursor: pointer;
   }
+
+  &:disabled {
+    color: $gray-color-2;
+    border-color: $gray-color-2;
+    cursor: not-allowed;
+  }
+}
+
+.buttons-container {
+  margin-bottom: calc($margin-md - $margin-xs);
 }
 
 .table-head {

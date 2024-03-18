@@ -1,5 +1,5 @@
 import cls from './styles.module.scss'
-import { useContext, useEffect, useId, useRef } from 'react'
+import { useContext, useEffect, useId, useRef, useState } from 'react'
 import CartItem from './CartItem'
 import { StoreContext } from '@/context'
 import useCartState from '@/hooks/useCartState'
@@ -7,14 +7,24 @@ import { currencyFormat } from '@/utils'
 import { useCartSummaryPrice, useFinishedProductPrice } from '@/hooks/useCartPrice'
 import TableSummary from '@/components/CartResult/TableSummary'
 import getDataTableInstance from '@/helpers/initTable'
+import {
+  excelImage,
+  loadExcelExportModule,
+  realExcelExportButton,
+} from '@/components/CartResult/excelExport'
+import DataTable from 'datatables.net-dt'
+import { dataTableBaseConfig } from '@/consts'
+import { useIsFetching } from 'react-query'
+import TableButtons from '@/components/CartResult/TableButtons'
 
 const CartResult = () => {
   const { table, setTable } = useContext(StoreContext)
+  const isFetching = useIsFetching()
   const cartState = useCartState()
   const finishedProductPrice = useFinishedProductPrice()
   const summaryPrice = useCartSummaryPrice()
   const tableId = useId()
-  const tableRef = useRef(null)
+  const tableRef = useRef<HTMLTableElement>(null)
 
   useEffect(() => {
     if (!table && tableRef.current) {
@@ -28,6 +38,7 @@ const CartResult = () => {
   return (
     <>
       <div className={cls.resultContainer}>
+        <TableButtons tableRef={tableRef} />
         <table
           class="table display responsive nowrap"
           id={tableId}
