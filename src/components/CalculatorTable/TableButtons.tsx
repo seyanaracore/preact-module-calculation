@@ -3,7 +3,7 @@ import {
   excelImage,
   loadExcelExportModule,
   realExcelExportButton,
-} from '@/components/CartResult/excelExport'
+} from '@/components/CalculatorTable/excelExport'
 import { useIsFetching } from 'react-query'
 import DataTable from 'datatables.net-dt'
 import { dataTableBaseConfig } from '@/consts'

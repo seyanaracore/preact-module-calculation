@@ -14,9 +14,14 @@
     flex-direction: column;
   }
 }
-//
-//.calc-title {
-//  font-size: 28px;
-//  line-height: 46px;
-//  margin-bottom: 4px;
-//}
+
+.summary-price {
+  text-align: right;
+  font-weight: 600;
+}
+
+.finished-product-price {
+  text-align: right;
+  font-weight: bold;
+}
+

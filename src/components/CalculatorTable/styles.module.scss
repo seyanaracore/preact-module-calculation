@@ -3,16 +3,6 @@
   overflow-x: auto;
 }
 
-.summary-price {
-  text-align: right;
-  font-weight: 600;
-}
-
-.finished-product-price {
-  text-align: right;
-  font-weight: bold;
-}
-
 .excel-export-btn {
   width: 200px;
   background: white;
@@ -48,9 +38,17 @@
   margin-bottom: calc($margin-md - $margin-xs);
 }
 
-.table-head {
+.table-title {
   color: white;
   background: $red-color;
+  text-align: left;
+}
+
+.table-head {
+  color: black;
+  background: $gray-color-2;
+  text-align: left;
+  font-weight: normal;
 }
 
 .link {

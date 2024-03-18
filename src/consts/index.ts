@@ -16,3 +16,5 @@ export const dataTableBaseConfig = {
   ordering: false,
   info: false,
 }
+
+export const excelExportCalcTitle = 'LED EXPRESS. Калькулятор комплектующих'

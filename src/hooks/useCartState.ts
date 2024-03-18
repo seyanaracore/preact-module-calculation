@@ -1,5 +1,5 @@
 import { useContext, useMemo } from 'react'
-import type { CartItem as ICartItem } from '@/components/CartResult/types'
+import type { CartItem as ICartItem } from '@/components/CalculatorTable/types'
 import { StoreContext } from '@/context'
 import {
   useCabinetsAmount,

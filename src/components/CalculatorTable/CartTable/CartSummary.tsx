@@ -1,7 +1,7 @@
 import { currencyFormat } from '@/utils'
 import { useCartSummaryPrice, useFinishedProductPrice } from '@/hooks/useCartPrice'
 
-const TableSummary = () => {
+const CartSummary = () => {
   const style = { display: 'none' }
   const finishedProductPrice = useFinishedProductPrice()
   const summaryPrice = useCartSummaryPrice()
@@ -30,4 +30,4 @@ const TableSummary = () => {
   )
 }
 
-export default TableSummary
+export default CartSummary
