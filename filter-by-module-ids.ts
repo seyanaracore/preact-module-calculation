@@ -45,7 +45,9 @@ const uniqByKeepLast = <T>(list: Array<T>, key: (i: T) => T[keyof T]) => {
 }
 
 Object.entries(filerMap).forEach(([fieldName, data]) => {
-  const handledData = uniqByKeepLast(data.filter(filterBy(fieldName)), (i) => i.id)
+  const handledData = uniqByKeepLast(data.filter(filterBy(fieldName)), (i) => i.id).sort(
+    (a, b) => requiredIds[fieldName].indexOf(a.id) - requiredIds[fieldName].indexOf(b.id)
+  )
 
   fs.writeFile(path.join(filteredPath, `${fieldName}.json`), JSON.stringify(handledData), (err) => {
     if (err) {
