@@ -59,11 +59,11 @@ const ProductCharacteristicTable = () => {
         value: `${widthResolution} x ${heightResolution}`,
       },
       {
-        label: 'Количество пикселей:',
+        label: 'Количество пикселей, всего:',
         value: summaryResolution,
       },
       {
-        label: 'Потребляемая мощность:',
+        label: 'Потребляемая мощность, вт:',
         value: totalConsumption,
       },
       {
