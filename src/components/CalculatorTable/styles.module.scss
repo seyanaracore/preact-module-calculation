@@ -4,12 +4,12 @@
 }
 
 .excel-export-btn {
-  width: 200px;
+  width: 120px;
   background: white;
   border: 1px solid $red-color;
   color: $red-color;
   transition: .2s;
-  padding: 9px;
+  padding: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,9 @@
 }
 
 .buttons-container {
-  margin-bottom: calc($margin-md - $margin-xs);
+  display: flex;
+  justify-content: flex-end;
+  margin: $margin-s 0;
 }
 
 .table-title {

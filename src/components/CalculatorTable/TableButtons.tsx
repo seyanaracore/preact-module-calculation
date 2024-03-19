@@ -38,7 +38,7 @@ const TableButtons = ({ tableRef }: { tableRef: Ref<HTMLTableElement> }) => {
           src={excelImage}
           alt="excel icon"
         />
-        Excel
+        Скачать
       </button>
     </div>
   )

@@ -15,12 +15,20 @@
   }
 }
 
+.table-summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: $margin-s;
+}
+
 .summary-price {
+  margin: 0;
   text-align: right;
   font-weight: 600;
 }
 
 .finished-product-price {
+  margin: 0;
   text-align: right;
   font-weight: bold;
 }

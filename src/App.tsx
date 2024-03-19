@@ -18,7 +18,7 @@ const App = () => {
         <ImplementationTypeSelect />
       </form>
       <CalculatorTable />
-      <div>
+      <div className={cls.tableSummaryContainer}>
         <p className={cls.summaryPrice}>Сумма: {currencyFormat.format(summaryPrice)}</p>
 
         <p className={cls.finishedProductPrice}>

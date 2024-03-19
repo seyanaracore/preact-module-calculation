@@ -23,32 +23,34 @@ const CalculatorTable = () => {
   }, [tableRef])
 
   return (
-    <div className={cls.resultContainer}>
+    <>
+      <div className={cls.resultContainer}>
+        <table
+          class="table display responsive nowrap"
+          id={tableId}
+          ref={tableRef}
+          width="100%"
+          style={{ width: '100%' }}
+        >
+          <thead>
+            <tr
+              className={cls.tableTitle}
+              role="row"
+            >
+              <th>Технические характеристики</th>
+              <th />
+              <th />
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            <ProductCharacteristicTable />
+            <CartTable />
+          </tbody>
+        </table>
+      </div>
       <TableButtons tableRef={tableRef} />
-      <table
-        class="table display responsive nowrap"
-        id={tableId}
-        ref={tableRef}
-        width="100%"
-        style={{ width: '100%' }}
-      >
-        <thead>
-          <tr
-            className={cls.tableTitle}
-            role="row"
-          >
-            <th>Технические характеристики</th>
-            <th />
-            <th />
-            <th />
-          </tr>
-        </thead>
-        <tbody>
-          <ProductCharacteristicTable />
-          <CartTable />
-        </tbody>
-      </table>
-    </div>
+    </>
   )
 }
 
