@@ -36,6 +36,10 @@ const getControllerForFullColor = ({
   if (summaryResolution <= 2600000) {
     return controllers.find((controller) => controller.id === 2342)
   }
+
+  if (summaryResolution <= 5200000) {
+    return controllers.find((controller) => controller.id === 2501)
+  }
 }
 
 export default getControllerForFullColor
