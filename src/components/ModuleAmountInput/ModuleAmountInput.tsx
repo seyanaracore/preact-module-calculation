@@ -8,8 +8,14 @@ import clsx from 'clsx'
 
 const getSize = (mmSize: number) => mmSize / 1000
 
-const format = (size: number) =>
-  size.toString().slice(-1) === '0' ? getSize(size).toString().padEnd(5, '0') : getSize(size)
+const format = (val: number) => {
+  const size = getSize(val)
+  const stringSize = size.toString()
+  const intNumLen = parseInt(stringSize, 10).toString().length
+  const separatedSize = intNumLen === stringSize.length ? `${stringSize}.00` : stringSize
+
+  return separatedSize.padEnd(4 + intNumLen, '0')
+}
 
 const ModuleAmountInput = ({
   unit,
