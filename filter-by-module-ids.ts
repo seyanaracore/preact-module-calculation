@@ -1,3 +1,5 @@
+import { pick } from 'lodash-es'
+
 import requiredIds from './db/json/required_ids.json' assert { type: 'json' }
 
 import modules from './db/json/modules.json' assert { type: 'json' }
@@ -45,9 +47,21 @@ const uniqByKeepLast = <T>(list: Array<T>, key: (i: T) => T[keyof T]) => {
 }
 
 Object.entries(filerMap).forEach(([fieldName, data]) => {
-  const handledData = uniqByKeepLast(data.filter(filterBy(fieldName)), (i) => i.id).sort(
-    (a, b) => requiredIds[fieldName].indexOf(a.id) - requiredIds[fieldName].indexOf(b.id)
-  )
+  const handledData = uniqByKeepLast(data.filter(filterBy(fieldName)), (i) => i.id)
+    .sort((a, b) => requiredIds[fieldName].indexOf(a.id) - requiredIds[fieldName].indexOf(b.id))
+    .map((dbItem) => {
+      return pick(dbItem, [
+        'id',
+        'name',
+        'parent-id',
+        'kolichestvo_svetodiodov_sht',
+        'razmer_mm',
+        'razmer_mm_shirina_vysota',
+        'proizvoditel',
+        'vyhodnaya_mownost_vt',
+        'price',
+      ])
+    })
 
   fs.writeFile(path.join(filteredPath, `${fieldName}.json`), JSON.stringify(handledData), (err) => {
     if (err) {

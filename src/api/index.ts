@@ -36,7 +36,6 @@ const api = {
       ledsInHeight,
       typeId: res['parent-id'],
       id: res.id,
-      sku: res.artikul.toString(),
       price: res.price,
       link: res.link,
       consumption: +res['vyhodnaya_mownost_vt'],

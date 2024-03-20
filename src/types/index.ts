@@ -12,7 +12,6 @@ export type ModuleItem = {
   consumption: number
   typeId: ModuleTypeId
   id: number
-  sku: string
   price: number
   link: string
 }
