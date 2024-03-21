@@ -27,6 +27,10 @@ const CartTable = () => {
           scope="col"
           className={cls.tableTitle}
         />
+        <th
+          scope="col"
+          className={cls.tableTitle}
+        />
       </tr>
       <tr>
         <th
@@ -34,6 +38,12 @@ const CartTable = () => {
           className={cls.tableHead}
         >
           Комплектующие
+        </th>
+        <th
+          scope="col"
+          className={cls.tableHead}
+        >
+          <span style={{ display: 'none' }}>Ед изм.</span>
         </th>
         <th
           scope="col"

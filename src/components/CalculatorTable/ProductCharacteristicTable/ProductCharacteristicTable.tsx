@@ -29,7 +29,7 @@ const ProductCharacteristicTable = () => {
   const isCabinetImplementation = useIsCabinetImplementation()
   const cabinetsInWidthAmount = useCabinetsInWidthAmount()
   const cabinetsInHeightAmount = useCabinetsInHeightAmount()
-  const headersList = ['Характеристика', '', '', 'Значение']
+  const headersList = ['Характеристика', '', '', '', 'Значение']
 
   const productSizes = useMemo(() => {
     if (isCabinetImplementation) return [modulesSummaryWidth, modulesSummaryHeight]
@@ -52,7 +52,7 @@ const ProductCharacteristicTable = () => {
       firstItem,
       {
         label: 'Разрешение одного модуля, пикс:',
-        value: `${moduleInfo?.ledsInWidth} x ${moduleInfo?.ledsInHeight}`,
+        value: moduleInfo ? `${moduleInfo?.ledsInWidth} x ${moduleInfo?.ledsInHeight}` : '0 x 0',
       },
       {
         label: 'Общее разрешение экрана, пикс:',
@@ -79,6 +79,8 @@ const ProductCharacteristicTable = () => {
     modulesInHeight,
     moduleInfo?.ledsInWidth,
     moduleInfo?.ledsInHeight,
+    widthResolution,
+    heightResolution,
     summaryResolution,
     totalConsumption,
     productSizes,

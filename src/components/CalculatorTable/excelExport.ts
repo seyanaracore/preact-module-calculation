@@ -25,16 +25,41 @@ function _createNode(doc: any, nodeName: any, opts: any) {
   return tempNode
 }
 
+const CART_ROW_START = 7
+
 export const realExcelExportButton = {
   extend: 'excelHtml5',
   exportOptions: {
     stripHtml: false,
     format: {
       body(_data: string | number, row: number, column: number, node: Element) {
-        let data = _data
+        let data = _data.toString()
+        const isPrice = data.includes('₽')
+        const isResultRow = row > 16
+        const isUnit = column === 1 && row > CART_ROW_START
 
-        if (column === 2 || column === 3) {
-          data = data.toString().replace(/&nbsp;/g, '')
+        if (column === 4 && row < CART_ROW_START) {
+          data = `\0${data}`
+        }
+
+        if (isUnit && data) {
+          data = node.textContent!
+        }
+
+        if (['Цена', 'Сумма'].includes(data)) {
+          data = `${data}, руб.`
+        }
+
+        if (isPrice && !isResultRow) {
+          data = parseInt(data.replace(/&nbsp;/g, ''), 10).toString()
+        }
+
+        if (isPrice && isResultRow) {
+          data = data.replace(/&nbsp;/g, '')
+        }
+
+        if (data && column === 2 && row > CART_ROW_START + 1) {
+          data = parseInt(data.toString(), 10).toString()
         }
 
         const children = node.children?.[0] as undefined | HTMLLinkElement
@@ -52,8 +77,8 @@ export const realExcelExportButton = {
     const mergeCells = window.$('mergeCells', sheet)
 
     // Номер строки зависит от кол-ва значений в характеристике продукта
-    mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A10:D10' } }))
-    mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A2:D2' } }))
+    mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A10:E10' } }))
+    mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A2:E2' } }))
 
     window.$('c[r=A1] t', sheet).text(excelExportCalcTitle)
 

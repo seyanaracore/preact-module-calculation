@@ -10,6 +10,7 @@ const CartItem = (props: CartItemProps) => {
       <tr>
         <td>{props.title}</td>
         <td />
+        <td />
         <td>Загрузка...</td>
         <td />
       </tr>
@@ -27,6 +28,9 @@ const CartItem = (props: CartItemProps) => {
         >
           {props.title}
         </a>
+      </td>
+      <td>
+        <span style={{ display: 'none' }}>{props.unit}</span>
       </td>
       <td>{props.amount + props.unit}</td>
       <td>{props.price === undefined ? '' : currencyFormat.format(props.price)}</td>

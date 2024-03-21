@@ -4,6 +4,7 @@ const ProductCharacteristicItem = ({ label, value }: { label: string; value: str
       <td>{label}</td>
       <td />
       <td />
+      <td />
       <td>{value}</td>
     </tr>
   )

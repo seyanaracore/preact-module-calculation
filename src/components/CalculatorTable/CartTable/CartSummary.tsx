@@ -13,15 +13,18 @@ const CartSummary = () => {
         <td />
         <td />
         <td />
+        <td />
       </tr>
       <tr style={style}>
         <td>Сумма:</td>
+        <td />
         <td />
         <td />
         <td>{currencyFormat.format(summaryPrice)}</td>
       </tr>
       <tr style={style}>
         <td>Стоимость готового изделия:</td>
+        <td />
         <td />
         <td />
         <td>{currencyFormat.format(finishedProductPrice)}</td>
