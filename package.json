@@ -11,6 +11,7 @@
 		"filter-db": "ts-node-esm filter-by-module-ids.ts"
 	},
 	"dependencies": {
+		"autoprefixer": "^10.4.19",
 		"clsx": "^2.1.0",
 		"datatables.net-buttons-dt": "^3.0.1",
 		"datatables.net-dt": "^2.0.2",
@@ -18,6 +19,9 @@
 		"jszip": "^3.10.1",
 		"ky": "^1.2.0",
 		"lodash-es": "^4.17.21",
+		"postcss": "^8.4.38",
+		"postcss-autoreset": "^3.1.0",
+		"postcss-load-config": "^5.0.3",
 		"preact": "^10.19.4",
 		"react-query": "^3.39.3"
 	},

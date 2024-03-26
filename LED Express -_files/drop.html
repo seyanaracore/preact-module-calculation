@@ -1,0 +1,55 @@
+
+<!-- saved from url=(0495)https://ulogin.ru/version/3.0/html/drop.html?id=0&redirect_uri=https%3A%2F%2Fledexpress.ru%2Fusers%2Fulogin%2F&callback=&providers=mailru,odnoklassniki,yandex&fields=first_name,last_name,network,email,nickname&force_fields=&popup_css=&optional=&othprov=vkontakte,google&protocol=https&host=ledexpress.ru&lang=ru&verify=&sort=relevant&m=0&icons_32=&icons_16=&theme=flat&client=&page=https%3A%2F%2Fledexpress.ru%2Fcalculator%2F&version=3&xdm_e=https%3A%2F%2Fledexpress.ru&xdm_c=default9610&xdm_p=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <style>
+        html,body{margin:0;font-family:arial;height:100%;}
+        div#wrapper{height:100%;width:100%;overflow:hidden;}
+        div#list{width:128px;overflow:hidden}
+        div#list div.a{height:23px;cursor:pointer;background:#e6e6e6 url(/img/bga.png) repeat-x;background-position:100% 120%;overflow:hidden}
+        div#list div.a a{display:block;height:23px;margin-top:2px;padding:0;text-decoration:none;text-shadow:#f5f5f5 0 1px 0;color:#777;font-size:11px;font-weight:bold;line-height:16px;overflow:hidden}
+        div#list div.a a span{float:left;margin: 0 5px;width:16px;height:16px;margin-top:1px;}
+        .processing{display:none;}
+        .process .processing{display:block;}
+        .process .no-processing{display:none;}
+        .iScrollVerticalScrollbar{position:absolute;z-index:9999;width:4px;bottom:2px;top:2px;right:2px;overflow:hidden;}
+        .iScrollIndicator {background-color:rgb(102, 102, 102);border-radius:6px;}
+    </style>
+    <script>
+        var query = {},
+            tmp = location.search.substr(1).split('&'),
+            tmp2, i;
+        for(i = 0; i < tmp.length; i++) {
+            tmp2 = tmp[i].split('=');
+            query[tmp2[0]] = tmp2[1];
+        }
+    </script>
+    <script class="stats.js">
+        addEvent(window,'load',function() {
+            var protocol = location.href.match(/^https/i) ? 'https://' : 'http://';
+            var img = new Image();
+            img.src = protocol+'counter.yadro.ru/hit?t26.6;r'+escape(document.referrer)+((typeof(screen)=='undefined')?'':';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+';'+Math.random();
+        });
+
+        function addEvent(object, event, handler){
+            if(object.addEventListener)
+                object.addEventListener(event, function(e){handler(object, e);}, false );
+            else if(object.attachEvent)
+                object.attachEvent('on'+event, function(e){handler(object, e);});
+            else
+                object['on' + event] = function(e){handler(object, e);}
+        }
+    </script>
+    <script src="./easyXDM.min.js"></script>
+    <script src="./iscroll.5.js"></script>
+    <script src="./lang.js"></script>
+    <script>
+        document.write('<script src="/version/3.0/js/drop.js?version=js.3.0.3"></'+'script>');
+    </script><script src="./drop.js"></script>
+</head>
+<body style="overflow: hidden;">
+    <div id="wrapper">
+        <div id="list" style="height: 67px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);"><div id="a1" class="a"><a id="mailru"><span style="background-image: url(/version/3.0/img/providers-16-flat.png?version=img.3.0.2); background-position:0 -52px" class="no-processing"></span><span style="background: url(/version/3.0/img/presmall.gif) 0 0 no-repeat; background-size: 16px;" class="processing"></span>Mail.ru</a></div><div id="a2" class="a"><a id="odnoklassniki"><span style="background-image: url(/version/3.0/img/providers-16-flat.png?version=img.3.0.2); background-position:0 -35px" class="no-processing"></span><span style="background: url(/version/3.0/img/presmall.gif) 0 0 no-repeat; background-size: 16px;" class="processing"></span>Одноклассники</a></div><div id="a3" class="a"><a id="yandex"><span style="background-image: url(/version/3.0/img/providers-16-flat.png?version=img.3.0.2); background-position:0 -120px" class="no-processing"></span><span style="background: url(/version/3.0/img/presmall.gif) 0 0 no-repeat; background-size: 16px;" class="processing"></span>Яндекс</a></div></div>
+    <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="overflow: hidden; pointer-events: none;"><div class="iScrollIndicator" style="transition-duration: 0ms; display: none; height: 8px; transform: translate(0px, -8px) translateZ(0px); transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);"></div></div></div>
+
+</body></html>

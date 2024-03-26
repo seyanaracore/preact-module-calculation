@@ -1,6 +1,9 @@
 .root {
   display: flex;
   flex-direction: column;
+  select option:first-child {
+    display: revert;
+  }
 }
 
 .form {

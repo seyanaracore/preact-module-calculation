@@ -12,11 +12,11 @@ const App = () => {
 
   return (
     <div class={cls.root}>
-      <form class={cls.form}>
+      <div class={cls.form}>
         <ModuleSelect />
         <ScreenSize />
         <ImplementationTypeSelect />
-      </form>
+      </div>
       <CalculatorTable />
       <div className={cls.tableSummaryContainer}>
         <p className={cls.summaryPrice}>Сумма: {currencyFormat.format(summaryPrice)}</p>
