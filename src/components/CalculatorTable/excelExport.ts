@@ -65,7 +65,7 @@ export const realExcelExportButton = {
         const children = node.children?.[0] as undefined | HTMLLinkElement
 
         if (children && children.tagName === 'A') {
-          data = JSON.stringify({ link: children.href, text: children.textContent })
+          data = children.textContent!
         }
 
         return data
@@ -87,24 +87,5 @@ export const realExcelExportButton = {
 
     window.$('row:contains("Комплектующие") c', sheet).attr('s', '2')
     window.$('row:contains("Характеристика") c', sheet).attr('s', '2')
-
-    window.$('row c', sheet).each(function (this: Element) {
-      const item = window.$('is t', this)
-      const itemText = item.text()
-      const isLink = itemText.match(/\{"link":".*","text":".*"}/)
-
-      if (isLink) {
-        const { link, text } = JSON.parse(itemText) as { link: string; text: string }
-
-        // (2.) change the type to `str` which is a formula
-        window.$(this).attr('t', 'str')
-        //append the formula
-        window.$(this).append(`<f>` + `HYPERLINK("${link}","${text}")` + `</f>`)
-        //remove the inlineStr
-        window.$('is', this).remove()
-        // (3.) underline
-        window.$(this).attr('s', '4')
-      }
-    })
   },
 }
