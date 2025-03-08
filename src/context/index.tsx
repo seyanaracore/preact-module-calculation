@@ -1,10 +1,10 @@
 import { createContext } from 'preact'
 import { Table } from '@/types'
-import { Dispatch, ReactNode, useState} from 'react'
-import { StateUpdater } from 'preact/hooks'
+import { ReactNode, useState } from 'react'
 import { ModuleImplementationType } from '@/enums'
+import useUrlState, { UseUrlStateReturn } from '@/hooks/useUrlState'
 
-type UseState<S> = [S, Dispatch<StateUpdater<S>>]
+type UseState<S> = UseUrlStateReturn<S>
 
 type States = {
   implementationType: UseState<ModuleImplementationType>
@@ -28,13 +28,24 @@ export type Store = StoreStates & StoreSetters
 export const StoreContext = createContext<Store>({} as unknown as Store)
 
 export const StoreProvider = ({ children }: { children: ReactNode }) => {
-  const [moduleId, setModuleId] = useState('')
-  const [modulesInWidth, setModulesInWidth] = useState(1)
-  const [modulesInHeight, setModulesInHeight] = useState(1)
+  const [moduleId, setModuleId] = useUrlState('module-id', '')
+
+  const [modulesInWidth, setModulesInWidth] = useUrlState('modules-in-width', 1, {
+    parse: (value) => parseInt(value, 10),
+  })
+
+  const [modulesInHeight, setModulesInHeight] = useUrlState('modules-in-height', 1, {
+    parse: (value) => parseInt(value, 10),
+  })
+
   const [table, setTable] = useState<Table | null>(null)
 
-  const [implementationType, setImplementationType] = useState<ModuleImplementationType>(
-    ModuleImplementationType.Monolithic
+  const [implementationType, setImplementationType] = useUrlState<ModuleImplementationType>(
+    'implementation-type',
+    ModuleImplementationType.Monolithic,
+    {
+      parse: (value) => parseInt(value, 10),
+    }
   )
 
   const storeValue: Store = {

@@ -8,15 +8,20 @@ import { useQueryModuleInfo } from '@/query'
  */
 const useModuleImplementationTypes = () => {
   const isFullColorModule = useIsFullColorModule()
-  const { data: moduleInfo } = useQueryModuleInfo()
+  const { data: moduleInfo, isLoading } = useQueryModuleInfo()
 
-  return useMemo(() => {
+  const moduleImplementationTypes = useMemo(() => {
     if (isFullColorModule && moduleInfo?.width === 320 && moduleInfo?.height === 160) {
       return [ModuleImplementationType.Monolithic, ModuleImplementationType.Cabinet640x640]
     }
 
     return [ModuleImplementationType.Monolithic]
   }, [isFullColorModule, moduleInfo])
+
+  return {
+    moduleImplementationTypes,
+    isLoading,
+  }
 }
 
 export default useModuleImplementationTypes

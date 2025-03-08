@@ -5,32 +5,32 @@ import { ModuleImplementationType } from '@/enums'
 import useModuleImplementationTypes from '@/hooks/useModuleImplementationTypes'
 import clsx from 'clsx'
 
+const IMPLEMENTATION_TYPES_LIST = [
+  {
+    title: 'Монолитный',
+    code: ModuleImplementationType.Monolithic,
+  },
+  {
+    title: 'Кабинет 640/640',
+    code: ModuleImplementationType.Cabinet640x640,
+  },
+]
+
 const ImplementationTypeSelect = () => {
   const { implementationType, setImplementationType } = useContext(StoreContext)
-  const moduleImplementationTypes = useModuleImplementationTypes()
+  const { moduleImplementationTypes, isLoading } = useModuleImplementationTypes()
   const containerClasses = clsx([commonCls.selectContainer, commonCls.mediaLgWidth100])
   const selectClasses = clsx([commonCls.select, commonCls.formInput])
-
-  const implementationTypesList = [
-    {
-      title: 'Монолитный',
-      code: ModuleImplementationType.Monolithic,
-    },
-    {
-      title: 'Кабинет 640/640',
-      code: ModuleImplementationType.Cabinet640x640,
-    },
-  ]
 
   const onChangeImplementationType = (e: ChangeEvent<HTMLSelectElement>) => {
     setImplementationType(Number((e.target as HTMLSelectElement).value))
   }
 
   useEffect(() => {
-    if (!moduleImplementationTypes.includes(implementationType)) {
+    if (!isLoading && !moduleImplementationTypes.includes(implementationType)) {
       setImplementationType(ModuleImplementationType.Monolithic)
     }
-  }, [moduleImplementationTypes, implementationType])
+  }, [moduleImplementationTypes, implementationType, isLoading])
 
   return (
     <label class={commonCls.labelMargin}>
@@ -43,7 +43,7 @@ const ImplementationTypeSelect = () => {
           native-select
           class={selectClasses}
         >
-          {implementationTypesList.map((implementationTypeItem) => (
+          {IMPLEMENTATION_TYPES_LIST.map((implementationTypeItem) => (
             <option
               key={implementationTypeItem.code}
               value={implementationTypeItem.code}

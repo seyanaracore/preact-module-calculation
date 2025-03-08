@@ -27,7 +27,7 @@ const ModuleSelect = () => {
   }
 
   useEffect(() => {
-    if (!groupedModules) return
+    if (!groupedModules || moduleId) return
 
     setModuleId(Object.values(groupedModules)[0][0].id.toString())
     // eslint-disable-next-line react-hooks/exhaustive-deps
