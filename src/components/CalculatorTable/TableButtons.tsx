@@ -3,13 +3,13 @@ import { excelImage, realExcelExportButton } from '@/components/CalculatorTable/
 import { useIsFetching } from 'react-query'
 import DataTable from 'datatables.net-dt'
 import { dataTableBaseConfig } from '@/consts'
-import { type Ref } from 'react'
+import type { RefObject } from 'react'
 
-const TableButtons = ({ tableRef }: { tableRef: Ref<HTMLTableElement> }) => {
+const TableButtons = ({ tableRef }: { tableRef: RefObject<HTMLTableElement> }) => {
   const isLoading = useIsFetching()
 
   const exportExcelHandler = async () => {
-    if (!tableRef.current) return
+    if (!tableRef?.current) return
 
     const clonedDomTable = tableRef.current.cloneNode(true) as HTMLTableElement
 

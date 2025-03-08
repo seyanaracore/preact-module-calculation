@@ -40,6 +40,7 @@ const ImplementationTypeSelect = () => {
         <select
           onChange={onChangeImplementationType}
           value={implementationType}
+          native-select
           class={selectClasses}
         >
           {implementationTypesList.map((implementationTypeItem) => (

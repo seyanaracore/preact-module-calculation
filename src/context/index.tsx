@@ -1,10 +1,10 @@
 import { createContext } from 'preact'
 import { Table } from '@/types'
-import { ReactNode, useState } from 'react'
+import { Dispatch, ReactNode, useState} from 'react'
 import { StateUpdater } from 'preact/hooks'
 import { ModuleImplementationType } from '@/enums'
 
-type UseState<S> = [S, StateUpdater<S>]
+type UseState<S> = [S, Dispatch<StateUpdater<S>>]
 
 type States = {
   implementationType: UseState<ModuleImplementationType>
@@ -28,7 +28,7 @@ export type Store = StoreStates & StoreSetters
 export const StoreContext = createContext<Store>({} as unknown as Store)
 
 export const StoreProvider = ({ children }: { children: ReactNode }) => {
-  const [moduleId, setModuleId] = useState<string>('')
+  const [moduleId, setModuleId] = useState('')
   const [modulesInWidth, setModulesInWidth] = useState(1)
   const [modulesInHeight, setModulesInHeight] = useState(1)
   const [table, setTable] = useState<Table | null>(null)

@@ -40,6 +40,7 @@ const ModuleSelect = () => {
         <select
           onChange={onChangeModuleId}
           value={moduleId}
+          native-select
           class={selectClasses}
         >
           {!groupedModules ? (
