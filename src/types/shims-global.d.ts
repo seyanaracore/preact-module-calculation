@@ -1,4 +1,3 @@
-import { IScreenCalculator } from '@/types/index'
 import { JQueryStatic } from 'jquery'
 
 declare global {
@@ -10,7 +9,6 @@ declare global {
   }
 
   interface Window {
-    screenCalculator: IScreenCalculator
     $: JQueryStatic
   }
 }

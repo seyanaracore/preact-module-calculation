@@ -87,14 +87,3 @@ export type PowerUnitItem = {
 }
 
 export interface Table extends InstanceType<ReturnType<typeof DataTable>> {}
-export type CalculatorItem = {
-  store: Store
-  cartState: ReturnType<typeof useCartState>
-  el: HTMLElement
-  table: Table | null
-}
-
-export type IScreenCalculator = {
-  list: CalculatorItem[]
-  getCalculator(domEl: HTMLElement): CalculatorItem | undefined
-}
