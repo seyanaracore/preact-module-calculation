@@ -14,6 +14,10 @@ export const useWidthModuleMultiplicity = () => {
       return 2
     }
 
+    if (implementationType === ModuleImplementationType.Cabinet640x480) {
+      return 2
+    }
+
     return 1
   }, [implementationType])
 }
@@ -28,6 +32,10 @@ export const useHeightModuleMultiplicity = () => {
   return useMemo(() => {
     if (implementationType === ModuleImplementationType.Cabinet640x640) {
       return 4
+    }
+
+    if (implementationType === ModuleImplementationType.Cabinet640x480) {
+      return 3
     }
 
     return 1

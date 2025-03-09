@@ -14,6 +14,10 @@ const IMPLEMENTATION_TYPES_LIST = [
     title: 'Кабинет 640/640',
     code: ModuleImplementationType.Cabinet640x640,
   },
+  {
+    title: 'Кабинет 640/480',
+    code: ModuleImplementationType.Cabinet640x480,
+  },
 ]
 
 const ImplementationTypeSelect = () => {

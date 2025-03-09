@@ -3,10 +3,14 @@ import { ModuleTypeId } from '@/api/enums'
 
 export const ModuleLabelUnit: Record<ModuleImplementationType, string> = {
   [ModuleImplementationType.Cabinet640x640]: 'каб',
+  [ModuleImplementationType.Cabinet640x480]: 'каб',
   [ModuleImplementationType.Monolithic]: 'мод',
 }
 
-export const cabinetImplementationsList = [ModuleImplementationType.Cabinet640x640]
+export const cabinetImplementationsList = [
+  ModuleImplementationType.Cabinet640x640,
+  ModuleImplementationType.Cabinet640x480,
+]
 /** Типы полноцветных модулей */
 export const fullColorModulesTypesList = [ModuleTypeId.outdoor, ModuleTypeId.interior]
 export const dataTableBaseConfig = {
