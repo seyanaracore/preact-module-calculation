@@ -14,11 +14,11 @@ const getControllerForFullColor = ({
   const summaryResolution = summaryLedsWidth * summaryLedsHeight
 
   if (summaryResolution <= 204800) {
-    return controllers.find((controller) => controller.id === 2347)
+    return controllers.find((controller) => controller.id === 3357)
   }
 
   if (summaryResolution <= 524288) {
-    return controllers.find((controller) => controller.id === 2895)
+    return controllers.find((controller) => controller.id === 3357)
   }
 
   if (summaryResolution <= 655360) {
