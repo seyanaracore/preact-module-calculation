@@ -20,5 +20,8 @@
 			"react-dom": ["./node_modules/preact/compat/"]
 		}
 	},
+	"ts-node": {
+		"esm": true
+	},
 	"include": ["node_modules/vite/client.d.ts", "src", "filter-by-module-ids.ts", "db"]
 }
