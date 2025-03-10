@@ -4,6 +4,7 @@ import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 import useIsFullColorModule from '@/hooks/useIsFullColorModule'
+import { implementationList } from '@/consts'
 
 enum QueryKey {
   Cabinet = 'cabinet',
@@ -20,13 +21,28 @@ enum QueryKey {
 }
 
 export const useQueryCabinet = () => {
+  const { implementationType } = useContext(StoreContext)
   const queryClient = useQueryClient()
   const isCabinetImplementation = useIsCabinetImplementation()
 
+  const cabinetId = useMemo(
+    () => implementationList.find((item) => item.code === implementationType)?.id,
+    [implementationType]
+  )
+
   // Queries
   const query = useQuery({
-    queryKey: [QueryKey.Cabinet],
-    queryFn: api.getCabinet,
+    queryKey: [QueryKey.Cabinet, cabinetId],
+    queryFn({ queryKey }) {
+      const [, cabinetId] = queryKey
+
+      if (!cabinetId) {
+        console.error('Implementation not found')
+        return
+      }
+
+      return api.getCabinet(cabinetId)
+    },
     enabled: isCabinetImplementation,
   })
 

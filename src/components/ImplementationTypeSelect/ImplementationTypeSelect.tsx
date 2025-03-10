@@ -4,21 +4,7 @@ import { StoreContext } from '@/context'
 import { ModuleImplementationType } from '@/enums'
 import useModuleImplementationTypes from '@/hooks/useModuleImplementationTypes'
 import clsx from 'clsx'
-
-const IMPLEMENTATION_TYPES_LIST = [
-  {
-    title: 'Монолитный',
-    code: ModuleImplementationType.Monolithic,
-  },
-  {
-    title: 'Кабинет 640/640',
-    code: ModuleImplementationType.Cabinet640x640,
-  },
-  {
-    title: 'Кабинет 640/480',
-    code: ModuleImplementationType.Cabinet640x480,
-  },
-]
+import { implementationList } from '@/consts'
 
 const ImplementationTypeSelect = () => {
   const { implementationType, setImplementationType } = useContext(StoreContext)
@@ -47,7 +33,7 @@ const ImplementationTypeSelect = () => {
           native-select
           class={selectClasses}
         >
-          {IMPLEMENTATION_TYPES_LIST.map((implementationTypeItem) => (
+          {implementationList.map((implementationTypeItem) => (
             <option
               key={implementationTypeItem.code}
               value={implementationTypeItem.code}

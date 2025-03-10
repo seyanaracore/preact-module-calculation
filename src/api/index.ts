@@ -62,8 +62,8 @@ const api = {
     return apiClient.getMagnet()
   },
 
-  getCabinet(): Promise<CabinetItem> {
-    return apiClient.getCabinet()
+  getCabinet(id: number | string): Promise<CabinetItem> {
+    return apiClient.getCabinet(id)
   },
 
   async getModuleTypes(): Promise<ModuleTypeItemById> {

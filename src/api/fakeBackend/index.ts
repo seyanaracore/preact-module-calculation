@@ -10,9 +10,7 @@ import cabinets from '../../../db/json/filtered/cabinets.json'
 import magnets from '../../../db/json/filtered/magnets.json'
 import moduleTypes from '../../../db/json/modules-types.json'
 import { ModuleManufacturer } from '@/api/enums'
-import { baseUrl } from '@/api/consts'
 import { DBItemWithLink, ModulesListItem } from './types'
-import UPage from './types/upage'
 import DBItem from './types/dbItem'
 import getActualPriceAndLink from '@/api/fakeBackend/getActualPriceAndLink'
 
@@ -72,12 +70,12 @@ const fakeBackend = {
       link,
     } as T
   },
-  getCabinet: async <T = ReturnData>() => {
-    const cabinets = db.cabinets[0]
-    const { price, link } = await getActualPriceAndLink(cabinets.id)
+  getCabinet: async <T = ReturnData>(id: number | string) => {
+    const cabinet = db.cabinets.find((cabinet) => cabinet.id === +id)
+    const { price, link } = await getActualPriceAndLink(id)
 
     return {
-      ...cabinets,
+      ...cabinet,
       price,
       link,
     } as T
