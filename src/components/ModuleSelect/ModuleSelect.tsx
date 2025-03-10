@@ -9,6 +9,8 @@ import clsx from 'clsx'
 
 type GroupedModules = Record<ModuleTypeId, ModulesListItem[]>
 
+const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' })
+
 const ModuleSelect = () => {
   const { moduleId, setModuleId } = useContext(StoreContext)
   const { data: modulesList } = useQueryModulesList()
@@ -16,11 +18,16 @@ const ModuleSelect = () => {
   const containerClasses = clsx([commonCls.selectContainer, commonCls.mediaLgWidth100])
   const selectClasses = clsx([commonCls.select, commonCls.formInput])
 
-  const groupedModules = useMemo<GroupedModules | null>(() => {
-    if (!modulesList?.length || !moduleTypes) return null
+  const sortedModules = useMemo(
+    () => [...(modulesList || [])].sort((a, b) => collator.compare(b.name, a.name)),
+    [modulesList]
+  )
 
-    return groupBy(modulesList, (module) => module['parent-id']) as GroupedModules
-  }, [modulesList, moduleTypes])
+  const groupedModules = useMemo<GroupedModules | null>(() => {
+    if (!sortedModules?.length || !moduleTypes) return null
+
+    return groupBy(sortedModules, (module) => module['parent-id']) as GroupedModules
+  }, [sortedModules, moduleTypes])
 
   const onChangeModuleId = (e: ChangeEvent<HTMLSelectElement>) => {
     setModuleId((e.target as HTMLSelectElement).value)
