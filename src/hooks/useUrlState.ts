@@ -73,7 +73,7 @@ function useUrlState<T>(
       const newUrl = `${window.location.pathname}${newSearch ? `?${newSearch}` : ''}`
 
       // Обновляем URL без перезагрузки страницы
-      window.history.pushState(null, '', newUrl)
+      window.history.replaceState(null, '', newUrl)
 
       // Обновляем локальное состояние
       setValue(newValue)
