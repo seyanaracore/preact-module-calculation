@@ -14,11 +14,11 @@ const getControllerForFullColor = ({
   const summaryResolution = summaryLedsWidth * summaryLedsHeight
 
   if (summaryResolution <= 204800) {
-    return controllers.find((controller) => controller.id === 3357)
+    return controllers.find((controller) => controller.id === 2347)
   }
 
   if (summaryResolution <= 524288) {
-    return controllers.find((controller) => controller.id === 3357)
+    return controllers.find((controller) => controller.id === 2895)
   }
 
   if (summaryResolution <= 655360) {
@@ -26,11 +26,11 @@ const getControllerForFullColor = ({
   }
 
   if (summaryResolution <= 1300000) {
-    return controllers.find((controller) => controller.id === 2812)
+    return controllers.find((controller) => controller.id === 3284)
   }
 
   if (summaryResolution <= 2300000) {
-    return controllers.find((controller) => controller.id === 2647)
+    return controllers.find((controller) => controller.id === 3385)
   }
 
   if (summaryResolution <= 2600000) {
