@@ -9,7 +9,18 @@ import clsx from 'clsx'
 
 type GroupedModules = Record<ModuleTypeId, ModulesListItem[]>
 
-const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' })
+function extractModuleNumber(str: string) {
+  // Регулярное выражение ищет любую латинскую букву, за которой следует число с опциональной дробной частью.
+  const regex = /[A-Za-z](\d+(?:[.,]\d+)?)/
+  const match = str.match(regex)
+
+  if (match && match[1]) {
+    // Заменяем запятую на точку для корректного парсинга как float.
+    return parseFloat(match[1].replace(',', '.'))
+  }
+
+  return 0 // Если не найдено, вернём 0.
+}
 
 const ModuleSelect = () => {
   const { moduleId, setModuleId } = useContext(StoreContext)
@@ -18,16 +29,11 @@ const ModuleSelect = () => {
   const containerClasses = clsx([commonCls.selectContainer, commonCls.mediaLgWidth100])
   const selectClasses = clsx([commonCls.select, commonCls.formInput])
 
-  const sortedModules = useMemo(
-    () => [...(modulesList || [])].sort((a, b) => collator.compare(b.name, a.name)),
-    [modulesList]
-  )
-
   const groupedModules = useMemo<GroupedModules | null>(() => {
-    if (!sortedModules?.length || !moduleTypes) return null
+    if (!modulesList?.length || !moduleTypes) return null
 
-    return groupBy(sortedModules, (module) => module['parent-id']) as GroupedModules
-  }, [sortedModules, moduleTypes])
+    return groupBy(modulesList, (module) => module['parent-id']) as GroupedModules
+  }, [modulesList, moduleTypes])
 
   const onChangeModuleId = (e: ChangeEvent<HTMLSelectElement>) => {
     setModuleId((e.target as HTMLSelectElement).value)

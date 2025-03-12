@@ -26,7 +26,22 @@ declare global {
 
 const filteredPath = path.resolve('db/json/filtered')
 
-const filterBy = (field: keyof typeof requiredIds) => {
+function extractModuleNumber(str: string) {
+  // Регулярное выражение ищет любую латинскую букву, за которой следует число с опциональной дробной частью.
+  const regex = /[A-Za-z](\d+(?:[.,]\d+)?)/
+  const match = str.match(regex)
+
+  if (match && match[1]) {
+    // Заменяем запятую на точку для корректного парсинга как float.
+    return parseFloat(match[1].replace(',', '.'))
+  }
+
+  return 0 // Если не найдено, вернём 0.
+}
+
+const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' })
+
+const getDataFilterByRequiredIds = (field: keyof typeof requiredIds) => {
   return (data: { id: number }) => requiredIds[field].includes(data.id)
 }
 
@@ -47,21 +62,37 @@ const uniqByKeepLast = <T>(list: Array<T>, key: (i: T) => T[keyof T]) => {
 }
 
 Object.entries(filerMap).forEach(([fieldName, data]) => {
-  const handledData = uniqByKeepLast(data.filter(filterBy(fieldName)), (i) => i.id)
-    .sort((a, b) => requiredIds[fieldName].indexOf(a.id) - requiredIds[fieldName].indexOf(b.id))
-    .map((dbItem) => {
-      return pick(dbItem, [
-        'id',
-        'name',
-        'parent-id',
-        'kolichestvo_svetodiodov_sht',
-        'razmer_mm',
-        'razmer_mm_shirina_vysota',
-        'proizvoditel',
-        'vyhodnaya_mownost_vt',
-        'price',
-      ])
-    })
+  const filterByRequiredIds = getDataFilterByRequiredIds(fieldName)
+  const onlyRequiredData = data.filter(filterByRequiredIds)
+  const uniqueRequiredData = uniqByKeepLast(onlyRequiredData, (i) => i.id)
+
+  uniqueRequiredData.sort((a, b) => collator.compare(a.name, b.name))
+
+  if (fieldName === 'modules') {
+    uniqueRequiredData.sort((a, b) => extractModuleNumber(b.name) - extractModuleNumber(a.name))
+
+    const boe = uniqueRequiredData.find((el) => el.id === 3384)
+
+    if (boe) {
+      boe.name = boe.name.replace('BOE BTQ025 (3840)', 'BOE, P2.5 (320*160),3840 Hz, indoor')
+      boe.title = boe.title.replace('BOE BTQ025 (3840)', 'BOE, P2.5 (320*160),3840 Hz, indoor')
+      boe.h1 = boe.h1.replace('BOE BTQ025 (3840)', 'BOE, P2.5 (320*160),3840 Hz, indoor')
+    }
+  }
+
+  const handledData = uniqueRequiredData.map((dbItem) => {
+    return pick(dbItem, [
+      'id',
+      'name',
+      'parent-id',
+      'kolichestvo_svetodiodov_sht',
+      'razmer_mm',
+      'razmer_mm_shirina_vysota',
+      'proizvoditel',
+      'vyhodnaya_mownost_vt',
+      'price',
+    ])
+  })
 
   fs.writeFile(path.join(filteredPath, `${fieldName}.json`), JSON.stringify(handledData), (err) => {
     if (err) {
