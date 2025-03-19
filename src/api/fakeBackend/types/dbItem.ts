@@ -8,6 +8,7 @@ type DBItem = {
   id: number
   name: string
   'parent-id': number
+  link: string
   kolichestvo_svetodiodov_sht: string
   razmer_mm: OptionalIntField
   proizvoditel: string

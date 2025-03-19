@@ -1,0 +1,32 @@
+{
+  "include": [
+    "db/db-handler.ts",
+    "db/required_ids.json",
+    "db/json-from-csv_catalog.json",
+    "db/catalog-links.json",
+    "./src/types/shims-global.d.ts"
+  ],
+  "compilerOptions": {
+    "types": ["node"],
+    "composite": true,
+    "outDir": "dist",
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}

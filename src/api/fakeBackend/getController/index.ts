@@ -1,10 +1,10 @@
 import { ControllerItem } from '@/types'
 import { ModuleTypeId } from '@/api/enums'
-import modules from '../../../../db/json/filtered/modules.json'
+import modules from '../../../../db/json/modules.json'
 import getControllerForMonochrome from './monochromeController'
 import getControllerForFullColor from './fullColorController'
 import DBItem from '@/api/fakeBackend/types/dbItem'
-import getActualPriceAndLink from '@/api/fakeBackend/getActualPriceAndLink'
+import getPrice from '@/api/fakeBackend/getPrice'
 import { DBItemWithLink } from '@/api/fakeBackend/types'
 
 type GetControllerParams = {
@@ -35,9 +35,9 @@ async function getController<T extends DBItemWithLink>({
 
   if (!targetController) throw new Error(`Target controller not found. Module id: ${moduleId}`)
 
-  const { price, link } = await getActualPriceAndLink(targetController.id)
+  const price = await getPrice(targetController.id)
 
-  return { ...targetController, price, link } as T
+  return { ...targetController, price } as T
 }
 
 export default getController

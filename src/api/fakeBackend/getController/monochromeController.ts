@@ -1,4 +1,4 @@
-import controllers from '../../../../db/json/filtered/controllers.json'
+import controllers from '../../../../db/json/controllers.json'
 import getLedsAmount from '@/helpers/getLedsAmount'
 import { GetTargetControllerParams } from './types'
 import DBItem from '@/api/fakeBackend/types/dbItem'

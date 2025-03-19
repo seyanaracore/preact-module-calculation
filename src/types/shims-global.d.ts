@@ -5,7 +5,7 @@ declare global {
     keys<T>(obj: T): Array<keyof T>
 
     // @ts-ignore
-    entries<T, K = keyof T>(o: T | ArrayLike<T>): [K, T[K]][]
+    entries<T, K = keyof T>(o: T): [K, T[K]][]
   }
 
   interface Window {

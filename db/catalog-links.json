@@ -1,0 +1,2185 @@
+[
+  { "id": "226", "link": "https://ledexpress.ru/" },
+  { "id": "291", "link": "https://ledexpress.ru/delivery_and_payment/" },
+  { "id": "311", "link": "https://ledexpress.ru/contacts/" },
+  { "id": "2226", "link": "https://ledexpress.ru/shop/" },
+  { "id": "2229", "link": "https://ledexpress.ru/shop/svet/" },
+  { "id": "2230", "link": "https://ledexpress.ru/shop/svet/pikseli/" },
+  { "id": "2231", "link": "https://ledexpress.ru/shop/svet/klastery/" },
+  { "id": "2232", "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/" },
+  { "id": "2233", "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/" },
+  { "id": "2234", "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/" },
+  { "id": "2235", "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/ulichnaya/" },
+  { "id": "2236", "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/" },
+  { "id": "2237", "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/" },
+  {
+    "id": "2238",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/"
+  },
+  { "id": "2239", "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/" },
+  {
+    "id": "2240",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/furnitura/"
+  },
+  { "id": "2241", "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/" },
+  {
+    "id": "2242",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/furnitura/"
+  },
+  { "id": "2243", "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/220-v/" },
+  { "id": "2244", "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/24-v/" },
+  { "id": "2246", "link": "https://ledexpress.ru/shop/kontrollery/" },
+  { "id": "2247", "link": "https://ledexpress.ru/shop/kontrollery/bx/" },
+  { "id": "2248", "link": "https://ledexpress.ru/shop/kontrollery/hd/" },
+  { "id": "2249", "link": "https://ledexpress.ru/shop/kontrollery/listen/" },
+  { "id": "2250", "link": "https://ledexpress.ru/shop/kontrollery/novastar/" },
+  { "id": "2251", "link": "https://ledexpress.ru/shop/kontrollery/colorlight/" },
+  { "id": "2252", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/" },
+  { "id": "2253", "link": "https://ledexpress.ru/shop/kontrollery/rgbsky/" },
+  { "id": "2254", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/" },
+  { "id": "2255", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/dvuhcvetnye/" },
+  { "id": "2256", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/" },
+  {
+    "id": "2257",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/"
+  },
+  {
+    "id": "2258",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/"
+  },
+  { "id": "2259", "link": "https://ledexpress.ru/shop/furnitura/" },
+  { "id": "2260", "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/" },
+  { "id": "2261", "link": "https://ledexpress.ru/shop/furnitura/shlejf/" },
+  { "id": "2262", "link": "https://ledexpress.ru/shop/furnitura/magnity/" },
+  { "id": "2263", "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/" },
+  { "id": "2264", "link": "https://ledexpress.ru/shop/furnitura/profil/" },
+  { "id": "2265", "link": "https://ledexpress.ru/shop/furnitura/vakuum/" },
+  {
+    "id": "2266",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/"
+  },
+  { "id": "2267", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/" },
+  { "id": "2268", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/" },
+  { "id": "2269", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/" },
+  { "id": "2270", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/24-v/" },
+  { "id": "2271", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/5-v/" },
+  { "id": "2272", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/" },
+  { "id": "2273", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/" },
+  { "id": "2274", "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/" },
+  {
+    "id": "2275",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/9v-36v-5v/"
+  },
+  {
+    "id": "2276",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q3-07-pro-320-160-smd-indoor/"
+  },
+  {
+    "id": "2277",
+    "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/kabel-pitaniya-92-25-25-cm/"
+  },
+  {
+    "id": "2278",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-stal-noj-960h960-outdoor-frontal-obsluzh/"
+  },
+  {
+    "id": "2285",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-smd2835-120-led-dc12v-ip65-9-6w-m-10lm-m-green-silicone/"
+  },
+  { "id": "2286", "link": "https://ledexpress.ru/shop/kontrollery/hd/wifi-mode/" },
+  { "id": "2289", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a3/" },
+  {
+    "id": "2290",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-s-type-smd2835-60-led-dc12v-ip20-7-2w-m-cool-white-8000-10000-k/"
+  },
+  {
+    "id": "2292",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-tb60/"
+  },
+  {
+    "id": "2294",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/profil-alyuminievyj-model-11530/"
+  },
+  {
+    "id": "2295",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/patch-kord-3m-e/"
+  },
+  {
+    "id": "2296",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-monohromnyj-single-color/"
+  },
+  {
+    "id": "2298",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-novastar-vx6s/"
+  },
+  {
+    "id": "2299",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-238-smd2835-4led-9000-11000k-160/"
+  },
+  {
+    "id": "2300",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-12v-white/"
+  },
+  {
+    "id": "2301",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/usb-udlinitel-1-5-m/"
+  },
+  {
+    "id": "2302",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-t1-smd2835-1led-7000-8000k-10-45-2w/"
+  },
+  {
+    "id": "2303",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-leh-d400-smd5630-3led-9000-11000k-160/"
+  },
+  {
+    "id": "2306",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/korpus-novastar-msd-300/"
+  },
+  {
+    "id": "2307",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-300ns-12-12v-25a/"
+  },
+  {
+    "id": "2309",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q3-07-eco-320-160-indoor-b-maski/"
+  },
+  {
+    "id": "2310",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-6-12-ip67-1-cm-pink-silicone/"
+  },
+  { "id": "2313", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w61/" },
+  {
+    "id": "2315",
+    "link": "https://ledexpress.ru/shop/kontrollery/colorlight/kontroller-colorlight-x2s/"
+  },
+  {
+    "id": "2317",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/ulichnaya/svetodiodnaya-lenta-smd2835-120-led-dc12v-ip65-9-6w-m-6-8lm-cold-white-10000-12000-k/"
+  },
+  {
+    "id": "2318",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/podves-kabineta-512-mm/"
+  },
+  { "id": "2319", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-u64/" },
+  {
+    "id": "2321",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-6-12-ip67-1-cm-white-silicone/"
+  },
+  {
+    "id": "2322",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-red/"
+  },
+  {
+    "id": "2323",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-t6/"
+  },
+  {
+    "id": "2324",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/kabel-akusticheskij-2-0-35-mm2/"
+  },
+  {
+    "id": "2325",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-warm-white-silicone/"
+  },
+  {
+    "id": "2326",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q8-smd-256-128-qiang-li-chang-li-ulichnyj-1-4-scan/"
+  },
+  {
+    "id": "2328",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q4-pro-320-160-outdoor/"
+  },
+  {
+    "id": "2329",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/raz-em-signala-rj-45-m/"
+  },
+  {
+    "id": "2330",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-stal-noj-960h960-outdoor-tyl-noe-obsluzh-odna-dver/"
+  },
+  { "id": "2333", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w62-75/" },
+  { "id": "2334", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-d16/" },
+  {
+    "id": "2335",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mrv-208/"
+  },
+  {
+    "id": "2336",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-q3-07-eco-smd-320-160-qiang-li-chang-li-inter-ernyj/"
+  },
+  {
+    "id": "2339",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-p3-smd-192-192-gkgd-inter-ernyj/"
+  },
+  {
+    "id": "2340",
+    "link": "https://ledexpress.ru/shop/kontrollery/rgbsky/videoprocessor-rgbsky-dvp703-sdi/"
+  },
+  {
+    "id": "2342",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/videoprocessor-hd-vp410/"
+  },
+  {
+    "id": "2343",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-300fay-4-5-4-5v-60a/"
+  },
+  {
+    "id": "2344",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-883-smd2835-3led-4000k-160/"
+  },
+  { "id": "2347", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c16c/" },
+  { "id": "2349", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w66/" },
+  {
+    "id": "2351",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-qiang-li-chang-li-ulichnyj-krasnyj/"
+  },
+  {
+    "id": "2352",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-241-smd2835-3led-cold-white-120/"
+  },
+  {
+    "id": "2354",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-12v-blue/"
+  },
+  {
+    "id": "2355",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-aptechnyj-krest-576-576-kreplenie-modulej-na-magnity-kreplenie-na-stenu/"
+  },
+  {
+    "id": "2357",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q6-66-eco-smd-320-160-qiang-li-chang-li-ulichnyj/"
+  },
+  {
+    "id": "2359",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-red/"
+  },
+  {
+    "id": "2360",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/perehodnik/"
+  },
+  {
+    "id": "2365",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-smd2835-120-led-dc12v-ip65-9-6w-m-10lm-m-yellow-silicone/"
+  },
+  { "id": "2366", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w64/" },
+  {
+    "id": "2367",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q2-eco-320-160-indoor/"
+  },
+  {
+    "id": "2368",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/hrw-12v30w/"
+  },
+  {
+    "id": "2369",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-tb3/"
+  },
+  {
+    "id": "2372",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/ugolok-plastikovyj-5515/"
+  },
+  { "id": "2373", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-u62/" },
+  {
+    "id": "2374",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-aptechnyj-krest-480-480-kreplenie-modulej-na-magnity-kreplenie-na-stenu/"
+  },
+  { "id": "2376", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-wf1/" },
+  {
+    "id": "2377",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-293-smd2835-3led-9000-11000k-160/"
+  },
+  {
+    "id": "2378",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-862-smd2835-2led-7000k-160/"
+  },
+  {
+    "id": "2382",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/raz-em-signala-rj-45-p/"
+  },
+  {
+    "id": "2384",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q3-pro-192-192-indoor-b-maski/"
+  },
+  {
+    "id": "2385",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-883-smd2835-3led-7000k-160/"
+  },
+  {
+    "id": "2388",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-cyv-100-12-12v-8-3a/"
+  },
+  {
+    "id": "2390",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/korpus-novastar-msd-300-4-sht/"
+  },
+  {
+    "id": "2392",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-265-smd3535-1led-7000-8000k-160/"
+  },
+  { "id": "2393", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c16/" },
+  {
+    "id": "2394",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-250-12-12v-20-8a/"
+  },
+  { "id": "2395", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-d06/" },
+  { "id": "2397", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-e63/" },
+  {
+    "id": "2399",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-light-green-silicone/"
+  },
+  {
+    "id": "2401",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q8-pro-320-160-outdoor/"
+  },
+  {
+    "id": "2403",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-12v-green/"
+  },
+  {
+    "id": "2406",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/temperature-humidity-brightness-remoter-sensor-hd-s108/"
+  },
+  {
+    "id": "2407",
+    "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/kabel-pitaniya-4525-25-10-cm-mednyj/"
+  },
+  {
+    "id": "2409",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-green-silicone/"
+  },
+  {
+    "id": "2410",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-green/"
+  },
+  {
+    "id": "2411",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-cyv-150-12-12v-12-5a/"
+  },
+  {
+    "id": "2416",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/ulichnaya/svetodiodnaya-lenta-smd2835-120-led-dc12v-ip65-9-6w-m-6-8lm-white-6000-6500-k/"
+  },
+  {
+    "id": "2417",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-238-smd2835-4led-7000-8000k-160/"
+  },
+  {
+    "id": "2418",
+    "link": "https://ledexpress.ru/shop/kontrollery/rgbsky/videoprocessor-rgbsky-dvp601/"
+  },
+  { "id": "2421", "link": "https://ledexpress.ru/shop/furnitura/magnity/magnit-12-8-1-2/" },
+  {
+    "id": "2425",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/usb-udlinitel-3-m/"
+  },
+  {
+    "id": "2427",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-241-smd2835-3led-red-120/"
+  },
+  { "id": "2428", "link": "https://ledexpress.ru/shop/kontrollery/listen/ls-q2c-75/" },
+  {
+    "id": "2429",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-600/"
+  },
+  {
+    "id": "2432",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q3-07-eco-320-160-indoor/"
+  },
+  { "id": "2436", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-u60/" },
+  {
+    "id": "2437",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-237-smd2835-3led-9000-11000k-160/"
+  },
+  { "id": "2439", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w62/" },
+  {
+    "id": "2441",
+    "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/kabel-pitaniya-35-25-25-cm/"
+  },
+  {
+    "id": "2442",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-cv-30-lp-12-12v-2-5a/"
+  },
+  {
+    "id": "2443",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-237-smd2835-3led-red-160/"
+  },
+  {
+    "id": "2445",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-12v-yellow/"
+  },
+  {
+    "id": "2446",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/klej-705-odnokomponentnyj/"
+  },
+  {
+    "id": "2451",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mrv-416/"
+  },
+  { "id": "2453", "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-fc1601-26cm/" },
+  { "id": "2455", "link": "https://ledexpress.ru/shop/furnitura/profil/ocinkovka-45-10-0-8/" },
+  { "id": "2456", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w64a/" },
+  {
+    "id": "2457",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd2835-120-led-dc12v-ip20-5-mm-white-6000-6500k/"
+  },
+  {
+    "id": "2458",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-300/"
+  },
+  {
+    "id": "2460",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-2091rgb/"
+  },
+  {
+    "id": "2461",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-aptechnyj-krest-640-640-kreplenie-modulej-na-magnity-kreplenie-na-stenu/"
+  },
+  {
+    "id": "2462",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q2-5-pro-320-160-outdoor/"
+  },
+  {
+    "id": "2463",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-blue-goluboj-silicone/"
+  },
+  {
+    "id": "2467",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q1-86-eco-320-160-indoor/"
+  },
+  { "id": "2468", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a30/" },
+  { "id": "2472", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-d35/" },
+  {
+    "id": "2473",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-yellow/"
+  },
+  {
+    "id": "2475",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-pink/"
+  },
+  { "id": "2476", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a4/" },
+  { "id": "2478", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-u60-75/" },
+  {
+    "id": "2480",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-230-smd2835-1led-7000-8000k-160/"
+  },
+  {
+    "id": "2481",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-rgb-r108-s-s-pul-tom/"
+  },
+  {
+    "id": "2482",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-light-pink-silicone/"
+  },
+  { "id": "2484", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w04/" },
+  {
+    "id": "2487",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-zelenyj/"
+  },
+  {
+    "id": "2488",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-blue/"
+  },
+  { "id": "2489", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-d05/" },
+  {
+    "id": "2490",
+    "link": "https://ledexpress.ru/shop/svet/klastery/klastery-1-smd2835-1-5w-12v-dc-6-45-degree-viewing-angle-ip65-size-46-31mm-cold-white-9000-12000/"
+  },
+  {
+    "id": "2495",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/raz-em-pitaniya-powercon-m/"
+  },
+  {
+    "id": "2496",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-700/"
+  },
+  { "id": "2498", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-u63/" },
+  {
+    "id": "2499",
+    "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-fc1601-50cm-mednyj/"
+  },
+  {
+    "id": "2501",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/videoprocessor-hd-vp820/"
+  },
+  {
+    "id": "2505",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/5-v/blok-pitaniya-cv-100wh-5-5v-20a/"
+  },
+  { "id": "2508", "link": "https://ledexpress.ru/shop/kontrollery/listen/ls-x1u/" },
+  {
+    "id": "2509",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-tb1/"
+  },
+  {
+    "id": "2510",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-100sa-12-12v-8-3a-slim/"
+  },
+  {
+    "id": "2511",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/lrs-100-12/"
+  },
+  {
+    "id": "2512",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-purple/"
+  },
+  {
+    "id": "2513",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-novastar-vx4s-n/"
+  },
+  {
+    "id": "2515",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-dpv-35-12-12v-3a/"
+  },
+  {
+    "id": "2516",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/podves-kabineta-576-mm/"
+  },
+  {
+    "id": "2517",
+    "link": "https://ledexpress.ru/shop/kontrollery/colorlight/priemnaya-karta-colorlight-e80/"
+  },
+  { "id": "2520", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c1/" },
+  { "id": "2521", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-e66a/" },
+  { "id": "2522", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-wf4/" },
+  {
+    "id": "2523",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q4-pro-smd-320-160-qiang-li-chang-li-ulichnyj/"
+  },
+  {
+    "id": "2524",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-rgb-t-4000/"
+  },
+  {
+    "id": "2525",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-400aa-4-5-slim/"
+  },
+  {
+    "id": "2527",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-8-16-ip67-1-cm-warm-white-silicone/"
+  },
+  {
+    "id": "2528",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/profil-alyuminievyj-model-2590f-chernyj-9-sm/"
+  },
+  {
+    "id": "2529",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-500-m-5-5v-80a/"
+  },
+  {
+    "id": "2531",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/datchik-temperatury-mth310/"
+  },
+  { "id": "2532", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-r712/" },
+  {
+    "id": "2533",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/korpus-960-960-frontal-nyj/"
+  },
+  {
+    "id": "2534",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-640h640-indoor/"
+  },
+  {
+    "id": "2535",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-12-rgb/"
+  },
+  {
+    "id": "2536",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-a10s-plus/"
+  },
+  {
+    "id": "2537",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-a9s/"
+  },
+  { "id": "2541", "link": "https://ledexpress.ru/shop/furnitura/magnity/magnit-m4-17-mm/" },
+  {
+    "id": "2542",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/podves-kabineta-640h480-mm/"
+  },
+  {
+    "id": "2548",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/tb8-svetodiodnye-moduli-unilumin-320h160mm-smd1515-3in1-led/"
+  },
+  { "id": "2550", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-e64/" },
+  { "id": "2551", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-r502/" },
+  {
+    "id": "2552",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-236-smd2835-2led-green-160/"
+  },
+  {
+    "id": "2553",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q6-66-pro-320-160-outdoor/"
+  },
+  {
+    "id": "2555",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/220-v/gibkij-neon-smd2835-120-led-ac220v-ip65-9-6w-m-10lm-m-green-pvc/"
+  },
+  {
+    "id": "2558",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/infrared-remote-controller-hd/"
+  },
+  {
+    "id": "2560",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/ugolok-k-profilyu-28h20-chernyj/"
+  },
+  {
+    "id": "2562",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-150-12-12v-12-5a/"
+  },
+  {
+    "id": "2563",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-400gf-12-12v-33-3a/"
+  },
+  { "id": "2565", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c35c/" },
+  {
+    "id": "2566",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-400ak-4-5-4-5v-80a/"
+  },
+  { "id": "2567", "link": "https://ledexpress.ru/shop/kontrollery/hd/4g-mode/" },
+  {
+    "id": "2568",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/rgb-led-kontroller-12v-24v-18a-216-432w/"
+  },
+  {
+    "id": "2569",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd5050-60-led-dc12v-ip20-14-4w-m-10-12lm-white-6000-6500-k/"
+  },
+  {
+    "id": "2570",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/podves-kabineta-640h480-c-indoor/"
+  },
+  {
+    "id": "2572",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/furnitura/vilka-preobrazovatel-evro-pvh-220-v/"
+  },
+  {
+    "id": "2575",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd5050-60-led-dc12v-ip20-14-4w-m-10-12lm-warm-white-2800-3200-k/"
+  },
+  {
+    "id": "2576",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/furnitura/zaglushka-pvh/"
+  },
+  { "id": "2577", "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-fc1601-50cm/" },
+  {
+    "id": "2579",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-6-12-ip67-1-cm-green-silicone/"
+  },
+  {
+    "id": "2580",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-6-12-ip67-1-cm-icy-blue-biryuzovyj-silicone/"
+  },
+  {
+    "id": "2582",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/komplekt-kabelej-outdoor/"
+  },
+  {
+    "id": "2583",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/videoprocessor-hd-vp1220/"
+  },
+  {
+    "id": "2585",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-236-smd2835-2led-7000-8000-k-160/"
+  },
+  {
+    "id": "2586",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q5-pro-320-160-outdoor/"
+  },
+  {
+    "id": "2587",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/mediakonverter-novastar-cvt-320/"
+  },
+  {
+    "id": "2589",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/priyomnaya-karta-novastar-mrv366-mrv316/"
+  },
+  {
+    "id": "2590",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-prozrachnaya/"
+  },
+  {
+    "id": "2591",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q8-eco-320-160-outdoor/"
+  },
+  {
+    "id": "2592",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-aptechnyj-krest-960-960-kreplenie-modulej-na-magnity-kreplenie-na-stenu/"
+  },
+  {
+    "id": "2593",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-863-smd2835-3led-7000k-160/"
+  },
+  {
+    "id": "2595",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/gajka-m8-kvadratnaya/"
+  },
+  {
+    "id": "2596",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-8-16-ip67-1-cm-white-silicone/"
+  },
+  {
+    "id": "2597",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-vx400s/"
+  },
+  {
+    "id": "2598",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-6-12-ip67-1-cm-blue-silicone/"
+  },
+  { "id": "2601", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c15c/" },
+  {
+    "id": "2604",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200nm-5d-5v-40a/"
+  },
+  {
+    "id": "2607",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-35-12-12v-3a/"
+  },
+  {
+    "id": "2609",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-q4-eco-smd-320-160-qiang-li-chang-li-inter-ernyj/"
+  },
+  {
+    "id": "2610",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-960-960-indoor-s-kommutaciej/"
+  },
+  {
+    "id": "2611",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/profil-alyuminievyj-model-2590f-chernyj-9-sm-5-8-metrov/"
+  },
+  { "id": "2612", "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-16-pin-mednyj/" },
+  {
+    "id": "2615",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-smd2835-120-led-dc12v-ip65-9-6w-m-size-8-16-10lm-m-blue-silicone/"
+  },
+  {
+    "id": "2616",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-aptechnyj-krest-768-768-kreplenie-modulej-na-magnity-kreplenie-na-stenu/"
+  },
+  {
+    "id": "2618",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-350ns-12-12v-29a/"
+  },
+  {
+    "id": "2620",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-100gc-12-12v-8-3a/"
+  },
+  {
+    "id": "2621",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-236-smd2835-2led-red-160/"
+  },
+  { "id": "2622", "link": "https://ledexpress.ru/shop/kontrollery/listen/ls-d5/" },
+  {
+    "id": "2623",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-230-smd2835-1led-9000-11000k-160/"
+  },
+  {
+    "id": "2624",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-292-smd2835-1led-9000-11000k-160/"
+  },
+  {
+    "id": "2625",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/brightness-sensor-hd-rgb/"
+  },
+  {
+    "id": "2626",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/videoprocessor-hd-vp210/"
+  },
+  {
+    "id": "2627",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-htw-1260-12v-5a/"
+  },
+  {
+    "id": "2630",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/patch-kord-1m-e/"
+  },
+  {
+    "id": "2631",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/24-v/blok-pitaniya-htw-24100-24v-4-16a/"
+  },
+  { "id": "2632", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-r512/" },
+  {
+    "id": "2638",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-pure-white-silicone/"
+  },
+  {
+    "id": "2639",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/furnitura/provoda-chernyj-krasnyj/"
+  },
+  {
+    "id": "2642",
+    "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-fc1601-100cm-mednyj/"
+  },
+  {
+    "id": "2643",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/lrs-150-12/"
+  },
+  {
+    "id": "2645",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q4-rgb-320-160-smd-outdoor/"
+  },
+  {
+    "id": "2649",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-120-led-dc12v-7-w-m-size-6-12-ip67-2-5-cm-cool-white-silicone/"
+  },
+  {
+    "id": "2653",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mrv-300/"
+  },
+  {
+    "id": "2656",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-q3-07-eco-smd-320-160-qiang-li-chang-li-inter-ernyj-b-maski/"
+  },
+  {
+    "id": "2659",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/ugolok-k-profilyu-11530/"
+  },
+  {
+    "id": "2662",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-960h960-outdoor-s-kommutaciej/"
+  },
+  {
+    "id": "2667",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/ugolok-k-profilyu-2590f/"
+  },
+  { "id": "2668", "link": "https://ledexpress.ru/shop/kontrollery/listen/ls-q2c-50/" },
+  {
+    "id": "2669",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-tb2/"
+  },
+  {
+    "id": "2670",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/peredayuwaya-karta-novastar-mctrl-300/"
+  },
+  {
+    "id": "2676",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/lpv-150-12/"
+  },
+  {
+    "id": "2677",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-862-smd2835-2led-10000k-160/"
+  },
+  {
+    "id": "2679",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-orange/"
+  },
+  {
+    "id": "2680",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-htw-12300-12v-25a/"
+  },
+  {
+    "id": "2681",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-htw-1235-12v-3a/"
+  },
+  {
+    "id": "2683",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-234-samsung-smd2835-3led-9000-11000k-160/"
+  },
+  {
+    "id": "2687",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-8-16-ip67-1-cm-orange-silicone/"
+  },
+  {
+    "id": "2690",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-htw-12240-12v-20a/"
+  },
+  {
+    "id": "2698",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/podves-kabineta-640h640mm/"
+  },
+  {
+    "id": "2699",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q3-07-eco-320-160-outdoor/"
+  },
+  {
+    "id": "2700",
+    "link": "https://ledexpress.ru/shop/kontrollery/colorlight/priemnaya-karta-colorlight-5a-75e/"
+  },
+  {
+    "id": "2701",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-stal-noj-960h960-outdoor-tyl-noe-obsluzh-dve-dveri/"
+  },
+  {
+    "id": "2704",
+    "link": "https://ledexpress.ru/shop/svet/klastery/klastery-2-5050led-0-48w-12v-42lm-pure-white-7000-8000k/"
+  },
+  {
+    "id": "2705",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-237-smd2835-3led-7000-8000k-160/"
+  },
+  { "id": "2706", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-wf2/" },
+  { "id": "2709", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-u64a/" },
+  {
+    "id": "2710",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-120-led-dc12v-7-w-m-size-6-12-ip67-2-5-cm-orange-silicone/"
+  },
+  { "id": "2711", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w60/" },
+  {
+    "id": "2714",
+    "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/kabel-pitaniya-75-25-25-cm/"
+  },
+  {
+    "id": "2715",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-236-smd2835-2led-9000-11000k-160/"
+  },
+  {
+    "id": "2719",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-25ga-12-12v-2a/"
+  },
+  {
+    "id": "2720",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/usb-udlinitel-5-m/"
+  },
+  {
+    "id": "2722",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/priyomnaya-karta-novastar-dh426/"
+  },
+  {
+    "id": "2725",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-monohromnyj-r106-s-s-pul-tom/"
+  },
+  {
+    "id": "2727",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/plata-hub-320-axs/"
+  },
+  {
+    "id": "2729",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q6-66-eco-320-160-outdoor/"
+  },
+  { "id": "2730", "link": "https://ledexpress.ru/shop/kontrollery/hd/brightness-sensor-hd/" },
+  {
+    "id": "2732",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-yellow/"
+  },
+  {
+    "id": "2734",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd2835-120-led-dc12v-ip20-9-6w-m-6-8lm-yellow/"
+  },
+  {
+    "id": "2735",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-223-smd5730-3led-9000-11000k-160/"
+  },
+  {
+    "id": "2738",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-266-smd3030-1led-6000-6500k-15-45/"
+  },
+  {
+    "id": "2742",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q3-07-pro-smd-320-160-qiang-li-chang-li-ulichnyj/"
+  },
+  {
+    "id": "2744",
+    "link": "https://ledexpress.ru/shop/kontrollery/colorlight/kontroller-colorlight-a35/"
+  },
+  {
+    "id": "2747",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-q2-5-pro-smd-320-160-qiang-li-chang-li-inter-ernyj/"
+  },
+  {
+    "id": "2749",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q3-eco-192-192-indoor-b-maski/"
+  },
+  {
+    "id": "2750",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-863-smd2835-3led-4000k-160/"
+  },
+  {
+    "id": "2751",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q8-eco-smd-320-160-qiang-li-chang-li-ulichnyj-1-5-scan/"
+  },
+  {
+    "id": "2752",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-268-smd2835-3led-9000-11000k-10-65-2-5w/"
+  },
+  { "id": "2753", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c15/" },
+  {
+    "id": "2755",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-292-smd2835-1led-7000-8000k-160/"
+  },
+  {
+    "id": "2756",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/profil-28h20-chernyj-2m/"
+  },
+  {
+    "id": "2757",
+    "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/kabel-pitaniya-35-25-25-cm-mednyj/"
+  },
+  {
+    "id": "2759",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-640h480-c-indoor/"
+  },
+  { "id": "2760", "link": "https://ledexpress.ru/shop/kontrollery/listen/ls-x1m/" },
+  { "id": "2762", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c35/" },
+  {
+    "id": "2763",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-257-smd2835-3led-9000-11000k-170/"
+  },
+  {
+    "id": "2764",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd2835-120-led-dc12v-ip20-5-mm-cold-white-10000-12000k/"
+  },
+  { "id": "2766", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w02/" },
+  {
+    "id": "2767",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/patch-kord-1-5m-e/"
+  },
+  {
+    "id": "2768",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-rgb-t-8000/"
+  },
+  {
+    "id": "2770",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/konnektor-dlya-lan-kabelya/"
+  },
+  {
+    "id": "2774",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/priyomnaya-karta-novastar-a5s/"
+  },
+  {
+    "id": "2776",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-white/"
+  },
+  {
+    "id": "2778",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-4k/"
+  },
+  {
+    "id": "2783",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/karta-monitoringa-novastar-mon-300/"
+  },
+  { "id": "2784", "link": "https://ledexpress.ru/shop/kontrollery/hd/temperatur-sensor-hd/" },
+  {
+    "id": "2785",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-cv-60ec-12-12v-5a-slim/"
+  },
+  { "id": "2786", "link": "https://ledexpress.ru/shop/kontrollery/novastar/modul-4g/" },
+  {
+    "id": "2790",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-smd2835-120-led-dc12v-ip65-9-6w-m-10lm-m-red-silicone/"
+  },
+  {
+    "id": "2792",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/profil-plastikovyj-3000x28x20-mm/"
+  },
+  {
+    "id": "2793",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-green/"
+  },
+  { "id": "2794", "link": "https://ledexpress.ru/shop/furnitura/profil/ocinkovka-50-11-1-0/" },
+  { "id": "2796", "link": "https://ledexpress.ru/shop/furnitura/magnity/magnit-m3-17mm/" },
+  { "id": "2797", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a31/" },
+  {
+    "id": "2801",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-krasnyj/"
+  },
+  {
+    "id": "2803",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/ugolok-k-profilyu-bld-alp9025-corner/"
+  },
+  {
+    "id": "2804",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd5050-60-led-dc12v-ip20-14-4w-m-10-12lm-rgb/"
+  },
+  {
+    "id": "2805",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/perehodnik-dvi-hdmi/"
+  },
+  { "id": "2806", "link": "https://ledexpress.ru/shop/furnitura/shlejf/konnektor/" },
+  {
+    "id": "2807",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/peredayuwaya-karta-novastar-msd-600/"
+  },
+  {
+    "id": "2809",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-640h640-c-indoor/"
+  },
+  {
+    "id": "2810",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/ventilyator-120h120h25/"
+  },
+  {
+    "id": "2811",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/kreplenie-prinimayuwej-karty/"
+  },
+  { "id": "2812", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a5/" },
+  {
+    "id": "2813",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200af-4-5-slim/"
+  },
+  {
+    "id": "2814",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-aptechnyj-krest-580-580-kreplenie-modulej-na-magnity-kreplenie-na-stenu/"
+  },
+  {
+    "id": "2818",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q2-5-eco-320-160-indoor/"
+  },
+  {
+    "id": "2820",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/lpv-100-12/"
+  },
+  {
+    "id": "2821",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/korpus-ams-lcb300-s2-dlya-t901/"
+  },
+  {
+    "id": "2823",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q3-07-pro-320-160-outdoor/"
+  },
+  {
+    "id": "2824",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/podves-kabineta-960-mm/"
+  },
+  {
+    "id": "2826",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-q4-pro-smd-320-160-qiang-li-chang-li-inter-ernyj/"
+  },
+  {
+    "id": "2827",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-zheltyj/"
+  },
+  {
+    "id": "2829",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/furnitura/klipsa-montazhnaya/"
+  },
+  {
+    "id": "2830",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-rgb-r101-4p/"
+  },
+  {
+    "id": "2831",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/furnitura/konnektor-pvh-neon/"
+  },
+  { "id": "2832", "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-50-pin/" },
+  {
+    "id": "2834",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q5-eco-smd-320-160-qiang-li-chang-li-ulichnyj/"
+  },
+  {
+    "id": "2835",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-lps-12300/"
+  },
+  { "id": "2836", "link": "https://ledexpress.ru/shop/kontrollery/listen/ls-q1-50/" },
+  {
+    "id": "2837",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-6-12-ip67-1-cm-purple-silicone/"
+  },
+  { "id": "2839", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-u6b/" },
+  {
+    "id": "2841",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200af-5-5v-40a/"
+  },
+  {
+    "id": "2842",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-863-smd2835-3led-10000k-160/"
+  },
+  { "id": "2843", "link": "https://ledexpress.ru/shop/kontrollery/listen/ls-q1-75/" },
+  {
+    "id": "2844",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q6-eco-smd-192-192-qiang-li-chang-li-ulichnyj-1-8-scan/"
+  },
+  {
+    "id": "2845",
+    "link": "https://ledexpress.ru/shop/kontrollery/colorlight/kontroller-colorlight-x4s/"
+  },
+  { "id": "2846", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w00/" },
+  {
+    "id": "2850",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-12v-red/"
+  },
+  {
+    "id": "2851",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-100-5-5v-20a/"
+  },
+  {
+    "id": "2852",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/datchik-yarkosti-ns060/"
+  },
+  {
+    "id": "2853",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q5-pro-smd-320-160-qiang-li-chang-li-ulichnyj-3840-hz/"
+  },
+  {
+    "id": "2854",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-512h512-s-kommutaciej/"
+  },
+  {
+    "id": "2856",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q6-pro-smd-192-192-qiang-li-chang-li-ulichnyj-1-8-scan/"
+  },
+  {
+    "id": "2858",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/tb8-svetodiodnye-moduli-unilumin-320-160mm-smd2727-3in1-led-1920-hz-4000-nit-outdoor/"
+  },
+  {
+    "id": "2859",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/svetodiodnyj-modul-qiangli-p10-krasnyj-smd/"
+  },
+  {
+    "id": "2860",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/raz-em-pitaniya-powercon-p/"
+  },
+  {
+    "id": "2861",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-vx1000/"
+  },
+  {
+    "id": "2862",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/lrs-50-12/"
+  },
+  {
+    "id": "2863",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-862-smd2835-2led-4000k-160/"
+  },
+  {
+    "id": "2864",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-cailiang-ulichnyj-krasnyj/"
+  },
+  {
+    "id": "2867",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-q2-5-eco-smd-320-160-qiang-li-chang-li-inter-ernyj/"
+  },
+  { "id": "2868", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-d1/" },
+  {
+    "id": "2869",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q2-5-pro-320-160-indoor/"
+  },
+  {
+    "id": "2870",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-293-smd2835-3led-7000-8000k-160/"
+  },
+  {
+    "id": "2872",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q3-07-pro-320-160-indoor-b-maski/"
+  },
+  {
+    "id": "2874",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-60-12-12v-5a/"
+  },
+  {
+    "id": "2875",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-6-12-ip67-1-cm-warm-white-silicone/"
+  },
+  {
+    "id": "2879",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-tb50/"
+  },
+  { "id": "2880", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w63/" },
+  {
+    "id": "2882",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-268-smd2835-3led-7000-8000k-10-65-2-5w/"
+  },
+  {
+    "id": "2883",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-640h640-s-komutaciej/"
+  },
+  {
+    "id": "2884",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p13-33-1r1g1b-16-32-3in1-7000-nits/"
+  },
+  {
+    "id": "2885",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q8-pro-smd-320-160-qiang-li-chang-li-ulichnyj-1-5-scan/"
+  },
+  {
+    "id": "2888",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-ice-blue/"
+  },
+  { "id": "2889", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-t901/" },
+  {
+    "id": "2891",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-blue-silicone/"
+  },
+  {
+    "id": "2892",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/ulavlivatel-modulya-module-catcher/"
+  },
+  { "id": "2895", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c36c/" },
+  {
+    "id": "2897",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/lpv-60-12/"
+  },
+  {
+    "id": "2898",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-300ay-4-5-slim/"
+  },
+  {
+    "id": "2900",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-tb30/"
+  },
+  { "id": "2903", "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-fc1601-100cm/" },
+  {
+    "id": "2904",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200-5-5v-40a/"
+  },
+  {
+    "id": "2907",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-576h576-s-kommutaciej/"
+  },
+  {
+    "id": "2908",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200af-4-5-4-5v-40a/"
+  },
+  {
+    "id": "2909",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/furnitura/vilka-soedinitel-naya-pvh-12-v/"
+  },
+  {
+    "id": "2910",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-rgb-2091-with-ic1903/"
+  },
+  {
+    "id": "2912",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/setevoj-adapter-1gb-usb-3-0/"
+  },
+  {
+    "id": "2913",
+    "link": "https://ledexpress.ru/shop/furnitura/vakuum/vakuum-23-13-14-sm-s-flajt-kejsom-dlya-obsluzhivaniya-ekrana/"
+  },
+  {
+    "id": "2914",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-240-smd2835-2led-red-120/"
+  },
+  {
+    "id": "2918",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-novapro-uhd-jr/"
+  },
+  {
+    "id": "2922",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-red-silicone/"
+  },
+  {
+    "id": "2924",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/zaglushka-warm-white/"
+  },
+  {
+    "id": "2928",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/lan-kabel/"
+  },
+  {
+    "id": "2931",
+    "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/kabel-pitaniya-pl0001-2-5m/"
+  },
+  {
+    "id": "2932",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/220-v/gibkij-neon-smd2835-120-led-ac220v-ip65-9-6w-m-10lm-m-red-pvc/"
+  },
+  { "id": "2933", "link": "https://ledexpress.ru/shop/furnitura/shlejf/shlejf-16-pin/" },
+  {
+    "id": "2936",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-rgb-t-1000s/"
+  },
+  {
+    "id": "2940",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q2-pro-320-160-indoor/"
+  },
+  {
+    "id": "2941",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-purple-silicone/"
+  },
+  {
+    "id": "2942",
+    "link": "https://ledexpress.ru/shop/kontrollery/colorlight/peredayuwaya-karta-colorlight-s2/"
+  },
+  {
+    "id": "2943",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/ulichnaya/svetodiodnaya-lenta-smd2835-120-led-dc12v-ip65-9-6w-m-6-8lm-natural-white-4000-4500-k/"
+  },
+  {
+    "id": "2945",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/24-v/gibkij-neon-smd2835-120-led-dc24v-ip65-9-6w-m-10lm-m-warm-white-2800-3200-k-pvc-12-12/"
+  },
+  {
+    "id": "2946",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200w-4-5/"
+  },
+  {
+    "id": "2948",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q5-eco-320-160-outdoor/"
+  },
+  {
+    "id": "2949",
+    "link": "https://ledexpress.ru/shop/furnitura/kabel-pitaniya/kabel-pitaniya-pi0002-1-5m/"
+  },
+  {
+    "id": "2952",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/ventilyator-92h92h25/"
+  },
+  { "id": "2954", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w60-75/" },
+  {
+    "id": "2955",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q6-192-192-outdoor/"
+  },
+  {
+    "id": "2956",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q1-66-pro-320-160-indoor/"
+  },
+  {
+    "id": "2957",
+    "link": "https://ledexpress.ru/shop/svet/klastery/klastery-1-smd3535-3w-12v-dc-6-45-degree-viewing-angle-ip65-size-46-31mm-pure-white-7000-8000k/"
+  },
+  {
+    "id": "2959",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd2835-120-led-dc12v-ip20-5-mm-natural-white-4000-4500k/"
+  },
+  {
+    "id": "2960",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/furnitura/zaglushka-silikon2/"
+  },
+  {
+    "id": "2961",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-msd-300/"
+  },
+  {
+    "id": "2962",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/komplekt-kabelej-indoor/"
+  },
+  {
+    "id": "2964",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-msd-600/"
+  },
+  {
+    "id": "2966",
+    "link": "https://ledexpress.ru/shop/svet/pikseli/svetodiodnyj-piksel-pd-9-white/"
+  },
+  {
+    "id": "2967",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-smd5050-60-led-dc12v-ip20-14-4w-m-10-12lm-cold-white-10000-12000-k/"
+  },
+  {
+    "id": "2972",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-640h480/"
+  },
+  {
+    "id": "2973",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q4-eco-320-160-outdoor/"
+  },
+  {
+    "id": "2975",
+    "link": "https://ledexpress.ru/shop/svet/klastery/klastery-1-smd2835-1-5w-12v-dc-6-45-degree-viewing-angle-ip65-size-46-31mm-pure-white-7000-800/"
+  },
+  {
+    "id": "2976",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q1-53-rgb-320-160-indoor/"
+  },
+  {
+    "id": "2977",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/gibkij-neon-100-led-dc12v-9-6-w-m-size-8-16-ip67-1-cm-pink-silicone/"
+  },
+  {
+    "id": "2978",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-883-smd2835-3led-10000k-160/"
+  },
+  {
+    "id": "2982",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-260-smd2835-3led-9000-11000k-170/"
+  },
+  {
+    "id": "2983",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-500/"
+  },
+  { "id": "2984", "link": "https://ledexpress.ru/shop/furnitura/shlejf/konnektor-s-zamkom/" },
+  {
+    "id": "2986",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/mul-tifunkcional-naya-karta-mfn-300/"
+  },
+  {
+    "id": "2995",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-nsl-12100/"
+  },
+  {
+    "id": "2998",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/ulichnye/12-v/blok-pitaniya-cyv-200-12-12v-16-7a/"
+  },
+  {
+    "id": "3000",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/furnitura/zaglushka-silikon1/"
+  },
+  { "id": "3002", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-d15/" },
+  {
+    "id": "3005",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-q4-eco-smd-320-160-qiang-li-chang-li-ulichnyj/"
+  },
+  {
+    "id": "3008",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-v960/"
+  },
+  {
+    "id": "3009",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-106-smd5050-3led-epoxy-rgb-120/"
+  },
+  {
+    "id": "3010",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/kontroller-monohromnyj-r102-s/"
+  },
+  {
+    "id": "3011",
+    "link": "https://ledexpress.ru/shop/svet/upravlenie-svetom/rgb-led-kontroller-dc5-24v-360-w-trehkanal-nyj/"
+  },
+  {
+    "id": "3015",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-882-smd2835-2led-4000k-160/"
+  },
+  {
+    "id": "3016",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-882-smd2835-2led-10000k-160/"
+  },
+  {
+    "id": "3017",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-rsh-882-smd2835-2led-7000k-160/"
+  },
+  {
+    "id": "3019",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-vx600/"
+  },
+  {
+    "id": "3020",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/"
+  },
+  {
+    "id": "3021",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-8-16/12-v/"
+  },
+  { "id": "3022", "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/12-v/" },
+  {
+    "id": "3023",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/12-v/gibkij-neon-smd2835-120-led-dc12v-ip65-9-6w-m-10lm-m-red-pvc/"
+  },
+  {
+    "id": "3024",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-pink-silicone/"
+  },
+  {
+    "id": "3025",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/12-v/gibkij-neon-smd5050-60-led-dc12v-ip65-14-4w-m-10-12lm-rgb-pvc-12-20/"
+  },
+  {
+    "id": "3026",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/12-v/gibkij-neon-smd2835-120-led-dc12v-ip65-9-6w-m-10lm-m-green-pvc/"
+  },
+  {
+    "id": "3027",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/neon-pvh/12-v/gibkij-neon-smd2835-120-led-dc12v-ip65-9-6w-m-10lm-m-blue-pvc/"
+  },
+  { "id": "3029", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-w4-wifi-u/" },
+  { "id": "3030", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-u4-usb/" },
+  { "id": "3031", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-u4l-usb/" },
+  { "id": "3032", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5mt-e-u/" },
+  { "id": "3033", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5ul-usb/" },
+  { "id": "3034", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5ut/" },
+  { "id": "3035", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y08/" },
+  { "id": "3036", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-v75-receiving-card/" },
+  { "id": "3037", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-u2l-usb/" },
+  { "id": "3038", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5a2-wifi/" },
+  { "id": "3039", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5ql-u-e/" },
+  { "id": "3040", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y2l/" },
+  { "id": "3041", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5u2-u-s/" },
+  { "id": "3042", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5u-u-s/" },
+  { "id": "3043", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-u3l-usb/" },
+  { "id": "3044", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-6ql-75/" },
+  { "id": "3045", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5a4-wifi/" },
+  { "id": "3046", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-yq2/" },
+  { "id": "3047", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-6u0/" },
+  { "id": "3048", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-w2-wifi-u/" },
+  { "id": "3049", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-w2l-wifi-u/" },
+  { "id": "3050", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5at-wifi/" },
+  { "id": "3051", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-w3-wifi-u/" },
+  { "id": "3052", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-6e1/" },
+  { "id": "3053", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-u2-usb/" },
+  { "id": "3054", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-u3-usb/" },
+  { "id": "3055", "link": "https://ledexpress.ru/shop/kontrollery/bx/brightness-sensor-vh/" },
+  { "id": "3056", "link": "https://ledexpress.ru/shop/kontrollery/bx/temperatur-sensor-bx/" },
+  { "id": "3057", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5m3-e-u/" },
+  { "id": "3058", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y2/" },
+  { "id": "3059", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-6q1-75-e-u/" },
+  { "id": "3060", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-w4l-wifi-u/" },
+  { "id": "3061", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5a0-wifi/" },
+  { "id": "3062", "link": "https://ledexpress.ru/shop/kontrollery/bx/ovp-l1/" },
+  { "id": "3063", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-yq1-75/" },
+  { "id": "3064", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y08-4g/" },
+  { "id": "3065", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y3/" },
+  { "id": "3066", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y08-wifi/" },
+  { "id": "3067", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-6q3l/" },
+  { "id": "3068", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5at-g/" },
+  { "id": "3070", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-dc/" },
+  { "id": "3071", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-5m4-e-u/" },
+  { "id": "3072", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y04-wifi/" },
+  { "id": "3073", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-x-w3l-wifi-u/" },
+  { "id": "3074", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w03/" },
+  {
+    "id": "3075",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-modul-10g-sfp-s-1310nm/"
+  },
+  {
+    "id": "3076",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-t3/"
+  },
+  {
+    "id": "3077",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/otpravlyayuwaya-slot-karta-h_20xrj45/"
+  },
+  {
+    "id": "3078",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-konverter-cvt-rack320-ch12/"
+  },
+  {
+    "id": "3079",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_1x12g-sdi/"
+  },
+  {
+    "id": "3080",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-modul-10g-sfp-m-850nm/"
+  },
+  {
+    "id": "3081",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/karta-central-nogo-upravleniya-h_std-i-o/"
+  },
+  {
+    "id": "3082",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-t30/"
+  },
+  {
+    "id": "3083",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/plata-hub-75e-axs/"
+  },
+  {
+    "id": "3084",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-konverter-cvt10-s/"
+  },
+  {
+    "id": "3085",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-konverter-cvt-rack320-ch16/"
+  },
+  {
+    "id": "3086",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-r5/"
+  },
+  {
+    "id": "3087",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/videoprocessor-vs7/"
+  },
+  {
+    "id": "3088",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_2xdp1-1/"
+  },
+  {
+    "id": "3089",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/mediakonverter-novastar-cvt-310/"
+  },
+  {
+    "id": "3090",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/videokommutator-n9/"
+  },
+  {
+    "id": "3091",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/distributor-signala-novastar-dis-300/"
+  },
+  {
+    "id": "3092",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_4-3g-sdi/"
+  },
+  {
+    "id": "3093",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-t50/"
+  },
+  {
+    "id": "3095",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-a4s/"
+  },
+  {
+    "id": "3096",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-660/"
+  },
+  {
+    "id": "3097",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-a8s/"
+  },
+  {
+    "id": "3099",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/videoprocessor-novapro-uhd/"
+  },
+  { "id": "3100", "link": "https://ledexpress.ru/shop/kontrollery/novastar/videomiksher-c1/" },
+  {
+    "id": "3101",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/karta-predprosmotra-h_2-rj45-1xhdmi1-3/"
+  },
+  {
+    "id": "3102",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mctrl-660-pro/"
+  },
+  {
+    "id": "3103",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-modul-1-25g-sfp-1310nm/"
+  },
+  {
+    "id": "3104",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-vx16s/"
+  },
+  {
+    "id": "3105",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/blok-pitaniya-dlya-h-serii-h_800w/"
+  },
+  {
+    "id": "3106",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-modul-1-25g-sfp-850nm/"
+  },
+  {
+    "id": "3107",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-konverter-cvt-rack320-ch4/"
+  },
+  {
+    "id": "3108",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-vx2s/"
+  },
+  {
+    "id": "3109",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-konverter-cvt-rack320-ch8/"
+  },
+  {
+    "id": "3111",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/korpus-video-processora-h2/"
+  },
+  {
+    "id": "3112",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-a7s-plus/"
+  },
+  {
+    "id": "3113",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-j6/"
+  },
+  {
+    "id": "3114",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/optovolokonnyj-konverter-cvt4k-s/"
+  },
+  {
+    "id": "3115",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/otpravlyayuwaya-slot-karta-h_16-rj45-2-opt/"
+  },
+  {
+    "id": "3116",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vyhodnaya-slot-karta-h_1xhdmi2-0/"
+  },
+  {
+    "id": "3117",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vyhodnaya-slot-karta-h_4xhdmi/"
+  },
+  {
+    "id": "3118",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_2-rj45-ip/"
+  },
+  {
+    "id": "3119",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_2xcvbs-2xvga/"
+  },
+  {
+    "id": "3120",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/videoprocessor-novaprohd/"
+  },
+  {
+    "id": "3121",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vyhodnaya-slot-karta-h_4xdvi/"
+  },
+  {
+    "id": "3122",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-a10s/"
+  },
+  { "id": "3123", "link": "https://ledexpress.ru/shop/kontrollery/novastar/modul-lora/" },
+  {
+    "id": "3124",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-mrv-412/"
+  },
+  {
+    "id": "3125",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_4-dvi/"
+  },
+  {
+    "id": "3126",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_1-hdmi2-0-1xdp1-2/"
+  },
+  {
+    "id": "3127",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_4-hdmi/"
+  },
+  {
+    "id": "3128",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/korpus-video-processora-h15/"
+  },
+  {
+    "id": "3129",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/korpus-video-processora-h5/"
+  },
+  {
+    "id": "3130",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/korpus-video-processora-h9/"
+  },
+  {
+    "id": "3131",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/vhodnaya-slot-karta-h_4xvga/"
+  },
+  {
+    "id": "3132",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/dvuhcvetnye/modul-p16-2r1g-256-128-qiang-li-chang-li-ulichnyj/"
+  },
+  {
+    "id": "3133",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/dvuhcvetnye/modul-p16-2r1g-256-128-jh-ulichnyj/"
+  },
+  {
+    "id": "3134",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-belyj/"
+  },
+  {
+    "id": "3136",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q1-rgb-320-160-indoor/"
+  },
+  {
+    "id": "3137",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q1-37-rgb-320-160-indoor/"
+  },
+  {
+    "id": "3138",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q4-pro-320160-indoor/"
+  },
+  {
+    "id": "3139",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q1-25-rgb-320-160-indoor/"
+  },
+  {
+    "id": "3140",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q4-eco-320160-indoor/"
+  },
+  {
+    "id": "3142",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q1-86-pro-320-160-indoor/"
+  },
+  {
+    "id": "3143",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/svetodiodnyj-modul-qiangli-q10-320-160-outdoor/"
+  },
+  { "id": "3144", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/gibkie-moduli/" },
+  {
+    "id": "3148",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-320x160-c-indoor/"
+  },
+  {
+    "id": "3149",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-qiangli-q3-pro-192-192-indoor/"
+  },
+  {
+    "id": "3151",
+    "link": "https://ledexpress.ru/shop/furnitura/kabinety-dlya-ekranov/kabinet-alyuminievyj-960-960-outdoor/"
+  },
+  {
+    "id": "3153",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/gibkie-moduli/qiangli-q1-86-pro-r-320-160-indoor-gibkij/"
+  },
+  {
+    "id": "3154",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/gibkie-moduli/qiangli-q2-pro-r-320-160-indoor-gibkij/"
+  },
+  {
+    "id": "3155",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/gibkie-moduli/qiangli-q2-5-pro-r-320-160-indoor-gibkij/"
+  },
+  {
+    "id": "3156",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/peredayuwaya-karta-novastar-mctrl-700/"
+  },
+  {
+    "id": "3157",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-belyj-smd/"
+  },
+  {
+    "id": "3158",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-krasnyj-smd/"
+  },
+  {
+    "id": "3159",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p10-smd-320-160-meiyad-ulichnyj-1-4-scan/"
+  },
+  {
+    "id": "3160",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-zelenyj-smd/"
+  },
+  {
+    "id": "3161",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-120gc-12-12v-8-3a/"
+  },
+  {
+    "id": "3162",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p8-smd-320-160-royal-ulichnyj/"
+  },
+  {
+    "id": "3163",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p5-smd-320-160-royal-ulichnyj/"
+  },
+  {
+    "id": "3164",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p10-smd-320-160-royal-ulichnyj/"
+  },
+  {
+    "id": "3165",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-p4-smd-320-160-royal-inter-ernyj/"
+  },
+  {
+    "id": "3166",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p4-smd-320-160-royal-ulichnyj/"
+  },
+  {
+    "id": "3167",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/profil-dlya-beguwej-stroki-bld-alp9025/"
+  },
+  { "id": "3168", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c36/" },
+  { "id": "3198", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub256-t8/" },
+  { "id": "3199", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub30/" },
+  {
+    "id": "3200",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub512-t12-vh-6h/"
+  },
+  { "id": "3202", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub75b/" },
+  {
+    "id": "3203",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-t75a-bx-5q/"
+  },
+  {
+    "id": "3204",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-adapter-hd/"
+  },
+  { "id": "3205", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub75-20/" },
+  { "id": "3206", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub75e/" },
+  { "id": "3208", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub128-t12/" },
+  {
+    "id": "3209",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub12-16port/"
+  },
+  { "id": "3210", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub128-t8/" },
+  {
+    "id": "3211",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-t08a-bx-5q/"
+  },
+  {
+    "id": "3212",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub08-8-port-hd/"
+  },
+  { "id": "3213", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub08-75/" },
+  {
+    "id": "3214",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-t90-bx-v-yq/"
+  },
+  {
+    "id": "3215",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-08q-256-ls/"
+  },
+  {
+    "id": "3216",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub75e-5-port/"
+  },
+  { "id": "3217", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub256-t12/" },
+  {
+    "id": "3218",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-adapter-bx/"
+  },
+  { "id": "3219", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub75c/" },
+  { "id": "3220", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub74/" },
+  { "id": "3222", "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-23/" },
+  {
+    "id": "3223",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-t74a-bx-5q/"
+  },
+  {
+    "id": "3224",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub-t75a-bx-v-yq/"
+  },
+  {
+    "id": "3225",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/hub75e-10-port/"
+  },
+  {
+    "id": "3226",
+    "link": "https://ledexpress.ru/shop/kontrollery/hub-i-datchiki/ls-hub12a-16-portov/"
+  },
+  { "id": "3227", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-y04/" },
+  {
+    "id": "3229",
+    "link": "https://ledexpress.ru/shop/furnitura/profil/profil-alyuminievyj-5515-uzkij/"
+  },
+  {
+    "id": "3230",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-240-smd2835-2led-9000-11000k-120/"
+  },
+  {
+    "id": "3231",
+    "link": "https://ledexpress.ru/shop/svet/klastery/svetodiodnyj-modul-les-240-smd2835-2led-7000-8000k-120/"
+  },
+  {
+    "id": "3232",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p8-smd-256-128-royal-ulichnyj/"
+  },
+  { "id": "3233", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w6b/" },
+  { "id": "3236", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a4l/" },
+  { "id": "3237", "link": "https://ledexpress.ru/shop/furnitura/magnity/magnit-m4-13-13-1-3/" },
+  {
+    "id": "3238",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/modul-p4-smd-256-128-royal-inter-ernyj/"
+  },
+  {
+    "id": "3239",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p3-07-smd-320-160-royal-ulichnyj-3840-hz/"
+  },
+  {
+    "id": "3240",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/kontroller-novastar-tb40/"
+  },
+  {
+    "id": "3241",
+    "link": "https://ledexpress.ru/shop/kontrollery/hd/priyomnaya-karta-huidu-hd-r500/"
+  },
+  { "id": "3242", "link": "https://ledexpress.ru/shop/furnitura/magnity/magnit-m4-14-13-1-3/" },
+  { "id": "3245", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-e62/" },
+  {
+    "id": "3246",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/svetodiodnaya-girlyanda-smart-rgb/"
+  },
+  {
+    "id": "3251",
+    "link": "https://ledexpress.ru/shop/furnitura/soputstvuyuwie-komplektuyuwie/usb-nakopitel-4gb-smart-buy-crown-series-white/"
+  },
+  {
+    "id": "3252",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/asinhronnyj-kontroller-tb10/"
+  },
+  {
+    "id": "3254",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-vx400/"
+  },
+  {
+    "id": "3261",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/media-processor-tu15-pro/"
+  },
+  {
+    "id": "3262",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/media-processor-tu20-pro/"
+  },
+  {
+    "id": "3263",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-vc4/"
+  },
+  {
+    "id": "3264",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/video-processor-cx40-pro/"
+  },
+  {
+    "id": "3265",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/9v-36v-5v/blok-pitaniya-asd-12d5n10a50e-lavalee/"
+  },
+  {
+    "id": "3266",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/9v-36v-5v/blok-pitaniya-asd-12d5n15a75e-lavalee/"
+  },
+  {
+    "id": "3267",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/9v-36v-5v/blok-pitaniya-asd-12d5n20a100dt-lavalee/"
+  },
+  {
+    "id": "3268",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/9v-36v-5v/blok-pitaniya-asd-12d5n30a150dt-lavalee/"
+  },
+  {
+    "id": "3269",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-400ak-5-5v-80a/"
+  },
+  {
+    "id": "3271",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200w-5-4-5v-40a/"
+  },
+  {
+    "id": "3272",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-zheltyj-smd/"
+  },
+  {
+    "id": "3273",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/monohrom/modul-p10-320-160-meiyad-ulichnyj-goluboj-smd/"
+  },
+  {
+    "id": "3275",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-orange-silicone-1sm/"
+  },
+  {
+    "id": "3276",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-cold-white-silicone-1sm/"
+  },
+  {
+    "id": "3277",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/12-v/gibkij-neon-smd2835-120-led-dc12v-8-10w-m-size-6-12-ip68-warm-white-silicone-1-sm/"
+  },
+  { "id": "3278", "link": "https://ledexpress.ru/calculator/" },
+  { "id": "3282", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-r716/" },
+  { "id": "3283", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-w2/" },
+  { "id": "3284", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a5l/" },
+  { "id": "3285", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a7/" },
+  {
+    "id": "3286",
+    "link": "https://ledexpress.ru/shop/kontrollery/novastar/peredayuwaya-karta-novastar-msd-300/"
+  },
+  { "id": "3290", "link": "https://ledexpress.ru/shop/kontrollery/bx/bx-6mp1/" },
+  {
+    "id": "3291",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/led-module-320mm-160mm-svetodiodnyj-modul-panel-bez-drajverov-i-cepej-upravleniya-d5/"
+  },
+  {
+    "id": "3292",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/led-module-320mm-160mm-svetodiodnyj-modul-panel-bez-drajverov-i-cepej-upravleniya-d4/"
+  },
+  {
+    "id": "3295",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnyj-neon/silikon-6-12/furnitura/klej-dlya-neona/"
+  },
+  {
+    "id": "3296",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/gibkie-moduli/svetodiodnyj-modul-dahua-inter-ernyj-p2-5-320x160-1920-hz-gibkij/"
+  },
+  {
+    "id": "3297",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/5-v/blok-pitaniya-a-200far-4-5ph-4-5v-40a/"
+  },
+  {
+    "id": "3298",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-200gd-12-12v-16-7a/"
+  },
+  {
+    "id": "3299",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-120ca-12-12v-10a/"
+  },
+  {
+    "id": "3300",
+    "link": "https://ledexpress.ru/shop/istochniki-pitaniya/inter-ernye/12-v/blok-pitaniya-a-150gd-12-12v-12-5a/"
+  },
+  {
+    "id": "3308",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-btq025-1920-partiya-a0sh22/"
+  },
+  {
+    "id": "3326",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-rshn-smd2835-120-led-dc12v-ip33-10w-m-9-5lm-white-6500-k/"
+  },
+  {
+    "id": "3331",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-rshn-smd2835-120-led-dc12v-ip33-10w-m-9-5lm-warm-white-3000-k/"
+  },
+  {
+    "id": "3334",
+    "link": "https://ledexpress.ru/shop/svet/svetodiodnaya-lenta/intre-ernaya/svetodiodnaya-lenta-rshn-smd2835-120-led-dc12v-ip33-10w-m-9-5lm-natural-white-4000-k/"
+  },
+  {
+    "id": "3335",
+    "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p2-5-smd-320-160-royal-ulichnyj/"
+  },
+  { "id": "3342", "link": "https://ledexpress.ru/shop/kontrollery/hd/hdp601/" },
+  { "id": "3356", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c08l/" },
+  { "id": "3358", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-c16l-4g/" },
+  { "id": "3384", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-inter-ernye/svetodiodnyj-modul-boe-btq025-3840/" },
+  { "id": "3345", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p6-67-smd-320-160-royal-ulichnyj-3840-hz/" },
+  { "id": "3346", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p5-smd-320-160-royal-ulichnyj-3840-hz/" },
+  { "id": "3347", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p4-smd-320-160-royal-ulichnyj-3840-hz/" },
+  { "id": "3348", "link": "https://ledexpress.ru/shop/svetodiodnye-moduli/polnocvetnye-ulichnye/modul-p2-5-smd-320-160-royal-ulichnyj-3840-hz/" },
+  { "id": "3385", "link": "https://ledexpress.ru/shop/kontrollery/hd/hd-a6l/" }
+]
