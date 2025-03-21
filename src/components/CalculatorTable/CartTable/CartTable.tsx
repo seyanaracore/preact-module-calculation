@@ -13,7 +13,7 @@ const CartTable = () => {
           scope="col"
           className={cls.tableTitle}
         >
-          Расчет стоимости комлектующих
+          Расчет стоимости комплектующих
         </th>
         <th
           scope="col"

@@ -83,7 +83,7 @@ export const realExcelExportButton = {
     window.$('c[r=A1] t', sheet).text(excelExportCalcTitle)
 
     window.$('row:contains("Технические характеристики") c', sheet).attr('s', '11')
-    window.$('row:contains("Расчет стоимости комлектующих") c', sheet).attr('s', '11')
+    window.$('row:contains("Расчет стоимости комплектующих") c', sheet).attr('s', '11')
 
     window.$('row:contains("Комплектующие") c', sheet).attr('s', '2')
     window.$('row:contains("Характеристика") c', sheet).attr('s', '2')
