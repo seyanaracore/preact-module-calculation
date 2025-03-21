@@ -11,3 +11,11 @@
 //.wrapper {
 //  max-width: 1460px
 //}
+
+table.dataTable {
+  th,
+  td {
+    border-left: none;
+    border-right: none;
+  }
+}
