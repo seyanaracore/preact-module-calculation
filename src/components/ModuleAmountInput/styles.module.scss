@@ -2,67 +2,68 @@
   display: flex;
   position: relative;
   flex-direction: column;
-}
 
-.module-amount-input {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding-left: 8px;
-  margin-bottom: calc($label-margin / 2);
+  .module-amount-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 8px;
+    margin-bottom: calc($label-margin / 2);
 
-  @include media-up(lg-x) {
-    width: 220px;
+    @include media-up(lg-x) {
+      width: 220px;
+    }
   }
-}
 
-.module-amount-input-number {
-  padding: 0 2px;
-  margin-right: 2px;
-  border: none;
-  background: none;
-  font-size: inherit;
-  line-height: inherit;
-}
+  .module-amount-input-number {
+    padding: 0 2px;
+    margin-right: 2px;
+    border: none;
+    background: none;
+    font-size: inherit;
+    line-height: inherit;
+  }
 
-.module-amount-input-side {
-  display: flex;
-  align-items: center;
-}
+  .module-amount-input-side {
+    display: flex;
+    align-items: center;
+  }
 
-.modules-amount-inputs-container {
-  display: flex;
-  flex-wrap: wrap;
-}
+  .modules-amount-inputs-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.module-control-buttons-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 8px;
-  height: 100%
-}
+  .module-control-buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    height: 100%;
+  }
 
-.module-control-button {
-  background: none;
-  border: none;
-  padding: 0;
-  border-radius: 4px;
-  display: flex;
-  height: 20px;
-  width: 20px;
-  color: black;
-  align-items: center;
-  justify-content: center;
-
-  &:hover {
-    cursor: pointer;
+  .module-control-button {
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 4px;
+    display: flex;
+    height: 20px;
+    width: 20px;
     color: black;
-    filter: revert;
-    background: rgb(226 226 226 / 76%);
-  }
-}
+    align-items: center;
+    justify-content: center;
 
-.module-label,.module-amount-info  {
-  margin-bottom: 0;
+    &:hover {
+      cursor: pointer;
+      color: black;
+      filter: revert;
+      background: rgb(226 226 226 / 76%);
+    }
+  }
+
+  .module-label,
+  .module-amount-info {
+    margin-bottom: 0;
+  }
 }
