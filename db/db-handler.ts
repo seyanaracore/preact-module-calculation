@@ -51,6 +51,8 @@ function validateCatalog() {
       }
     })
   })
+
+  checkOnErrors()
 }
 
 function checkOnErrors() {
@@ -148,7 +150,6 @@ function run() {
 }
 
 validateCatalog()
-checkOnErrors()
 
 run()
 checkOnErrors()
