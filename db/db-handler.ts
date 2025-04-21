@@ -6,10 +6,13 @@ import chalk from 'chalk'
 import requiredIds from './required_ids.json'
 import jsonCatalog from './json-from-csv_catalog.json'
 import catalogLinks from './catalog-links.json'
+import rawCatalogForProdService from './raw-catalog-for-prod-service.json'
+import { ModuleItem } from '../src/types'
 
 const JSON_TARGET_PATH = path.resolve('db/json')
 const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' })
 const idLinkMap = Object.fromEntries(catalogLinks.map(({ id, link }) => [id, link]))
+let targetModules: ModuleItem[]
 
 const errors = {
   links: {
@@ -35,6 +38,21 @@ const errors = {
 
       console.error(
         chalk.red(`Не найдены данные для ${this.items.length} товаров: ${this.items.join(', ')}`)
+      )
+      return true
+    },
+  },
+  prodServiceCatalog: {
+    items: [] as number[],
+    handler() {
+      if (!this.items.length) {
+        return false
+      }
+
+      console.error(
+        chalk.red(
+          `ProdService. Не найдены данные для ${this.items.length} товаров: ${this.items.join(', ')}`
+        )
       )
       return true
     },
@@ -89,6 +107,33 @@ function uniqByKeepLast<T>(list: Array<T>, key: (i: T) => T[keyof T]) {
   return [...new Map(list.map((x) => [key(x), x])).values()]
 }
 
+function createProdServiceModulesForProdService() {
+  const modulesMap = Map.groupBy(targetModules, ({ id }) => id)
+
+  const prodServiceCatalog = rawCatalogForProdService.map((moduleItem) => {
+    const data = modulesMap.get(moduleItem.id)
+
+    if (!data) {
+      errors.prodServiceCatalog.items.push(moduleItem.id)
+    }
+
+    return {
+      ...data,
+      name: moduleItem.name,
+    }
+  })
+
+  fs.writeFile(
+    path.join(JSON_TARGET_PATH, `prod-service-modules.json`),
+    JSON.stringify(prodServiceCatalog),
+    (err) => {
+      if (err) {
+        return console.log(err)
+      }
+    }
+  )
+}
+
 function run() {
   Object.keys(requiredIds).forEach((fieldName) => {
     const filterByRequiredIds = getDataFilterByRequiredIds(fieldName)
@@ -137,6 +182,10 @@ function run() {
       ])
     })
 
+    if (fieldName === 'modules') {
+      targetModules = structuredClone(handledData) as unknown as ModuleItem[]
+    }
+
     fs.writeFile(
       path.join(JSON_TARGET_PATH, `${fieldName}.json`),
       JSON.stringify(handledData),
@@ -147,6 +196,8 @@ function run() {
       }
     )
   })
+
+  createProdServiceModulesForProdService()
 }
 
 validateCatalog()

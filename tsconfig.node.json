@@ -4,7 +4,9 @@
     "db/required_ids.json",
     "db/json-from-csv_catalog.json",
     "db/catalog-links.json",
-    "./src/types/shims-global.d.ts"
+    "db/raw-catalog-for-prod-service.json",
+    "./src/types/shims-global.d.ts",
+    "./src/types/index.ts",
   ],
   "compilerOptions": {
     "types": ["node"],
