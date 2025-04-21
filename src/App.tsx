@@ -5,6 +5,7 @@ import cls from './app.module.scss'
 import ImplementationTypeSelect from '@/components/ImplementationTypeSelect'
 import { currencyFormat } from '@/utils'
 import { useCartSummaryPrice, useFinishedProductPrice } from '@/hooks/useCartPrice'
+import { isProdService } from './consts'
 
 const App = () => {
   const finishedProductPrice = useFinishedProductPrice()
@@ -19,7 +20,9 @@ const App = () => {
       </div>
       <CalculatorTable />
       <div className={cls.tableSummaryContainer}>
-        <p className={cls.summaryPrice}>Сумма: {currencyFormat.format(summaryPrice)}</p>
+        {!isProdService && (
+          <p className={cls.summaryPrice}>Сумма: {currencyFormat.format(summaryPrice)}</p>
+        )}
 
         <p className={cls.finishedProductPrice}>
           Стоимость готового изделия: {currencyFormat.format(finishedProductPrice)}

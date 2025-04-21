@@ -1,13 +1,12 @@
-import controllers from '../../../../db/json/controllers.json'
 import getLedsAmount from '@/helpers/getLedsAmount'
-import { GetTargetControllerParams } from './types'
-import DBItem from '@/api/fakeBackend/types/dbItem'
+import type { GetTargetControllerParams } from './types'
+import type { DataBase, DBItem } from '../db'
 
-const getControllerForMonochrome = ({
-  module,
-  modulesInHeight,
-  modulesInWidth,
-}: GetTargetControllerParams): DBItem | undefined => {
+const getControllerForMonochrome = (
+  db: DataBase,
+  { module, modulesInHeight, modulesInWidth }: GetTargetControllerParams
+): DBItem | undefined => {
+  const { controllers } = db
   const { ledsInWidth, ledsInHeight } = getLedsAmount(module)
   const summaryLedsWidth = ledsInWidth * modulesInWidth
   const summaryLedsHeight = ledsInHeight * modulesInHeight

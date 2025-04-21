@@ -1,18 +1,18 @@
 import { ModuleImplementationType } from '@/enums'
 import { ModuleTypeId } from '@/api/enums'
 
-export const ModuleLabelUnit: Record<ModuleImplementationType, string> = {
+export const MODULE_LABEL_UNIT: Record<ModuleImplementationType, string> = {
   [ModuleImplementationType.Cabinet640x640]: 'каб',
   [ModuleImplementationType.Cabinet640x480]: 'каб',
   [ModuleImplementationType.Monolithic]: 'мод',
 }
 
-export const cabinetImplementationsList = [
+export const CABINET_IMPLEMENTATION_LIST = [
   ModuleImplementationType.Cabinet640x640,
   ModuleImplementationType.Cabinet640x480,
 ]
 
-export const implementationList = [
+export const IMPLEMENTATION_LIST = [
   {
     title: 'Монолитный',
     code: ModuleImplementationType.Monolithic,
@@ -30,8 +30,8 @@ export const implementationList = [
 ]
 
 /** Типы полноцветных модулей */
-export const fullColorModulesTypesList = [ModuleTypeId.outdoor, ModuleTypeId.interior]
-export const dataTableBaseConfig = {
+export const FULL_COLOR_MODULES_TYPES_LIST = [ModuleTypeId.outdoor, ModuleTypeId.interior]
+export const DATA_TABLE_BASE_CONFIG = {
   searching: false,
   search: false,
   paging: false,
@@ -39,4 +39,6 @@ export const dataTableBaseConfig = {
   info: false,
 }
 
-export const excelExportCalcTitle = 'LED EXPRESS. Калькулятор комплектующих'
+export const EXCEL_EXPORT_CALC_TITLE = 'LED EXPRESS. Калькулятор комплектующих'
+
+export const isProdService = window.calculatorConfig?.prodService ?? false

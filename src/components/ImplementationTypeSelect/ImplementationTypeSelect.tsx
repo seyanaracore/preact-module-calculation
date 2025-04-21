@@ -1,10 +1,10 @@
-import { ChangeEvent, useContext, useEffect } from 'react'
+import { type ChangeEvent, useContext, useEffect } from 'react'
 import commonCls from '@/assets/scss/common.module.scss'
 import { StoreContext } from '@/context'
 import { ModuleImplementationType } from '@/enums'
 import useModuleImplementationTypes from '@/hooks/useModuleImplementationTypes'
 import clsx from 'clsx'
-import { implementationList } from '@/consts'
+import { IMPLEMENTATION_LIST } from '@/consts'
 
 const ImplementationTypeSelect = () => {
   const { implementationType, setImplementationType } = useContext(StoreContext)
@@ -33,7 +33,7 @@ const ImplementationTypeSelect = () => {
           native-select
           class={selectClasses}
         >
-          {implementationList.map((implementationTypeItem) => (
+          {IMPLEMENTATION_LIST.map((implementationTypeItem) => (
             <option
               key={implementationTypeItem.code}
               value={implementationTypeItem.code}

@@ -7,12 +7,12 @@ import requiredIds from './required_ids.json'
 import jsonCatalog from './json-from-csv_catalog.json'
 import catalogLinks from './catalog-links.json'
 import rawCatalogForProdService from './raw-catalog-for-prod-service.json'
-import { ModuleItem } from '../src/types'
+import type { DBItem } from '../src/types/DBItem'
 
 const JSON_TARGET_PATH = path.resolve('db/json')
 const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' })
 const idLinkMap = Object.fromEntries(catalogLinks.map(({ id, link }) => [id, link]))
-let targetModules: ModuleItem[]
+let targetModules: DBItem[]
 
 const errors = {
   links: {
@@ -111,7 +111,7 @@ function createProdServiceModulesForProdService() {
   const modulesMap = Map.groupBy(targetModules, ({ id }) => id)
 
   const prodServiceCatalog = rawCatalogForProdService.map((moduleItem) => {
-    const data = modulesMap.get(moduleItem.id)
+    const data = modulesMap.get(moduleItem.id)?.[0] as DBItem | undefined
 
     if (!data) {
       errors.prodServiceCatalog.items.push(moduleItem.id)
@@ -124,7 +124,7 @@ function createProdServiceModulesForProdService() {
   })
 
   fs.writeFile(
-    path.join(JSON_TARGET_PATH, `prod-service-modules.json`),
+    path.join(JSON_TARGET_PATH, `modules-for-prod-service.json`),
     JSON.stringify(prodServiceCatalog),
     (err) => {
       if (err) {
@@ -183,7 +183,7 @@ function run() {
     })
 
     if (fieldName === 'modules') {
-      targetModules = structuredClone(handledData) as unknown as ModuleItem[]
+      targetModules = structuredClone(handledData) as unknown as DBItem[]
     }
 
     fs.writeFile(

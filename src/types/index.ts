@@ -1,44 +1,47 @@
-import { ModuleTypeId } from '@/api/enums'
-import { Store } from '@/context'
-import useCartState from '@/hooks/useCartState'
 import DataTable from 'datatables.net-dt'
+import type { ModuleTypeId } from '@/api/enums'
+import type { DBItem } from './DBItem'
 
-export type ModuleItem = {
-  name: string
-  width: number
-  height: number
+export type { DBItem }
+
+export type LedsCount = {
   ledsInWidth: number
   ledsInHeight: number
-  consumption: number
-  typeId: ModuleTypeId
+}
+
+type BaseItem = {
+  name: string
   id: number
   price: number
   link: string
 }
+
+export type ModuleItem = BaseItem &
+  LedsCount & {
+    width: number
+    height: number
+    consumption: number
+    typeId: ModuleTypeId
+  }
+
+export type ControllerItem = BaseItem
+
+export type ProfileItem = BaseItem
+
+export type GalvanizationItem = BaseItem
+
+export type ReceivingItem = BaseItem
+
+export type MagnetItem = BaseItem
+
+export type CabinetItem = BaseItem
+
+export type CornerItem = BaseItem
+
+export type PowerUnitItem = BaseItem
 
 export type ModulesListItem = Pick<ModuleItem, 'id' | 'name'> & {
   'parent-id': ModuleTypeId
-}
-
-export type ControllerItem = {
-  name: string
-  id: number
-  price: number
-  link: string
-}
-
-export type ProfileItem = {
-  name: string
-  price: number
-  link: string
-  id: number
-}
-
-export type GalvanizationItem = {
-  name: string
-  price: number
-  link: string
-  id: number
 }
 
 export type ModuleTypeItem = {
@@ -46,44 +49,6 @@ export type ModuleTypeItem = {
   id: ModuleTypeId
 }
 
-export type ReceivingItem = {
-  name: string
-  price: number
-  link: string
-  id: number
-}
-
-export type MagnetItem = {
-  name: string
-  price: number
-  link: string
-  id: number
-}
-
-export type CabinetItem = {
-  name: string
-  price: number
-  link: string
-  id: number
-}
-
 export type ModuleTypeItemById = Record<ModuleTypeId, ModuleTypeItem>
-
-export type CornerItem = {
-  name: string
-  price: number
-  id: number
-  link: string
-}
-
-export type PowerUnitItem = {
-  name: string
-  price: number
-  // outputPower: number
-  // voltage: number
-  // amperage: number
-  id: number
-  link: string
-}
 
 export interface Table extends InstanceType<ReturnType<typeof DataTable>> {}

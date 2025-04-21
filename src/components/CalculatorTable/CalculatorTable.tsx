@@ -9,6 +9,7 @@ import TableHead from './TableHead'
 
 import getDataTableInstance from '@/helpers/initTable'
 import clsx from 'clsx'
+import { isProdService } from '@/consts'
 
 const CalculatorTable = () => {
   const { table, setTable } = useContext(StoreContext)
@@ -38,7 +39,7 @@ const CalculatorTable = () => {
           <TableHead />
           <tbody>
             <ProductCharacteristicTable />
-            <CartTable />
+            {!isProdService && <CartTable />}
           </tbody>
         </table>
       </div>

@@ -1,10 +1,7 @@
-/** "" */
 type EmptyField = string
 type OptionalIntField = number | EmptyField
 
-export default DBItem
-
-type DBItem = {
+export type DBItem = {
   id: number
   name: string
   'parent-id': number

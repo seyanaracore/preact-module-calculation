@@ -1,23 +1,23 @@
-import { ControllerItem } from '@/types'
 import { ModuleTypeId } from '@/api/enums'
-import modules from '../../../../db/json/modules.json'
 import getControllerForMonochrome from './monochromeController'
 import getControllerForFullColor from './fullColorController'
-import DBItem from '@/api/fakeBackend/types/dbItem'
 import getPrice from '@/api/fakeBackend/getPrice'
-import { DBItemWithLink } from '@/api/fakeBackend/types'
+import type { DataBase, DBItem } from '../db'
 
-type GetControllerParams = {
+export type GetControllerParams = {
+  db: DataBase
   moduleId: number | string
   modulesInWidth: number
   modulesInHeight: number
 }
 
-async function getController<T extends DBItemWithLink>({
+async function getController<T extends DBItem>({
+  db,
   moduleId,
   modulesInWidth,
   modulesInHeight,
 }: GetControllerParams) {
+  const { modules } = db
   const targetModuleId = +moduleId
   const module = modules.find((module) => module.id === targetModuleId)
   let targetController: DBItem | undefined
@@ -28,9 +28,9 @@ async function getController<T extends DBItemWithLink>({
   const moduleTypeId = module['parent-id']
 
   if (moduleTypeId === ModuleTypeId.monochrome) {
-    targetController = getControllerForMonochrome(controllerGetterPayload)
+    targetController = getControllerForMonochrome(db, controllerGetterPayload)
   } else if ([ModuleTypeId.interior, ModuleTypeId.outdoor].includes(moduleTypeId)) {
-    targetController = getControllerForFullColor(controllerGetterPayload)
+    targetController = getControllerForFullColor(db, controllerGetterPayload)
   }
 
   if (!targetController) throw new Error(`Target controller not found. Module id: ${moduleId}`)

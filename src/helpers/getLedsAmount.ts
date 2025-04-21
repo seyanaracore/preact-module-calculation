@@ -1,4 +1,4 @@
-import DBItem from '@/api/fakeBackend/types/dbItem'
+import type { DBItem } from '@/api/fakeBackend/db'
 
 const getLedsAmount = (module: DBItem) => {
   const [ledsInWidth, ledsInHeight] = module['kolichestvo_svetodiodov_sht'].split('/')

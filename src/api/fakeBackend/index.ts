@@ -1,36 +1,26 @@
-import getController from './getController'
-import profiles from '../../../db/json/profiles.json'
-import corners from '../../../db/json/corners.json'
-import powerUnits from '../../../db/json/powerUnits.json'
-import galvanization from '../../../db/json/galvanization.json'
-import modules from '../../../db/json/modules.json'
-import controllers from '../../../db/json/controllers.json'
-import receivingCards from '../../../db/json/receivingCards.json'
-import cabinets from '../../../db/json/cabinets.json'
-import magnets from '../../../db/json/magnets.json'
-import moduleTypes from '../../../db/json/modules-types.json'
+import getController, { type GetControllerParams } from './getController'
 import { ModuleManufacturer } from '@/api/enums'
-import { DBItemWithLink, ModulesListItem } from './types'
-import DBItem from './types/dbItem'
 import getPrice from '@/api/fakeBackend/getPrice'
+import { BaseDb, ProdServiceDb } from './db'
+import type { ModulesListItem, ModuleType, DBItem } from './types'
 
-type ReturnData = DBItemWithLink
+type BaseReturnData = DBItem
 
-const db = {
-  modules,
-  controllers,
-  profiles,
-  corners,
-  powerUnits,
-  galvanization,
-  moduleTypes,
-  receivingCards,
-  magnets,
-  cabinets,
+async function getDb({ prodService }: { prodService: boolean }) {
+  return prodService ? ProdServiceDb : BaseDb
+}
+
+export type BasePayload = {
+  prodService: boolean
+}
+
+export type GetByIdPayload = BasePayload & {
+  id: number | string
 }
 
 const fakeBackend = {
-  getProfile: async <T = ReturnData>() => {
+  getProfile: async <T = BaseReturnData>({ prodService }: BasePayload) => {
+    const db = await getDb({ prodService })
     const profile = db.profiles[0]
     const price = await getPrice(profile.id)
 
@@ -39,7 +29,8 @@ const fakeBackend = {
       price,
     } as T
   },
-  getGalvanization: async <T = ReturnData>() => {
+  getGalvanization: async <T = BaseReturnData>({ prodService }: BasePayload) => {
+    const db = await getDb({ prodService })
     const galvanization = db.galvanization[0]
     const price = await getPrice(galvanization.id)
 
@@ -48,7 +39,8 @@ const fakeBackend = {
       price,
     } as T
   },
-  getMagnet: async <T = ReturnData>() => {
+  getMagnet: async <T = BaseReturnData>({ prodService }: BasePayload) => {
+    const db = await getDb({ prodService })
     const magnet = db.magnets[0]
     const price = await getPrice(magnet.id)
 
@@ -57,7 +49,8 @@ const fakeBackend = {
       price,
     } as T
   },
-  getCorner: async <T = ReturnData>() => {
+  getCorner: async <T = BaseReturnData>({ prodService }: BasePayload) => {
+    const db = await getDb({ prodService })
     const corners = db.corners[0]
     const price = await getPrice(corners.id)
 
@@ -66,7 +59,8 @@ const fakeBackend = {
       price,
     } as T
   },
-  getCabinet: async <T = ReturnData>(id: number | string) => {
+  getCabinet: async <T = BaseReturnData>({ prodService, id }: GetByIdPayload) => {
+    const db = await getDb({ prodService })
     const cabinet = db.cabinets.find((cabinet) => cabinet.id === +id)
     const price = await getPrice(id)
 
@@ -75,15 +69,23 @@ const fakeBackend = {
       price,
     } as T
   },
-  getModulesList: async <T = ModulesListItem>() =>
-    db.modules.map((module) => ({
+  getModulesList: async <T = ModulesListItem>({ prodService }: BasePayload) => {
+    const db = await getDb({ prodService })
+
+    return db.modules.map((module) => ({
       name: module.name,
       id: module.id,
       'parent-id': module['parent-id'],
-    })) as T[],
-  getModuleTypes: async <T = DBItem[]>() => db.moduleTypes,
+    })) as T[]
+  },
+  getModuleTypes: async <T = ModuleType[]>({ prodService }: BasePayload) => {
+    const db = await getDb({ prodService })
 
-  async getModuleInfo<T = ReturnData>(id: number | string) {
+    return db.moduleTypes as T
+  },
+
+  async getModuleInfo<T = BaseReturnData>({ id, prodService }: GetByIdPayload) {
+    const db = await getDb({ prodService })
     const modules = db.modules
     const targetModuleId = +id
     const module = modules.find((module) => module.id === targetModuleId)
@@ -98,7 +100,8 @@ const fakeBackend = {
     } as T
   },
 
-  getReceivingCard: async <T = ReturnData>() => {
+  getReceivingCard: async <T = BaseReturnData>({ prodService }: BasePayload) => {
+    const db = await getDb({ prodService })
     const receivingCard = db.receivingCards[0]
     const price = await getPrice(receivingCard.id)
 
@@ -108,8 +111,9 @@ const fakeBackend = {
     } as T
   },
 
-  async getPowerUnit<T extends ReturnData>(moduleId: number | string) {
-    const targetModuleId = +moduleId
+  async getPowerUnit<T extends BaseReturnData>({ id, prodService }: GetByIdPayload) {
+    const db = await getDb({ prodService })
+    const targetModuleId = +id
     const targetModule = db.modules.find((moduleItem) => moduleItem.id === targetModuleId)
 
     if (!targetModule) throw new Error('Module not found')
@@ -132,7 +136,11 @@ const fakeBackend = {
     } as T
   },
 
-  getController,
+  async getController({ prodService, ...payload }: Omit<GetControllerParams, 'db'> & BasePayload) {
+    const db = await getDb({ prodService })
+
+    return getController({ db, ...payload })
+  },
 }
 
 export default fakeBackend

@@ -1,7 +1,7 @@
 import cls from './styles.module.scss'
-import { ChangeEvent, useEffect, useId, useMemo, useRef } from 'react'
+import { type ChangeEvent, useEffect, useId, useMemo, useRef } from 'react'
 import commonCls from '@/assets/scss/common.module.scss'
-import { ModuleLabelUnit } from '@/consts'
+import { MODULE_LABEL_UNIT } from '@/consts'
 import { ModuleImplementationType } from '@/enums'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 import clsx from 'clsx'
@@ -48,7 +48,7 @@ const ModuleAmountInput = ({
    * @example 'мод' | 'каб'
    */
   const labelUnit = useMemo(() => {
-    return ModuleLabelUnit[implementationType]
+    return MODULE_LABEL_UNIT[implementationType]
   }, [implementationType])
 
   /**

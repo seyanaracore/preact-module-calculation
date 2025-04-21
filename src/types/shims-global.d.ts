@@ -10,5 +10,8 @@ declare global {
 
   interface Window {
     $: JQueryStatic
+    calculatorConfig?: {
+      prodService?: boolean
+    }
   }
 }

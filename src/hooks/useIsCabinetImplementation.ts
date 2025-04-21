@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
-import { cabinetImplementationsList } from '@/consts'
+import { CABINET_IMPLEMENTATION_LIST } from '@/consts'
 
 /**
  * Выбран один из типов кабинета
@@ -9,7 +9,7 @@ const useIsCabinetImplementation = () => {
   const { implementationType } = useContext(StoreContext)
 
   return useMemo(
-    () => cabinetImplementationsList.includes(implementationType),
+    () => CABINET_IMPLEMENTATION_LIST.includes(implementationType),
     [implementationType]
   )
 }

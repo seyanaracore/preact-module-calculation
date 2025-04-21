@@ -4,12 +4,13 @@
     "module": "ESNext",
     "composite": true,
     "moduleResolution": "Bundler",
-    "noEmit": true,
     "allowJs": true,
     "checkJs": true,
     "resolveJsonModule": true,
     "strictNullChecks": true,
     "strict": true,
+    "verbatimModuleSyntax": true,
+    "emitDeclarationOnly": true,
 
     /* Preact Config */
     "jsx": "react-jsx",

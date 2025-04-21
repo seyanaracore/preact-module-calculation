@@ -1,4 +1,4 @@
-import {
+import type {
   ModuleItem,
   ControllerItem,
   ModulesListItem,
@@ -13,18 +13,24 @@ import {
 } from '@/types'
 import getLedsAmount from '@/helpers/getLedsAmount'
 import getModuleSizesFields from '@/helpers/getModuleSizesFields'
-import fakeBackend from '@/api/fakeBackend'
+import fakeBackend, { type BasePayload, type GetByIdPayload } from '@/api/fakeBackend'
 
 const apiClient = fakeBackend
 
+export type GetControllerPayload = BasePayload & {
+  moduleId: number | string
+  modulesInWidth: number
+  modulesInHeight: number
+}
+
 const api = {
-  getModulesList(): Promise<ModulesListItem[]> {
-    return apiClient.getModulesList()
+  getModulesList(payload: BasePayload): Promise<ModulesListItem[]> {
+    return apiClient.getModulesList(payload)
   },
 
   /** Получить информацию по модулю */
-  async getModuleInfo(moduleId: number | string): Promise<ModuleItem> {
-    const res = await apiClient.getModuleInfo(moduleId)
+  async getModuleInfo(payload: GetByIdPayload): Promise<ModuleItem> {
+    const res = await apiClient.getModuleInfo(payload)
     const { ledsInHeight, ledsInWidth } = getLedsAmount(res)
     const { width, height } = getModuleSizesFields(res)
 
@@ -42,48 +48,44 @@ const api = {
     }
   },
 
-  getProfile(): Promise<ProfileItem> {
-    return apiClient.getProfile()
+  getProfile(payload: BasePayload): Promise<ProfileItem> {
+    return apiClient.getProfile(payload)
   },
 
-  getCorner(): Promise<CornerItem> {
-    return apiClient.getCorner()
+  getCorner(payload: BasePayload): Promise<CornerItem> {
+    return apiClient.getCorner(payload)
   },
 
-  getGalvanization(): Promise<GalvanizationItem> {
-    return apiClient.getGalvanization()
+  getGalvanization(payload: BasePayload): Promise<GalvanizationItem> {
+    return apiClient.getGalvanization(payload)
   },
 
-  getReceivingCard(): Promise<ReceivingItem> {
-    return apiClient.getReceivingCard()
+  getReceivingCard(payload: BasePayload): Promise<ReceivingItem> {
+    return apiClient.getReceivingCard(payload)
   },
 
-  getMagnet(): Promise<MagnetItem> {
-    return apiClient.getMagnet()
+  getMagnet(payload: BasePayload): Promise<MagnetItem> {
+    return apiClient.getMagnet(payload)
   },
 
-  getCabinet(id: number | string): Promise<CabinetItem> {
-    return apiClient.getCabinet(id)
+  getCabinet(payload: GetByIdPayload): Promise<CabinetItem> {
+    return apiClient.getCabinet(payload)
   },
 
-  async getModuleTypes(): Promise<ModuleTypeItemById> {
-    const res = await apiClient.getModuleTypes()
+  async getModuleTypes(payload: BasePayload): Promise<ModuleTypeItemById> {
+    const res = await apiClient.getModuleTypes(payload)
 
     return Object.fromEntries(
       res.map((moduleTypeItem) => [moduleTypeItem.id, moduleTypeItem])
     ) as ModuleTypeItemById
   },
 
-  getController(params: {
-    moduleId: number | string
-    modulesInWidth: number
-    modulesInHeight: number
-  }): Promise<ControllerItem> {
-    return apiClient.getController(params)
+  getController(payload: GetControllerPayload): Promise<ControllerItem> {
+    return apiClient.getController(payload)
   },
 
-  getPowerUnit(moduleId: number | string): Promise<PowerUnitItem> {
-    return apiClient.getPowerUnit(moduleId)
+  getPowerUnit(payload: GetByIdPayload): Promise<PowerUnitItem> {
+    return apiClient.getPowerUnit(payload)
   },
 }
 

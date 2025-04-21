@@ -1,4 +1,4 @@
-import { excelExportCalcTitle } from '@/consts'
+import { EXCEL_EXPORT_CALC_TITLE } from '@/consts'
 
 export const excelImage =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAlFJREFUSEu1lVtIVFEUhr89nnFMzbLISEPMIhLTrl4mEkIkQicmHYgEmSIHizI0kLLM0lJHJaJ6qAdN86EgpaBInyxfKumt7CFCEwQpyPIyeXeaHXMgwziN4+28bfZa3/r3f87+j2CJHjEXbkT+vpU6gyK7q1qHZuvTBIfmHPTHb2S7RFqEEGnARkBxw3RSpvXebmvxChyWn1wkJelANODnsWlg/BnDEz2uQL1mmdCJ7q/322+qikPzkuVsCv7sn0s4QmxIJHFGo2bL/tJjtFc3iTmDk1ZtYa1hBWGbIshNtVL3oonRiTF1iHudUmKdHeyj05GZkMrDty24XC61OWgYlClQggN4bW/EbD/B958DCASvKh5pgx/kVLIzPIqoS2YVYrfkEbN+M6Zbp6ePfT4xU7Ui3rhH0wpNxYqPwseypxy9V8Sbrnd02puJu5bJ4KjjL6RvBMaduJbr+Xy3jcRCC31D/Qgh6Lrz8v9WlJhPYdmVgr25luNJGaRct81QVhB/mJg1G9idaMRX0TPpnJred689euxWKqVkb6WVb47+GeBIEUwgBoLWrab+TDVn68oYHHGoiutyqzyDP1x9gp/ewNbidCack4sDzjKauJBqo737Pb4+eqy1FxduhU4IPlU8J6umkI7eTjpKHxNdfGiGj8zn5TXYytkRHkXs5QxVZWtBDT0/vpBdf2Vhn1vQsgBA4BgbVkFhwSE0ZJdz4MZJnK5f878g3uTFolxprUFzCqEli81/lbmDXviPbpNSWgDTvIPeG2/dNQv+NXk7yFPdb542MiYJ0VqmAAAAAElFTkSuQmCC'
@@ -80,7 +80,7 @@ export const realExcelExportButton = {
     mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A10:E10' } }))
     mergeCells[0].appendChild(_createNode(sheet, 'mergeCell', { attr: { ref: 'A2:E2' } }))
 
-    window.$('c[r=A1] t', sheet).text(excelExportCalcTitle)
+    window.$('c[r=A1] t', sheet).text(EXCEL_EXPORT_CALC_TITLE)
 
     window.$('row:contains("Технические характеристики") c', sheet).attr('s', '11')
     window.$('row:contains("Расчет стоимости комплектующих") c', sheet).attr('s', '11')

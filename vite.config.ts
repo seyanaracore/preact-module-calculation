@@ -2,12 +2,11 @@ import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
 import preact from '@preact/preset-vite'
 import { viteExternalsPlugin } from 'vite-plugin-externals'
-import ledExpressUrl from './src/consts/ledExrpessUrl'
 
-// https://vitejs.dev/config/
-
+const LED_EXPRESS_URL = 'https://ledexpress.ru'
 const isBuild = !!(process.env.NODE_ENV === 'production' && process.env.lib)
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     preact(),
@@ -21,7 +20,7 @@ export default defineConfig({
       // with options: http://localhost:5173/api/bar-> http://jsonplaceholder.typicode.com/bar
       '/upage': {
         secure: false,
-        target: ledExpressUrl,
+        target: LED_EXPRESS_URL,
         changeOrigin: true,
       },
     },

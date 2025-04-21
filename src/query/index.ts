@@ -4,7 +4,7 @@ import { useContext, useMemo } from 'react'
 import { StoreContext } from '@/context'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 import useIsFullColorModule from '@/hooks/useIsFullColorModule'
-import { implementationList } from '@/consts'
+import { IMPLEMENTATION_LIST, isProdService } from '@/consts'
 
 enum QueryKey {
   Cabinet = 'cabinet',
@@ -26,13 +26,13 @@ export const useQueryCabinet = () => {
   const isCabinetImplementation = useIsCabinetImplementation()
 
   const cabinetId = useMemo(
-    () => implementationList.find((item) => item.code === implementationType)?.id,
+    () => IMPLEMENTATION_LIST.find((item) => item.code === implementationType)?.id,
     [implementationType]
   )
 
   // Queries
   const query = useQuery({
-    queryKey: [QueryKey.Cabinet, cabinetId],
+    queryKey: [QueryKey.Cabinet, cabinetId] as const,
     queryFn({ queryKey }) {
       const [, cabinetId] = queryKey
 
@@ -41,7 +41,7 @@ export const useQueryCabinet = () => {
         return
       }
 
-      return api.getCabinet(cabinetId)
+      return api.getCabinet({ id: cabinetId, prodService: isProdService })
     },
     enabled: isCabinetImplementation,
   })
@@ -55,8 +55,12 @@ export const useQueryCabinet = () => {
 
 export const useQueryProfile = () => {
   const queryClient = useQueryClient()
+
   // Queries
-  const query = useQuery({ queryKey: [QueryKey.Profile], queryFn: api.getProfile })
+  const query = useQuery({
+    queryKey: [QueryKey.Profile],
+    queryFn: () => api.getProfile({ prodService: isProdService }),
+  })
 
   return {
     ...query,
@@ -75,9 +79,11 @@ export const useQueryController = () => {
 
   // Queries
   const query = useQuery({
-    queryKey: [QueryKey.Controller, controllerPayload],
-    queryFn: () => {
-      return api.getController(controllerPayload)
+    queryKey: [QueryKey.Controller, controllerPayload] as const,
+    queryFn: ({ queryKey }) => {
+      const [, controllerPayload] = queryKey
+
+      return api.getController({ ...controllerPayload, prodService: isProdService })
     },
     enabled: !!moduleId,
   })
@@ -95,7 +101,7 @@ export const useQueryReceivingCart = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.ReceivingCart, isFullColorModule],
-    queryFn: api.getReceivingCard,
+    queryFn: () => api.getReceivingCard({ prodService: isProdService }),
     enabled: isFullColorModule,
   })
 
@@ -111,7 +117,7 @@ export const useQueryGalvanization = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.Galvanization],
-    queryFn: api.getGalvanization,
+    queryFn: () => api.getGalvanization({ prodService: isProdService }),
   })
 
   return {
@@ -126,7 +132,7 @@ export const useQueryCorner = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.Corner],
-    queryFn: api.getCorner,
+    queryFn: () => api.getCorner({ prodService: isProdService }),
   })
 
   return {
@@ -141,7 +147,7 @@ export const useQueryMagnet = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.Magnet],
-    queryFn: api.getMagnet,
+    queryFn: () => api.getMagnet({ prodService: isProdService }),
   })
 
   return {
@@ -156,8 +162,12 @@ export const useQueryPowerUnit = () => {
 
   // Queries
   const query = useQuery({
-    queryKey: [QueryKey.PowerUnit, moduleId],
-    queryFn: () => api.getPowerUnit(moduleId),
+    queryKey: [QueryKey.PowerUnit, moduleId] as const,
+    queryFn({ queryKey }) {
+      const [, moduleId] = queryKey
+
+      return api.getPowerUnit({ id: moduleId, prodService: isProdService })
+    },
     enabled: !!moduleId,
   })
 
@@ -173,7 +183,7 @@ export const useQueryModulesList = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.ModulesList],
-    queryFn: api.getModulesList,
+    queryFn: () => api.getModulesList({ prodService: isProdService }),
   })
 
   return {
@@ -189,7 +199,11 @@ export const useQueryModuleInfo = () => {
 
   const query = useQuery({
     queryKey: [QueryKey.ModuleInfo, moduleId],
-    queryFn: () => api.getModuleInfo(moduleId),
+    queryFn({ queryKey }) {
+      const [, moduleId] = queryKey
+
+      return api.getModuleInfo({ id: moduleId, prodService: isProdService })
+    },
     enabled: !!moduleId,
   })
 
@@ -205,7 +219,7 @@ export const useQueryModuleTypes = () => {
   // Queries
   const query = useQuery({
     queryKey: [QueryKey.ModuleTypes],
-    queryFn: api.getModuleTypes,
+    queryFn: () => api.getModuleTypes({ prodService: isProdService }),
   })
 
   return {
