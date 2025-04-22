@@ -1,7 +1,7 @@
+import { CART_TABLE_HEADER } from './consts'
 import CartItem from '@/components/CalculatorTable/CartTable/CartItem'
 import { useCartState } from '@/hooks/useCartState'
 import cls from '@/components/CalculatorTable/styles.module.scss'
-import CartSummary from '@/components/CalculatorTable/CartTable/CartSummary'
 
 const CartTable = () => {
   const cartState = useCartState()
@@ -13,7 +13,7 @@ const CartTable = () => {
           scope="col"
           className={cls.tableTitle}
         >
-          Расчет стоимости комплектующих
+          {CART_TABLE_HEADER}
         </th>
         <th
           scope="col"
@@ -71,7 +71,6 @@ const CartTable = () => {
           key={idx}
         />
       ))}
-      <CartSummary />
     </>
   )
 }

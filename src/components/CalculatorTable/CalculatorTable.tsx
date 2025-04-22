@@ -6,6 +6,8 @@ import TableButtons from './TableButtons'
 import ProductCharacteristicTable from './ProductCharacteristicTable'
 import CartTable from './CartTable'
 import TableHead from './TableHead'
+import CartSummary from './CartTable/CartSummary'
+import ProdServiceTableAdditionalData from './ProdServiceTableAdditionalData'
 import { StoreContext } from '@/context'
 
 import getDataTableInstance from '@/helpers/initTable'
@@ -38,8 +40,10 @@ const CalculatorTable = () => {
         >
           <TableHead />
           <tbody>
+            {isProdService && <ProdServiceTableAdditionalData />}
             <ProductCharacteristicTable />
             {!isProdService && <CartTable />}
+            <CartSummary />
           </tbody>
         </table>
       </div>

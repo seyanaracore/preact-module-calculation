@@ -17,7 +17,7 @@ const TableButtons = ({ tableRef }: { tableRef: RefObject<HTMLTableElement> }) =
       ...DATA_TABLE_BASE_CONFIG,
       layout: {
         topStart: {
-          // @ts-expect-error
+          // @ts-expect-error skip type check
           buttons: [realExcelExportButton],
         },
       },
