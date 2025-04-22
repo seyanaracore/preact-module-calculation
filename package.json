@@ -6,7 +6,7 @@
 		"build": "cross-env lib=true vite build",
 		"deploy": "vite build",
 		"preview": "vite preview",
-		"lint": "eslint src/**/*.{tsx,ts}",
+		"lint": "eslint 'src/**/*.{tsx,ts}'",
 		"lint:fix": "npm run lint -- --fix",
 		"type-check": "tsc --project tsconfig.app.json --noEmit",
 		"type-check:node": "tsc --project tsconfig.node.json --noEmit",
