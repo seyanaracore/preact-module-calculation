@@ -1,6 +1,6 @@
 /* stylelint-disable at-rule-empty-line-before */
 @use '../variables' as *;
-@import '../functions/media';
+@use '../functions/media' as *;
 
 @mixin media-up($name, $breakpoints: $breakpoints) {
   $min: media-min($name, $breakpoints);
