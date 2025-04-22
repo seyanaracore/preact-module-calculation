@@ -1,7 +1,7 @@
 import { type ChangeEvent, useContext, useEffect, useMemo } from 'react'
+import { groupBy } from 'es-toolkit'
 import commonCls from '@/assets/scss/common.module.scss'
 import { StoreContext } from '@/context'
-import groupBy from 'lodash-es/groupBy'
 import { ModuleTypeId } from '@/api/enums'
 import type { ModulesListItem } from '@/types'
 import { useQueryModulesList, useQueryModuleTypes } from '@/query'

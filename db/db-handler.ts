@@ -1,4 +1,3 @@
-import { pick } from 'lodash-es'
 import path from 'path'
 import fs from 'fs'
 import chalk from 'chalk'
@@ -8,6 +7,7 @@ import jsonCatalog from './json-from-csv_catalog.json'
 import catalogLinks from './catalog-links.json'
 import rawCatalogForProdService from './raw-catalog-for-prod-service.json'
 import type { DBItem } from '../src/types/DBItem'
+import { pick } from 'es-toolkit'
 
 const JSON_TARGET_PATH = path.resolve('db/json')
 const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' })

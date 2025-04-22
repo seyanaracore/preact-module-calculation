@@ -1,13 +1,57 @@
+const ERROR = 'error'
+const OFF = 'off'
+
 module.exports = {
-  extends: ['preact', 'prettier'],
+  extends: [
+    'preact',
+    'prettier',
+    'plugin:import/recommended',
+    // the following lines do the trick
+    'plugin:import/typescript',
+  ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['import', '@typescript-eslint', 'prettier', 'unused-imports'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+      typescript: {
+        alwaysTryTypes: true,
+        project: 'tsconfig.app.json',
+      },
+    },
+  },
   rules: {
-    'prettier/prettier': 'error',
-    'jest/no-deprecated-functions': 'off',
-    'no-unused-vars': 'off',
+    'prettier/prettier': ERROR,
+    'jest/no-deprecated-functions': OFF,
+    'unused-imports/no-unused-imports': ERROR,
+    'no-unused-vars': OFF,
+    'import/no-unresolved': [
+      ERROR,
+      {
+        ignore: ['react'],
+      },
+    ],
+    'import/order': [
+      ERROR,
+      {
+        groups: [
+          'builtin',
+          'external',
+          'parent',
+          'sibling',
+          'index',
+          'internal',
+          'object',
+          'unknown',
+          'type',
+        ],
+      },
+    ],
+    'no-duplicate-imports': OFF,
     'padding-line-between-statements': [
-      'error',
+      ERROR,
       {
         blankLine: 'always',
         prev: 'import',
@@ -59,5 +103,5 @@ module.exports = {
         next: ['cjs-import'],
       },
     ],
-  }
+  },
 }
