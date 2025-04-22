@@ -1,7 +1,7 @@
-import cls from './styles.module.scss'
-import { excelImage, realExcelExportButton } from '@/components/CalculatorTable/excelExport'
 import { useIsFetching } from 'react-query'
 import DataTable from 'datatables.net-dt'
+import cls from './styles.module.scss'
+import { excelImage, realExcelExportButton } from '@/components/CalculatorTable/excelExport'
 import { DATA_TABLE_BASE_CONFIG } from '@/consts'
 import type { RefObject } from 'react'
 

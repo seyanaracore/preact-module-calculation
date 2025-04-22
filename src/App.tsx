@@ -1,11 +1,11 @@
+import cls from './app.module.scss'
+import { isProdService } from './consts'
 import ModuleSelect from '@/components/ModuleSelect'
 import ScreenSize from '@/components/ScreenSize'
 import CalculatorTable from '@/components/CalculatorTable'
-import cls from './app.module.scss'
 import ImplementationTypeSelect from '@/components/ImplementationTypeSelect'
 import { currencyFormat } from '@/utils'
 import { useCartSummaryPrice, useFinishedProductPrice } from '@/hooks/useCartPrice'
-import { isProdService } from './consts'
 
 const App = () => {
   const finishedProductPrice = useFinishedProductPrice()

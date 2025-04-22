@@ -1,6 +1,6 @@
 import { createContext } from 'preact'
-import { type Table } from '@/types'
 import { type ReactNode, useState } from 'react'
+import { type Table } from '@/types'
 import { ModuleImplementationType } from '@/enums'
 import useUrlState, { type UseUrlStateReturn } from '@/hooks/useUrlState'
 

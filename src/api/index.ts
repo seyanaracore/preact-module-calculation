@@ -1,3 +1,6 @@
+import getLedsAmount from '@/helpers/getLedsAmount'
+import getModuleSizesFields from '@/helpers/getModuleSizesFields'
+import fakeBackend, { type BasePayload, type GetByIdPayload } from '@/api/fakeBackend'
 import type {
   ModuleItem,
   ControllerItem,
@@ -11,9 +14,6 @@ import type {
   MagnetItem,
   CabinetItem,
 } from '@/types'
-import getLedsAmount from '@/helpers/getLedsAmount'
-import getModuleSizesFields from '@/helpers/getModuleSizesFields'
-import fakeBackend, { type BasePayload, type GetByIdPayload } from '@/api/fakeBackend'
 
 const apiClient = fakeBackend
 

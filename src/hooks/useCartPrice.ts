@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import useCartState from '@/hooks/useCartState'
+import { useCartState } from '@/hooks/useCartState'
 import { useModulesTotalAmount } from '@/hooks/useAmounts'
 
 /**

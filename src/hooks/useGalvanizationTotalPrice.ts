@@ -1,6 +1,5 @@
+import { useMemo } from 'react'
 import { useGalvanizationAmount } from '@/hooks/useAmounts'
-import { useContext, useMemo } from 'react'
-import { StoreContext } from '@/context'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
 import { useQueryGalvanization } from '@/query'
 

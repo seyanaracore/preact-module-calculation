@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react'
+import { useMemo } from 'react'
 import useIsFullColorModule from '@/hooks/useIsFullColorModule'
 import { ModuleImplementationType } from '@/enums'
 import { useQueryModuleInfo } from '@/query'

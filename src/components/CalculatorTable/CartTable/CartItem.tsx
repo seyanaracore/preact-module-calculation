@@ -1,6 +1,6 @@
 import { currencyFormat } from '@/utils'
-import type { CartItem as ICartItem } from '@/components/CalculatorTable/types'
 import cls from '@/components/CalculatorTable/styles.module.scss'
+import type { CartItem as ICartItem } from '@/components/CalculatorTable/types'
 
 export type CartItemProps = ICartItem & { idx: number }
 

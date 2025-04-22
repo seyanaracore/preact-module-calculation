@@ -1,4 +1,5 @@
 import { useContext, useMemo } from 'react'
+import cls from '../styles.module.scss'
 import { StoreContext } from '@/context'
 import useModulesSizes from '@/hooks/useModulesSizes'
 import { useQueryModuleInfo } from '@/query'
@@ -12,7 +13,6 @@ import {
   useCabinetsInWidthAmount,
   useTotalConsumption,
 } from '@/hooks/useAmounts'
-import cls from '../styles.module.scss'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 import ProductCharacteristicItem from '@/components/CalculatorTable/ProductCharacteristicTable/ProductCharacteristicItem'
 
@@ -71,6 +71,7 @@ const ProductCharacteristicTable = () => {
         value: `${productSizes[0]} x ${productSizes[1]}`,
       },
     ]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     isCabinetImplementation,
     cabinetsInWidthAmount,

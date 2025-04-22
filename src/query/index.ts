@@ -1,6 +1,6 @@
 import { useQuery, useQueryClient } from 'react-query'
-import api from '@/api'
 import { useContext, useMemo } from 'react'
+import api from '@/api'
 import { StoreContext } from '@/context'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
 import useIsFullColorModule from '@/hooks/useIsFullColorModule'

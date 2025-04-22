@@ -1,9 +1,9 @@
 import { type ChangeEvent, useContext, useEffect } from 'react'
+import clsx from 'clsx'
 import commonCls from '@/assets/scss/common.module.scss'
 import { StoreContext } from '@/context'
 import { ModuleImplementationType } from '@/enums'
 import useModuleImplementationTypes from '@/hooks/useModuleImplementationTypes'
-import clsx from 'clsx'
 import { IMPLEMENTATION_LIST } from '@/consts'
 
 const ImplementationTypeSelect = () => {
@@ -20,7 +20,7 @@ const ImplementationTypeSelect = () => {
     if (!isLoading && !moduleImplementationTypes.includes(implementationType)) {
       setImplementationType(ModuleImplementationType.Monolithic)
     }
-  }, [moduleImplementationTypes, implementationType, isLoading])
+  }, [moduleImplementationTypes, implementationType, isLoading, setImplementationType])
 
   return (
     <label class={commonCls.labelMargin}>

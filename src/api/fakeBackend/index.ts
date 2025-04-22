@@ -1,7 +1,7 @@
 import getController, { type GetControllerParams } from './getController'
+import { BaseDb, ProdServiceDb } from './db'
 import { ModuleManufacturer } from '@/api/enums'
 import getPrice from '@/api/fakeBackend/getPrice'
-import { BaseDb, ProdServiceDb } from './db'
 import type { ModulesListItem, ModuleType, DBItem } from './types'
 
 type BaseReturnData = DBItem

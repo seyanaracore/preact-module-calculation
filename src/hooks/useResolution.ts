@@ -1,7 +1,6 @@
-import { useQueryModuleInfo } from '@/query'
 import { useContext, useMemo } from 'react'
+import { useQueryModuleInfo } from '@/query'
 import { StoreContext } from '@/context'
-import useModulesSizes from '@/hooks/useModulesSizes'
 
 export const useWidthResolution = () => {
   const { data: moduleInfo } = useQueryModuleInfo()

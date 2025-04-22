@@ -1,6 +1,6 @@
-import { ModuleTypeId } from '@/api/enums'
 import getControllerForMonochrome from './monochromeController'
 import getControllerForFullColor from './fullColorController'
+import { ModuleTypeId } from '@/api/enums'
 import getPrice from '@/api/fakeBackend/getPrice'
 import type { DataBase, DBItem } from '../db'
 

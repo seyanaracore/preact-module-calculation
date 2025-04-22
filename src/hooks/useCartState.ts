@@ -1,6 +1,4 @@
-import { useContext, useMemo } from 'react'
-import type { CartItem as ICartItem } from '@/components/CalculatorTable/types'
-import { StoreContext } from '@/context'
+import { useMemo } from 'react'
 import {
   useCabinetsAmount,
   useGalvanizationAmount,
@@ -25,6 +23,7 @@ import {
   useQueryProfile,
   useQueryReceivingCart,
 } from '@/query'
+import type { CartItem as ICartItem } from '@/components/CalculatorTable/types'
 
 const getLoadingState = (title: string) => ({
   title,
@@ -214,5 +213,3 @@ export const useCartState = () => {
     isCabinetImplementation,
   ])
 }
-
-export default useCartState

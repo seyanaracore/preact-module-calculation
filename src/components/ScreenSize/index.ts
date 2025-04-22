@@ -1,3 +1,3 @@
-import ScreenSize from "./ScreenSize";
+import ScreenSize from './ScreenSize'
 
-export default ScreenSize;
+export default ScreenSize

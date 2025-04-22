@@ -1,5 +1,5 @@
-import { useProfileAmount } from '@/hooks/useAmounts'
 import { useMemo } from 'react'
+import { useProfileAmount } from '@/hooks/useAmounts'
 import roundToLargerInt from '@/helpers/roundToLargerInt'
 import { useQueryProfile } from '@/query'
 

@@ -1,5 +1,5 @@
+import { useContext } from 'react'
 import cls from './styles.module.scss'
-import { useContext, useMemo } from 'react'
 import ModuleAmountInput from '@/components/ModuleAmountInput'
 import { StoreContext } from '@/context'
 import {

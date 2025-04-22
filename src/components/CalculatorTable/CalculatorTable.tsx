@@ -1,14 +1,14 @@
-import cls from './styles.module.scss'
 import { useContext, useEffect, useId, useRef } from 'react'
-import { StoreContext } from '@/context'
+import clsx from 'clsx'
+import cls from './styles.module.scss'
 
 import TableButtons from './TableButtons'
 import ProductCharacteristicTable from './ProductCharacteristicTable'
 import CartTable from './CartTable'
 import TableHead from './TableHead'
+import { StoreContext } from '@/context'
 
 import getDataTableInstance from '@/helpers/initTable'
-import clsx from 'clsx'
 import { isProdService } from '@/consts'
 
 const CalculatorTable = () => {

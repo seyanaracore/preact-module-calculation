@@ -1,11 +1,11 @@
 import { type ChangeEvent, useContext, useEffect, useMemo } from 'react'
 import { groupBy } from 'es-toolkit'
+import clsx from 'clsx'
 import commonCls from '@/assets/scss/common.module.scss'
 import { StoreContext } from '@/context'
 import { ModuleTypeId } from '@/api/enums'
-import type { ModulesListItem } from '@/types'
 import { useQueryModulesList, useQueryModuleTypes } from '@/query'
-import clsx from 'clsx'
+import type { ModulesListItem } from '@/types'
 
 type GroupedModules = Record<ModuleTypeId, ModulesListItem[]>
 

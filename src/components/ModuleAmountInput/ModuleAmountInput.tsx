@@ -1,10 +1,10 @@
-import cls from './styles.module.scss'
 import { type ChangeEvent, useEffect, useId, useMemo, useRef } from 'react'
+import clsx from 'clsx'
+import cls from './styles.module.scss'
 import commonCls from '@/assets/scss/common.module.scss'
 import { MODULE_LABEL_UNIT } from '@/consts'
 import { ModuleImplementationType } from '@/enums'
 import useIsCabinetImplementation from '@/hooks/useIsCabinetImplementation'
-import clsx from 'clsx'
 
 const getSize = (mmSize: number) => mmSize / 1000
 
