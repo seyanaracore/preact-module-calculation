@@ -33,7 +33,14 @@ async function getController<T extends DBItem>({
     targetController = getControllerForFullColor(db, controllerGetterPayload)
   }
 
-  if (!targetController) throw new Error(`Target controller not found. Module id: ${moduleId}`)
+  if (!targetController)
+    throw new Error(`
+      Необходимый контроллер не найден.
+      айди модуля: ${moduleId};
+      тип модуля: ${moduleTypeId};
+      модулей в ширину: ${modulesInWidth};
+      модулей в высоту: ${modulesInHeight};
+  `)
 
   const price = await getPrice(targetController.id)
 
