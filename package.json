@@ -3,8 +3,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite --host",
-		"build": "cross-env lib=true vite build",
-		"deploy": "vite build",
+		"build": "vite build",
+		"analyzer": "ANALYZER=true vite build",
 		"preview": "vite preview",
 		"lint": "eslint 'src/**/*.{tsx,ts}'",
 		"lint:fix": "npm run lint -- --fix",
@@ -14,8 +14,8 @@
 	},
 	"dependencies": {
 		"clsx": "2.1.1",
-		"datatables.net-buttons-dt": "3.0.1",
-		"datatables.net-dt": "2.0.2",
+		"datatables.net-buttons-dt": "3.2.2",
+		"datatables.net-dt": "2.2.1",
 		"es-toolkit": "1.35.0",
 		"jquery": "3.5.1",
 		"jszip": "3.10.1",
@@ -43,12 +43,13 @@
 		"postcss-autoreset": "3.1.0",
 		"postcss-load-config": "5.1.0",
 		"prettier": "3.5.3",
-		"sass": "1.86.3",
+		"rollup-plugin-visualizer": "5.14.0",
+		"sass": "1.87.0",
 		"tsx": "4.19.3",
 		"type-fest": "4.40.0",
 		"typescript": "5.8.3",
-		"vite": "6.3.2",
-		"vite-plugin-externals": "0.6.2"
+		"vite-plugin-externals": "0.6.2",
+		"vite": "6.3.2"
 	},
 	"engines": {
 		"node": "23"
