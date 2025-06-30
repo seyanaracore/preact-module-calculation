@@ -19,12 +19,12 @@ export const IMPLEMENTATION_LIST = [
   },
   {
     title: 'Кабинет 640/640',
-    id: 2883,
+    id: 3406,
     code: ModuleImplementationType.Cabinet640x640,
   },
   {
     title: 'Кабинет 640/480',
-    id: 2759,
+    id: 3403,
     code: ModuleImplementationType.Cabinet640x480,
   },
 ]
