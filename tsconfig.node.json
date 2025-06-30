@@ -1,10 +1,10 @@
 {
   "include": [
-    "db/db-handler.ts",
-    "db/required_ids.json",
-    "db/json-from-csv_catalog.json",
-    "db/catalog-links.json",
-    "db/raw-catalog-for-prod-service.json",
+    "db/dbHandler.ts",
+    "db/requiredIds.json",
+    "db/jsonFromCsvCatalog.json",
+    "db/catalogLinks.json",
+    "db/rawCatalogForProdService.json",
     "./src/types/shims-global.d.ts",
     "./src/types/DBItem.ts",
     "./vite.config.ts"

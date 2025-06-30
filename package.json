@@ -10,7 +10,7 @@
 		"lint:fix": "npm run lint -- --fix",
 		"type-check": "tsc --project tsconfig.app.json --noEmit",
 		"type-check:node": "tsc --project tsconfig.node.json --noEmit",
-		"handle-db": "tsx db/db-handler.ts"
+		"handle-db": "tsx db/dbHandler.ts"
 	},
 	"dependencies": {
 		"clsx": "2.1.1",

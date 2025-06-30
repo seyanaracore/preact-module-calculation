@@ -7,7 +7,7 @@ import controllers from '../../../../db/json/controllers.json'
 import receivingCards from '../../../../db/json/receivingCards.json'
 import cabinets from '../../../../db/json/cabinets.json'
 import magnets from '../../../../db/json/magnets.json'
-import moduleTypes from '../../../../db/json/modules-types.json'
+import moduleTypes from '../../../../db/json/modulesTypes.json'
 import type { DataBase } from './types'
 
 const db: DataBase = {

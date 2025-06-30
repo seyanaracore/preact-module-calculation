@@ -2,12 +2,12 @@ import path from 'path'
 import fs from 'fs'
 import chalk from 'chalk'
 
-import requiredIds from './required_ids.json'
-import jsonCatalog from './json-from-csv_catalog.json'
-import catalogLinks from './catalog-links.json'
-import rawCatalogForProdService from './raw-catalog-for-prod-service.json'
-import type { DBItem } from '../src/types/DBItem'
 import { pick } from 'es-toolkit'
+import requiredIds from './requiredIds.json'
+import jsonCatalog from './jsonFromCsvCatalog.json'
+import catalogLinks from './catalogLinks.json'
+import rawCatalogForProdService from './rawCatalogForProdService.json'
+import type { DBItem } from '../src/types/DBItem'
 
 const JSON_TARGET_PATH = path.resolve('db/json')
 const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' })
@@ -124,7 +124,7 @@ function createProdServiceModulesForProdService() {
   })
 
   fs.writeFile(
-    path.join(JSON_TARGET_PATH, `modules-for-prod-service.json`),
+    path.join(JSON_TARGET_PATH, `modulesForProdService.json`),
     JSON.stringify(prodServiceCatalog),
     (err) => {
       if (err) {
